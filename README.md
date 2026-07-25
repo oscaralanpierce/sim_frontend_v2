@@ -16,6 +16,7 @@ This repo houses the README for the Skyrim Inventory Management V2 front end. Th
     - [Testing with Vitest](#testing-with-vitest)
       - [Writing Tests](#writing-tests)
     - [Testing with Storybook](#testing-with-storybook)
+      - [Writing Stories](#writing-stories)
   - [Deploying from a Local Environment](#deploying-from-a-local-environment)
   - [GitHub Actions](#github-actions)
     - [Tests](#tests)
@@ -104,7 +105,74 @@ The details of how to use Vitest and React Testing Library are too extensive to 
 
 #### Testing with Storybook
 
-TODO
+[Storybook](https://storybook.js.org/) enables us to develop individual React components in isolation. Run Storybook locally using:
+
+```
+yarn storybook
+```
+
+Once Storybook is running, you can view your stories by visiting `http://localhost:6006` in your browser.
+
+To ensure Storybook builds before committing or opening a PR, run:
+
+```
+yarn build-storybook
+```
+
+##### Writing Stories
+
+Stories should reflect as many component states as possible. If you need to mock API data, you can do so using the [MSW](https://mswjs.io) addon. However, it is often best to mock data by simply adding data to a context provider/wrapper and wrapping the story using decorators.
+
+Stories live in the directory with each component, in a file called `componentName.stories.tsx`. A simple example of a story file looks like this:
+
+```tsx
+import { type Meta, type StoryObj } from '@storybook/react-vite'
+import { BrowserRouter } from 'react-router-dom'
+import { contextValue } from '../support/data'
+import { MyContext, type MyContextType } from '../contexts/myContext'
+import MyComponent from './myComponent'
+
+type MyComponentStory = StoryObj<typeof MyComponent>
+
+const meta: Meta<typeof MyComponent> = {
+  title: 'MyComponent',
+  decorators: [
+    (Story, { parameters }) => (
+      <BrowserRouter>
+        <MyContext value={parameters['contextValue'] as MyContextType}>
+          <Story />
+        </MyContext>
+      </BrowserRouter>
+    ),
+  ],
+}
+
+export default meta
+
+export const Default: MyComponentStory = {
+  parameters: {
+    contextValue,
+  }
+}
+```
+
+If your component has multiple states, you can include multiple named exports in your story file. For example, you might have a component that has both success and error states. Then, you might have stories like this:
+
+```tsx
+export const Default: MyComponentStory = {
+  parameters: {
+    contextValue: contextValueSuccess,
+  }
+}
+
+export const Error: MyComponentStory = {
+  parameters: {
+    contextValue: contextValueError,
+  }
+}
+```
+
+Stories can also be created for loading states or other states a component may have.
 
 ### Deploying from a Local Environment
 
