@@ -11,9 +11,10 @@ Summary of the changes made, preferably as a bulleted list
 ## Required Tasks
 
 - [ ] Add/update automated tests
+- [ ] Add/update Storybook stories
+- [ ] Add/update user and/or developer docs
 - [ ] Verify full test coverage with `yarn coverage`
 - [ ] Comprehensively test final changes in local environment
-- [ ] Add/update docs
 - [ ] Verify TypeScript compiles
 
 ## Considerations
