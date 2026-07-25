@@ -12,7 +12,7 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'json-summary', 'html'],
       include: ['src/**'],
-      exclude: ['**/types/**', 'src/main.tsx'],
+      exclude: ['**/types/**', 'src/main.tsx', 'src/stories/**'],
       thresholds: {
         lines: 95,
         functions: 95,
