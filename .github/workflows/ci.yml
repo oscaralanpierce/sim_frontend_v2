@@ -1,0 +1,24 @@
+name: Skyrim Inventory Management Frontend CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-node@v7
+      with:
+        node-version: "26.5.0"
+    - name: Install Node Modules
+      run: yarn
+    - name: Compile Production Build
+      run: yarn build
+    - name: Run tests
+      run: yarn test
