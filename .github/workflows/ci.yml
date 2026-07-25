@@ -20,6 +20,8 @@ jobs:
       run: yarn
     - name: Compile Production Build
       run: yarn build
+    - name: Build Storybook
+      run: yarn build-storybook
     - name: Run tests
       run: yarn test
     - name: Verify test coverage
