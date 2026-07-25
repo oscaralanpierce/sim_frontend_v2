@@ -35,6 +35,9 @@ docs/plans/
 # Storybook build files
 storybook-static/
 
+# Vitest coverage reports
+coverage/
+
 # Yarn cache and binary file
 .yarn/cache
 .yarn/install-state.gz
