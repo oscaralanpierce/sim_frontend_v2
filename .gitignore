@@ -26,6 +26,10 @@ dist-ssr
 # Claude plans
 docs/plans/
 
+# Local env variables
+.env.development
+.env.production
+
 # Firebase hosting cache
 .firebase
 

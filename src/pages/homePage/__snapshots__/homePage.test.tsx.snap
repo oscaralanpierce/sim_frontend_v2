@@ -16,6 +16,18 @@ exports[`HomePage > when unauthenticated > matches snapshot 1`] = `
           >
             Skyrim Inventory Management
           </h1>
+          <div
+            class="_login_1d9dec"
+          >
+            <button
+              aria-label="Sign in with Google"
+              class="_root_913e3c"
+            >
+              <div
+                class="_background_913e3c"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -32,6 +44,18 @@ exports[`HomePage > when unauthenticated > matches snapshot 1`] = `
         >
           Skyrim Inventory Management
         </h1>
+        <div
+          class="_login_1d9dec"
+        >
+          <button
+            aria-label="Sign in with Google"
+            class="_root_913e3c"
+          >
+            <div
+              class="_background_913e3c"
+            />
+          </button>
+        </div>
       </div>
     </div>
   </div>,
