@@ -24,7 +24,7 @@ This repo houses the README for the Skyrim Inventory Management V2 front end. Th
 
 ## Production Site
 
-TODO
+https://sim.oscaralanpierce.com
 
 ## Overview
 
@@ -176,7 +176,21 @@ Stories can also be created for loading states or other states a component may h
 
 ### Deploying from a Local Environment
 
-TODO
+**NB:** Deployment should always be done via GitHub Actions. **The instructions in this section apply to emergency situations only.**
+
+You can manually deploy to [Firebase](https://firebase.google.com/docs/hosting) if you have access to do so using the Firebase CLI. To install the Firebase CLI, run:
+
+```bash
+npm install -g firebase-tools
+```
+
+To deploy, `cd` into the root directory from the SIM V2 front end and run:
+
+```bash
+firebase login
+# (Use browser workflow to log in)
+firebase deploy
+```
 
 ### GitHub Actions
 
@@ -196,4 +210,4 @@ on:
 
 #### Deploys
 
-TODO
+Deployment to [Firebase hosting](https://firebase.google.com/docs/hosting) is handled automatically by GitHub Actions. A preview is created when a PR is opened and a production deploy is run when a PR is merged to main. When working with previews, take care not to manipulate data at the API as there is only one API instance - **there is no staging API where data can be safely manipulated for testing.**
