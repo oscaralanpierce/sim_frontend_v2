@@ -1,0 +1,34 @@
+.root {
+  width: 191px;
+  height: 46px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.root:disabled {
+  cursor: auto;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-image: url(./img/btn_normal.png);
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.root:focus .background {
+  background-image: url(./img/btn_focus.png);
+}
+
+.root:active .background {
+  background-image: url(./img/btn_pressed.png);
+}
+
+.root:disabled .background {
+  background-image: url(./img/btn_disabled.png);
+}

@@ -16,6 +16,14 @@ exports[`<App /> > matches snapshot 1`] = `
           >
             Skyrim Inventory Management
           </h1>
+          <button
+            aria-label="Sign in with Google"
+            class="_root_913e3c"
+          >
+            <div
+              class="_background_913e3c"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -32,6 +40,14 @@ exports[`<App /> > matches snapshot 1`] = `
         >
           Skyrim Inventory Management
         </h1>
+        <button
+          aria-label="Sign in with Google"
+          class="_root_913e3c"
+        >
+          <div
+            class="_background_913e3c"
+          />
+        </button>
       </div>
     </div>
   </div>,
