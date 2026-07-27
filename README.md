@@ -1,4 +1,4 @@
-# Skyrim Inventory Management V2
+# Skyrim Inventory Management V2 [![Hippocratic License HL3-FULL](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-FULL&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/full.html)
 
 This repo houses the README for the Skyrim Inventory Management V2 front end. The original front end lives
 [here](https://github.com/oscaralanpierce/skyrim_inventory_management_frontend).
