@@ -25,3 +25,6 @@ export const render = (ui: ReactElement, url?: string) => {
 
   return originalRender(ui)
 }
+
+export const renderWithRouter = (ui: ReactElement, url?: string) =>
+  render(<BrowserRouter>{ui}</BrowserRouter>, url)
