@@ -7,7 +7,7 @@ interface AuthUserState {
   isLoading: boolean
 }
 
-const useAuthUser = (): AuthUserState => {
+export const useAuthUser = (): AuthUserState => {
   const [state, setState] = useState<AuthUserState>({
     user: auth.currentUser,
     isLoading: true,
@@ -23,5 +23,3 @@ const useAuthUser = (): AuthUserState => {
 
   return state
 }
-
-export default useAuthUser

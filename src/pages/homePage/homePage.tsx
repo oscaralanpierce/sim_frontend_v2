@@ -1,7 +1,7 @@
 import { useEffect, useState, type MouseEventHandler } from 'react'
-import GoogleSignInButton from '../../components/googleSignInButton/googleSignInButton'
-import useAuthUser from '../../hooks/useAuthUser'
 import { signInWithGoogle } from '../../firebase'
+import { useAuthUser } from '../../hooks/useAuthUser'
+import GoogleSignInButton from '../../components/googleSignInButton/googleSignInButton'
 import styles from './homePage.module.css'
 
 const HomePage = () => {

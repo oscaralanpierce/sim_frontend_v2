@@ -1,7 +1,8 @@
 import { describe, test, expect, vi, beforeEach } from 'vitest'
+import { act } from '@testing-library/react'
 import { type User } from 'firebase/auth'
 import { render } from '../../support/testUtils'
-import useAuthUser from '../../hooks/useAuthUser'
+import { useAuthUser } from '../../hooks/useAuthUser'
 import { signInWithGoogle } from '../../firebase'
 import HomePage from './homePage'
 
@@ -50,7 +51,9 @@ describe('HomePage', () => {
       mockedSignInWithGoogle.mockResolvedValue({} as User)
       const wrapper = render(<HomePage />)
 
-      wrapper.container.querySelector('button')?.click()
+      await act(async () => {
+        wrapper.container.querySelector('button')?.click()
+      })
 
       expect(mockedSignInWithGoogle).toHaveBeenCalledOnce()
     })
@@ -61,11 +64,11 @@ describe('HomePage', () => {
       mockedSignInWithGoogle.mockRejectedValue(signInError)
       const wrapper = render(<HomePage />)
 
-      wrapper.container.querySelector('button')?.click()
-
-      await vi.waitFor(() => {
-        expect(errorSpy).toHaveBeenCalledWith('Google sign-in failed', signInError)
+      await act(async () => {
+        wrapper.container.querySelector('button')?.click()
       })
+
+      expect(errorSpy).toHaveBeenCalledWith('Google sign-in failed', signInError)
     })
   })
 

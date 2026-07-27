@@ -1,7 +1,7 @@
 import { describe, test, expect, vi, beforeEach } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
 import { onAuthStateChanged, type User } from 'firebase/auth'
-import useAuthUser from './useAuthUser'
+import { useAuthUser } from './useAuthUser'
 
 vi.mock('../firebase', () => ({
   auth: { currentUser: null },
