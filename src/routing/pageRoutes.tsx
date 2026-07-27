@@ -20,8 +20,8 @@ interface Page extends BasePage {
 }
 
 const notFoundPage: BasePage = {
-  title: '404 Not Found',
-  description: `${siteTitle} | Page Not Found`,
+  title: `${siteTitle} | Page Not Found`,
+  description: '404 Not Found',
   tsx: <NotFoundPage />
 }
 
