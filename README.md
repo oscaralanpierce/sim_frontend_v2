@@ -21,6 +21,7 @@ This repo houses the README for the Skyrim Inventory Management V2 front end. Th
   - [GitHub Actions](#github-actions)
     - [Tests](#tests)
     - [Deploys](#deploys)
+- [License](#license)
 
 ## Production Site
 
@@ -211,3 +212,7 @@ on:
 #### Deploys
 
 Deployment to [Firebase hosting](https://firebase.google.com/docs/hosting) is handled automatically by GitHub Actions. A preview is created when a PR is opened and a production deploy is run when a PR is merged to main. When working with previews, take care not to manipulate data at the API as there is only one API instance - **there is no staging API where data can be safely manipulated for testing.**
+
+## License
+
+Skyrim Inventory Management is proudly licensed under the [Hippocratic License](https://firstdonoharm.dev). This open-source license restricts use of source code by organizations or users whose usage maintainers consider unethical. This project uses the full (most restrictive) version of the license, with provisions on ecocide, human trafficking and slavery, genocide, mass surveillance, and other unethical activities.
