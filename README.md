@@ -153,7 +153,7 @@ export default meta
 export const Default: MyComponentStory = {
   parameters: {
     contextValue,
-  }
+  },
 }
 ```
 
@@ -163,13 +163,13 @@ If your component has multiple states, you can include multiple named exports in
 export const Default: MyComponentStory = {
   parameters: {
     contextValue: contextValueSuccess,
-  }
+  },
 }
 
 export const Error: MyComponentStory = {
   parameters: {
     contextValue: contextValueError,
-  }
+  },
 }
 ```
 

@@ -68,7 +68,10 @@ describe('HomePage', () => {
         wrapper.container.querySelector('button')?.click()
       })
 
-      expect(errorSpy).toHaveBeenCalledWith('Google sign-in failed', signInError)
+      expect(errorSpy).toHaveBeenCalledWith(
+        'Google sign-in failed',
+        signInError
+      )
     })
   })
 
