@@ -113,7 +113,7 @@ CSS should be written mobile-first. The smallest viewport width officially suppo
   line-height: 1.3;
 }
 
-@media(min-width: 1025px) {
+@media (min-width: 1025px) {
   .root {
     font-size: 2rem;
     line-height: 2;
@@ -140,7 +140,7 @@ const pages: Page[] = [
       </MyContextProvider>
     ),
     paths: paths.myPage, // this may also be scoped, e.g. paths.dashboard.myPage
-  }
+  },
 ]
 ```
 

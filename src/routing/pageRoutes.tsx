@@ -22,7 +22,7 @@ interface Page extends BasePage {
 const notFoundPage: BasePage = {
   title: `${siteTitle} | Page Not Found`,
   description: '404 Not Found',
-  tsx: <NotFoundPage />
+  tsx: <NotFoundPage />,
 }
 
 const pages: Page[] = [
@@ -45,8 +45,8 @@ const RouteContent = ({ title, description, tsx }: BasePage) => (
 const PageRoutes = () => (
   <Routes>
     <Route
-      path='*'
-      key='notFound'
+      path="*"
+      key="notFound"
       element={<RouteContent {...notFoundPage} />}
     />
     {pages.map(({ pageId, path, title, description, tsx }: Page) => (

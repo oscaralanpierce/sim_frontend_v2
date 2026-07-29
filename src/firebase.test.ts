@@ -5,12 +5,7 @@ import {
   type User,
   type UserCredential,
 } from 'firebase/auth'
-import {
-  signInWithGoogle,
-  signOutWithGoogle,
-  auth,
-} from './firebase'
-
+import { signInWithGoogle, signOutWithGoogle, auth } from './firebase'
 
 vi.mock('firebase/app', () => ({
   initializeApp: vi.fn(() => ({})),
@@ -29,7 +24,9 @@ const mockedSignOut = vi.mocked(signOut)
 describe('firebase', () => {
   test('signInWithGoogle resolves with the signed-in user', async () => {
     const fakeUser = { displayName: 'Dovahkiin' } as User
-    mockedSignInWithPopup.mockResolvedValue({ user: fakeUser } as UserCredential)
+    mockedSignInWithPopup.mockResolvedValue({
+      user: fakeUser,
+    } as UserCredential)
 
     const user = await signInWithGoogle()
 

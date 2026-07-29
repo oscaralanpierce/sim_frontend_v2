@@ -9,7 +9,7 @@ interface GoogleSignInButtonProps {
 const GoogleSignInButton = ({ onClick, loading }: GoogleSignInButtonProps) => (
   <button
     className={styles.root}
-    aria-label='Sign in with Google'
+    aria-label="Sign in with Google"
     onClick={onClick}
     disabled={loading}
   >

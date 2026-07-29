@@ -11,6 +11,8 @@
     "build-storybook": "storybook build",
     "coverage": "vitest run --coverage",
     "dev": "vite",
+    "format": "prettier .",
+    "format:fix": "prettier --write .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "test": "vitest"
@@ -34,6 +36,7 @@
     "@vitest/coverage-v8": "4.1.10",
     "jsdom": "^30.0.0",
     "playwright": "^1.62.0",
+    "prettier": "^3.9.6",
     "storybook": "^10.5.4",
     "typescript": "^7.0.2",
     "unplugin-fonts": "^2.0.0",

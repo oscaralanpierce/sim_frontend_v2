@@ -20,7 +20,7 @@ const PageHead = ({ title, description, lang = 'en' }: PageHeadProps) => {
   return (
     <>
       <title>{title}</title>
-      <meta name='description' content={description} />
+      <meta name="description" content={description} />
     </>
   )
 }

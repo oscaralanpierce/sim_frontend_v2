@@ -40,7 +40,7 @@ const pages: Page[] = [
   // other pages go here...
 ]
 ```
+
 Adding the path to `paths.ts` and the page data to the `pages` array should be sufficient to render your new page at the route specified. Verify by running the dev server and visiting `http://localhost:5173/your_path`. Paths should be snake cased (although the keys corresponding to each path in `paths.ts` should be camel cased).
 
 If your page requires props that are only known at runtime to render, you are probably trying to develop a [layout component](/docs/developer/component-architecture.md#layouts) and not a page. In fact, in the V1 API, there were no page components that took any props at all, so if your page needs data that cannot be provided via a context, that is a sign that you may be developing a [different type of component](/docs/developer/component-architecture.md).
-

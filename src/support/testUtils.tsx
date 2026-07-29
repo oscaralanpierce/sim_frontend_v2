@@ -15,9 +15,9 @@ const setDom = (url?: string) => {
 }
 
 /**
- * 
+ *
  * Test Renderers
- * 
+ *
  */
 
 export const render = (ui: ReactElement, url?: string) => {

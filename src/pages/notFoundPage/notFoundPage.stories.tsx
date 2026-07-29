@@ -12,8 +12,8 @@ const meta: Meta<typeof NotFoundPage> = {
       <BrowserRouter>
         <Story />
       </BrowserRouter>
-    )
-  ]
+    ),
+  ],
 }
 
 export default meta

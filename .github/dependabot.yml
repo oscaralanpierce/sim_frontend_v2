@@ -5,38 +5,38 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'npm'
+    directory: '/' # Location of package manifests
     schedule:
-      interval: "daily"
-      timezone: "Australia/Sydney"
+      interval: 'daily'
+      timezone: 'Australia/Sydney'
     commit-message:
-      prefix: "[Dependabot]"
-      include: "scope"
+      prefix: '[Dependabot]'
+      include: 'scope'
     open-pull-requests-limit: 8
     reviewers:
-      - "oscaralanpierce"
-    versioning-strategy: "increase"
+      - 'oscaralanpierce'
+    versioning-strategy: 'increase'
     ignore:
       # All packages published by the Storybook maintainers should be updated
       # together using `npx storybook@latest upgrade && yarn dedupe`. Updates
       # are issued very frequently so this should be done once a week or so.
-      - dependency-name: "storybook"
-      - dependency-name: "@storybook/addon-vitest"
-      - dependency-name: "@storybook/addon-a11y"
-      - dependency-name: "@storybook/addon-docs"
-      - dependency-name: "@storybook/addon-mcp"
-      - dependency-name: "@chromatic-com/storybook"
-      - dependency-name: "eslint-plugin-storybook"
+      - dependency-name: 'storybook'
+      - dependency-name: '@storybook/addon-vitest'
+      - dependency-name: '@storybook/addon-a11y'
+      - dependency-name: '@storybook/addon-docs'
+      - dependency-name: '@storybook/addon-mcp'
+      - dependency-name: '@chromatic-com/storybook'
+      - dependency-name: 'eslint-plugin-storybook'
 
       # All FontAwesome packages also need to be updated together.
-      - dependency-name: "@fortawesome/fontawesome-svg-core"
-      - dependency-name: "@fortawesome/free-regular-svg-icons"
-      - dependency-name: "@fortawesome/free-solid-svg-icons"
-      - dependency-name: "@fortawesome/react-fontawesome"
+      - dependency-name: '@fortawesome/fontawesome-svg-core'
+      - dependency-name: '@fortawesome/free-regular-svg-icons'
+      - dependency-name: '@fortawesome/free-solid-svg-icons'
+      - dependency-name: '@fortawesome/react-fontawesome'
 
       # Leave framework updates to the pros
-      - dependency-name: "react"
-      - dependency-name: "react-dom"
-      - dependency-name: "@types/react"
-      - dependency-name: "@types/react-dom"
+      - dependency-name: 'react'
+      - dependency-name: 'react-dom'
+      - dependency-name: '@types/react'
+      - dependency-name: '@types/react-dom'
