@@ -216,3 +216,5 @@ Deployment to [Firebase hosting](https://firebase.google.com/docs/hosting) is ha
 ## License
 
 Skyrim Inventory Management is proudly licensed under the [Hippocratic License](https://firstdonoharm.dev). This open-source license restricts use of source code by organizations or users whose usage maintainers consider unethical. This project uses the full (most restrictive) version of the license, with provisions on ecocide, human trafficking and slavery, genocide, mass surveillance, and other unethical activities.
+
+Pursuant to the above, the maintainers specify that we do not authorize our code to be used by (without limitation) the US military, US Immigration and Customs Enforcement (ICE), the Israeli Defense Force (IDF), or any organisations that have contracts with the above.
