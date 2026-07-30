@@ -40,6 +40,8 @@ Use `async`/`await` syntax instead unless promise resolution with `then`/`resolv
 
 Avoid third-party packages in general. If you are unsure if a package should be added, prompt a human user.
 
+Third-party packages should be limited to the following;
+
 - Third-party API wrappers or SDKs (such as Firebase)
 - Standard tech-stack elements maintained by known maintainers (React, Vite, TypeScript, Testing Library, etc.)
 - Libraries encapsulating complex or extensive logic that would significantly complicate maintaining this project
