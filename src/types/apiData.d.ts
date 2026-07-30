@@ -20,6 +20,6 @@ export interface ResponsePlaythrough {
   user_id: number
   name: string
   description: string | null
-  created_at: Date
-  updated_at: Date
+  created_at: string // timestamp as string
+  updated_at: string // timestamp as string
 }
