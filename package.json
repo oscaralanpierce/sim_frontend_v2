@@ -11,6 +11,7 @@
     "build-storybook": "storybook build",
     "coverage": "vitest run --coverage",
     "dev": "vite",
+    "dev:local": "VITE_API_URI=http://locahost:3000 vite",
     "format": "prettier .",
     "format:fix": "prettier --write .",
     "preview": "vite preview",
