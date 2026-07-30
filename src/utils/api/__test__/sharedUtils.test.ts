@@ -1,5 +1,5 @@
 import { describe, test, expect, vi } from 'vitest'
-import { baseUri, combinedHeaders } from '../sharedUtils'
+import { baseUri, authHeader, combinedHeaders } from '../sharedUtils'
 
 describe('API wrapper utils', () => {
   describe('baseUri', () => {
@@ -17,6 +17,14 @@ describe('API wrapper utils', () => {
       it('takes the value of VITE_API_URI', () => {
         vi.stubEnv('VITE_API_URI', 'https://google.com')
         expect(baseUri()).toEqual('https://google.com')
+      })
+    })
+  })
+
+  describe('authHeader', () => {
+    test('generates an Authorization header with the passed-in token', () => {
+      expect(authHeader('foobar')).toEqual({
+        Authorization: 'Bearer foobar',
       })
     })
   })

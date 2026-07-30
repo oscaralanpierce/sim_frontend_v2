@@ -3,7 +3,9 @@ export const baseUri = () => {
 }
 
 const contentTypeHeader = { 'Content-Type': 'application/json' }
-const authHeader = (token: string) => ({ Authorization: `Bearer ${token}` })
+
+export const authHeader = (token: string) => ({ Authorization: `Bearer ${token}` })
+
 export const combinedHeaders = (token: string) => ({
   ...contentTypeHeader,
   ...authHeader(token),
