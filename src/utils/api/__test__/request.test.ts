@@ -76,7 +76,6 @@ describe('apiRequest', () => {
     })
 
     test('falls back to a generic message when a non-Error is thrown', async () => {
-      // eslint-disable-next-line prefer-promise-reject-errors
       mockFetch(() => Promise.reject('offline'))
 
       const result = await apiRequest('/api/playthroughs')

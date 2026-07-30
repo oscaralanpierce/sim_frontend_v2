@@ -23,7 +23,10 @@ describe('Playthrough endpoints', () => {
       expect(mockedApiRequest).toHaveBeenCalledWith(
         `${baseUri()}/playthroughs`,
         {
-          headers: combinedHeaders('some-token'),
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer some-token',
+          },
         }
       )
     })
@@ -32,6 +35,18 @@ describe('Playthrough endpoints', () => {
       const resolvedValue = {
         status: 200,
         data: [{ id: 1, name: 'My Playthrough' }],
+      }
+      mockedApiRequest.mockResolvedValue(resolvedValue)
+
+      const result = await getPlaythroughs('some-token')
+
+      expect(result).toBe(resolvedValue)
+    })
+
+    test('resolves in an error case as well', async () => {
+      const resolvedValue = {
+        status: 404,
+        errors: ['Playthrough not found'],
       }
       mockedApiRequest.mockResolvedValue(resolvedValue)
 
