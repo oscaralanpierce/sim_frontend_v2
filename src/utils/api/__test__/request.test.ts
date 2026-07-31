@@ -29,6 +29,24 @@ describe('apiRequest', () => {
     })
   })
 
+  describe('when the response is a 204 No Content', () => {
+    test('includes null data', async () => {
+      mockFetch(() =>
+        Promise.resolve({
+          ok: true,
+          status: 204,
+        })
+      )
+
+      const result = await apiRequest('/api/playthroughs')
+
+      expect(result).toEqual({
+        status: 204,
+        data: null,
+      })
+    })
+  })
+
   describe('when the API returns a documented error response', () => {
     test('resolves with the status and the errors array from the body', async () => {
       mockFetch(() =>

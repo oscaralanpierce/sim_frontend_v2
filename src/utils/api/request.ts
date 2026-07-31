@@ -1,7 +1,9 @@
 import { type ErrorObject } from '../../types/apiData'
 
 export type ApiResult<T> =
-  { status: number; data: T } | { status: number; errors: string[] }
+  | { status: 204; data: null } // 204 No Content is a special case
+  | { status: number; data: T }
+  | { status: number; errors: string[] }
 
 const errorMessage = (e: unknown): string =>
   e instanceof Error ? e.message : 'An unexpected error occurred'
@@ -17,6 +19,8 @@ export const apiRequest = async <T>(
   } catch (e) {
     return { status: 0, errors: [errorMessage(e)] }
   }
+
+  if (res.status === 204) return { status: res.status, data: null }
 
   let json: unknown
 
