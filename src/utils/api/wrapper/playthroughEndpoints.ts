@@ -41,13 +41,13 @@ export const postPlaythroughs = (
 export const patchPlaythrough = (
   id: number,
   params: RequestPlaythrough,
-  token: string,
+  token: string
 ): Promise<ApiResult<ResponsePlaythrough>> => {
-return apiRequest(`${PLAYTHROUGHS_URI}/${id}`, {
-  method: 'PATCH',
-  body: JSON.stringify({ playthrough: params }),
-  headers: combinedHeaders(token),
-})
+  return apiRequest(`${PLAYTHROUGHS_URI}/${id}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ playthrough: params }),
+    headers: combinedHeaders(token),
+  })
 }
 
 /**
