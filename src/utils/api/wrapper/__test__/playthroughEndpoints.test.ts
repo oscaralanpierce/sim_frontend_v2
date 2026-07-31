@@ -5,7 +5,11 @@ import {
   emptyPlaythroughs,
   allPlaythroughs,
 } from '../../../../support/data/playthroughs'
-import { getPlaythroughs, postPlaythroughs, deletePlaythrough } from '../playthroughEndpoints'
+import {
+  getPlaythroughs,
+  postPlaythroughs,
+  deletePlaythrough,
+} from '../playthroughEndpoints'
 
 vi.mock('../../request', () => ({
   apiRequest: vi.fn(),

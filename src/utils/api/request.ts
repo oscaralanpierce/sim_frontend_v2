@@ -1,7 +1,7 @@
 import { type ErrorObject } from '../../types/apiData'
 
 export type ApiResult<T> =
-  | { status: 204, data: null } // 204 No Content is a special case
+  | { status: 204; data: null } // 204 No Content is a special case
   | { status: number; data: T }
   | { status: number; errors: string[] }
 
