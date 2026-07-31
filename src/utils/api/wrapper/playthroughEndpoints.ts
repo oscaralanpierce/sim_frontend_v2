@@ -33,3 +33,17 @@ export const postPlaythroughs = (
     body: JSON.stringify({ playthrough: params }),
   })
 }
+
+/**
+ * DELETE /playthroughs/:id endpoint
+ */
+
+export const deletePlaythrough = (
+  id: number,
+  token: string
+): Promise<ApiResult<null>> => {
+  return apiRequest(`${PLAYTHROUGHS_URI}/${id}`, {
+    method: 'DELETE',
+    headers: authHeader(token),
+  })
+}

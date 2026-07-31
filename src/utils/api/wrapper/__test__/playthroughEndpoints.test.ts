@@ -1,11 +1,11 @@
 import { describe, test, expect, vi, afterEach } from 'vitest'
-import { baseUri } from '../../sharedUtils'
+import { authHeader, baseUri } from '../../sharedUtils'
 import { apiRequest } from '../../request'
 import {
   emptyPlaythroughs,
   allPlaythroughs,
 } from '../../../../support/data/playthroughs'
-import { getPlaythroughs, postPlaythroughs } from '../playthroughEndpoints'
+import { getPlaythroughs, postPlaythroughs, deletePlaythrough } from '../playthroughEndpoints'
 
 vi.mock('../../request', () => ({
   apiRequest: vi.fn(),
@@ -100,7 +100,7 @@ describe('Playthrough endpoints', () => {
 
     test('resolves with whatever apiRequest resolves with', async () => {
       const resolvedValue = {
-        status: 204,
+        status: 201,
         data: allPlaythroughs[0],
       }
       mockedApiRequest.mockResolvedValue(resolvedValue)
@@ -118,6 +118,49 @@ describe('Playthrough endpoints', () => {
       mockedApiRequest.mockResolvedValue(resolvedValue)
 
       const result = await postPlaythroughs(body, 'some-token')
+
+      expect(result).toBe(resolvedValue)
+    })
+  })
+
+  describe('DELETE /playthroughs/:id', () => {
+    test('makes a DELETE request to the endpoint indicated', async () => {
+      mockedApiRequest.mockResolvedValue({
+        status: 204,
+        data: null,
+      })
+
+      await deletePlaythrough(27, 'some-token')
+
+      expect(mockedApiRequest).toHaveBeenCalledWith(
+        `${baseUri()}/playthroughs/27`,
+        {
+          headers: authHeader('some-token'),
+          method: 'DELETE',
+        }
+      )
+    })
+
+    test('resolves a success case', async () => {
+      const resolvedValue = {
+        status: 204,
+        data: null,
+      }
+      mockedApiRequest.mockResolvedValue(resolvedValue)
+
+      const result = await deletePlaythrough(27, 'some-token')
+
+      expect(result).toBe(resolvedValue)
+    })
+
+    test('resolves an error case', async () => {
+      const resolvedValue = {
+        status: 404,
+        errors: ['Playthrough not found'],
+      }
+      mockedApiRequest.mockResolvedValue(resolvedValue)
+
+      const result = await deletePlaythrough(27, 'some-token')
 
       expect(result).toBe(resolvedValue)
     })
