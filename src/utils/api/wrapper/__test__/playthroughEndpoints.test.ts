@@ -1,5 +1,5 @@
 import { describe, test, expect, vi, afterEach } from 'vitest'
-import { authHeader, baseUri } from '../../sharedUtils'
+import { baseUri } from '../../sharedUtils'
 import { apiRequest } from '../../request'
 import {
   emptyPlaythroughs,
@@ -139,7 +139,9 @@ describe('Playthrough endpoints', () => {
       expect(mockedApiRequest).toHaveBeenCalledWith(
         `${baseUri()}/playthroughs/27`,
         {
-          headers: authHeader('some-token'),
+          headers: {
+            Authorization: 'Bearer some-token',
+          },
           method: 'DELETE',
         }
       )
