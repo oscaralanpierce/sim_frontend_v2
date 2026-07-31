@@ -35,6 +35,22 @@ export const postPlaythroughs = (
 }
 
 /**
+ * PATCH /playthroughs/:id endpoint
+ */
+
+export const patchPlaythrough = (
+  id: number,
+  params: RequestPlaythrough,
+  token: string,
+): Promise<ApiResult<ResponsePlaythrough>> => {
+return apiRequest(`${PLAYTHROUGHS_URI}/${id}`, {
+  method: 'PATCH',
+  body: JSON.stringify({ playthrough: params }),
+  headers: combinedHeaders(token),
+})
+}
+
+/**
  * DELETE /playthroughs/:id endpoint
  */
 

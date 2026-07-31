@@ -8,6 +8,7 @@ import {
 import {
   getPlaythroughs,
   postPlaythroughs,
+  patchPlaythrough,
   deletePlaythrough,
 } from '../playthroughEndpoints'
 
@@ -122,6 +123,59 @@ describe('Playthrough endpoints', () => {
       mockedApiRequest.mockResolvedValue(resolvedValue)
 
       const result = await postPlaythroughs(body, 'some-token')
+
+      expect(result).toBe(resolvedValue)
+    })
+  })
+
+  describe('PATCH /playthroughs/:id', () => {
+    const id = allPlaythroughs[0].id
+    const body = {
+      name: allPlaythroughs[0].name,
+      description: allPlaythroughs[0].description,
+    }
+
+    test('makes a PATCH request with the token in the auth header', async () => {
+      mockedApiRequest.mockResolvedValue({
+        status: 200,
+        data: allPlaythroughs[0],
+      })
+
+      await patchPlaythrough(id, body, 'some-token')
+
+      expect(mockedApiRequest).toHaveBeenCalledWith(
+        `${baseUri()}/playthroughs/${id}`,
+        {
+          method: 'PATCH',
+          headers: {
+            Authorization: 'Bearer some-token',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ playthrough: body }),
+        }
+      )
+    })
+
+    test('resolves with whatever apiRequest resolves with', async () => {
+      const resolvedValue = {
+        status: 200,
+        data: allPlaythroughs[0],
+      }
+      mockedApiRequest.mockResolvedValue(resolvedValue)
+
+      const result = await patchPlaythrough(id, body, 'some-token')
+
+      expect(result).toBe(resolvedValue)
+    })
+
+    test('resolves in an error case as well', async () => {
+      const resolvedValue = {
+        status: 500,
+        errors: ['Better page on-call'],
+      }
+      mockedApiRequest.mockResolvedValue(resolvedValue)
+
+      const result = await patchPlaythrough(id, body, 'some-token')
 
       expect(result).toBe(resolvedValue)
     })
