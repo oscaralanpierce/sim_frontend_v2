@@ -13,6 +13,7 @@ Summary of the changes made, preferably as a bulleted list
 - [ ] Add/update automated tests
 - [ ] Add/update Storybook stories
 - [ ] Add/update user and/or developer docs
+- [ ] Add ADR(s) for architecturally significant decisions
 - [ ] Verify full test coverage with `yarn coverage`
 - [ ] Comprehensively test final changes in local environment
 - [ ] Verify TypeScript compiles
