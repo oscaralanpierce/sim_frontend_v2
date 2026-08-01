@@ -15,6 +15,7 @@ Summary of the changes made, preferably as a bulleted list
 - [ ] Add/update user and/or developer docs
 - [ ] Add ADR(s) for architecturally significant decisions
 - [ ] Verify full test coverage with `yarn coverage`
+- [ ] Ensure any new pages or components adhere to [accessibility best practices](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [ ] Comprehensively test final changes in local environment
 - [ ] Verify TypeScript compiles
 
