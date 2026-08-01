@@ -50,6 +50,7 @@ We will build a V2 front end instead of modifying V1.
 ## Resources and References
 
 Related back-end ADRs:
+
 - [0001. Build New V2 API](https://github.com/oscaralanpierce/sim_api_v2/blob/main/docs/adrs/0001-build-new-v2-api.md)
 - [0004. Use Universal Catalog Table](https://github.com/oscaralanpierce/sim_api_v2/blob/main/docs/adrs/0004-use-universal-catalog-table.md)
 - [0006. Consolidate Inventory and Procurement List into Operational Ledger](https://github.com/oscaralanpierce/sim_api_v2/blob/main/docs/adrs/0006-consolidate-inventory-and-procurement-lists-into-operational-ledger.md)
