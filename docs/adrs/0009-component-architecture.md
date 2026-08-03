@@ -15,7 +15,7 @@ We will use a three-tier component hierarchy:
 - Page components (stored in `/src/pages/`) are components that have their own routes
 - Layout components (stored in `/src/layouts/`) are components that "wrap" the contents of a page, providing an
   overarching visual design
-- Plain components (tored in `/src/components/`) are components that make up the elements contained in a
+- Plain components (stored in `/src/components/`) are components that make up the elements contained in a
   layout
 
 A layout component is defined as a component that provides the overall visual design of a page. A component can be
