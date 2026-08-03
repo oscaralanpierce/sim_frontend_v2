@@ -24,6 +24,11 @@ contexts or refactors - must include a detailed manual testing plan. This testin
 and possible regressions, not just the happy path. This testing can include not only observed UI behaviour but
 also logging and errors as well as reviewing back-end logs and database state.
 
+**The outlined process should specifically emphasise any behaviour that can't be tested, or can't be tested
+accurately, in Vitest or Storybook.** It should be clear from a PR description that some behaviour doesn't have
+adequate automated test coverage, which technical considerations made such test coverage impossible or impractical,
+and how to fill the gaps with manual testing.
+
 The documented manual test process for each PR should also clarify any differing behaviour on desktop and
 mobile/tablet, such as touchscreen behaviour and gestures. Proposed manual testing processes are fair game
 for PR reviewers as well, and feedback should be incorporated prior to merging the PR.
