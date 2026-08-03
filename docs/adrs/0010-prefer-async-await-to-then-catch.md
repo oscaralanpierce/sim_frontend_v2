@@ -32,21 +32,26 @@ In V1, we preferred `.then()`/`.catch()` promise resolution to `async`/`await` s
  * V1 .then()/.catch() syntax
  */
 
-makeApiCall().then((response) => {
-  if (response.status === 401) {
-    signOutUser()
-    return
-  }
+makeApiCall()
+  .then((response) => {
+    if (response.status === 401) {
+      signOutUser()
+      return
+    }
 
-  return response.json().then((json) => {
-    // set content state to enable UI
-    // to display data
-  }).catch((e) => {
-    // error handling behavior for parsing JSON
+    return response
+      .json()
+      .then((json) => {
+        // set content state to enable UI
+        // to display data
+      })
+      .catch((e) => {
+        // error handling behavior for parsing JSON
+      })
   })
-}).catch((e) => {
-  // error handling behavior for API call
-})
+  .catch((e) => {
+    // error handling behavior for API call
+  })
 
 /**
  * V2 async/await syntax
