@@ -87,7 +87,9 @@ const Widget = ({ foo, children }: WidgetProps) => {
   )
 }
 ```
+
 The corresponding CSS file then might look like this:
+
 ```css
 .root {
   background-color: var(--background-color);
@@ -124,21 +126,21 @@ Styled components have some of the same advantages as CSS modules. The code abov
 components:
 
 ```tsx
-const Box = styled.div<{ $borderRadius: number, $colors: Colors }>`
-  background-color: ${props => props.$colors.themeColorLight};
-  border: ${props => `1px solid ${props.$colors.border}$`};
-  border-radius: ${props => props.$borderRadius};
+const Box = styled.div<{ $borderRadius: number; $colors: Colors }>`
+  background-color: ${(props) => props.$colors.themeColorLight};
+  border: ${(props) => `1px solid ${props.$colors.border}$`};
+  border-radius: ${(props) => props.$borderRadius};
 `
 
-const Text = styled.div<{ $foo: boolean, $colors: Colors }>`
+const Text = styled.div<{ $foo: boolean; $colors: Colors }>`
   font-family: Arial, Helvetica, sans-serif;
-  color: ${props => props.$foo ? props.$colors.textColorFoo : props.$colors.textColor};
+  color: ${(props) => (props.$foo ? props.$colors.textColorFoo : props.$colors.textColor)};
   margin: 0 auto;
   text-align: center;
 `
 
 render(
-  <Box borderRadius={3} colors={{ themeColorLight: '#fff', border: 'red'}}>
+  <Box borderRadius={3} colors={{ themeColorLight: '#fff', border: 'red' }}>
     <Text foo={false} colors={{ textColorFoo: 'blue', textColor: '#343434' }}>
       {children}
     </Text>
@@ -184,6 +186,7 @@ But in CSS modules, `composes` is preferred:
   color: red;
 }
 ```
+
 This works because CSS modules typically negate the need for multiple classes (although there are rare exceptions).
 
 ## Summary
