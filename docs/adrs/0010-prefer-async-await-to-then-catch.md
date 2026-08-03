@@ -56,6 +56,7 @@ makeApiCall()
 /**
  * V2 async/await syntax
  */
+
 try {
   const response = await makeApiCall()
 
@@ -88,7 +89,7 @@ exclusively, so that was the primary alternative approach we considered here.
 ## Considerations
 
 As is illustrated in the above examples, the promise syntax used in V1 can quickly result in deeply nested
-code. This coupled with other design decisions in V1, to be discussed in an upcoming ADR, to create code that
+code. This coupled with other design decisions in V1, to be discussed in an upcoming ADR, led to code that
 was wordy, deeply nested, unmaintainable and, at times, hard to test. The `async`/`await` syntax is expected to
 result in cleaner, more maintainable, and more testable code.
 
