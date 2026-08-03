@@ -6,6 +6,7 @@ This directory contains developer docs for the Skyrim Inventory Management V2 fr
 
 - [API Wrapper](/docs/developer/api-wrapper.md)
 - [Component Architecture](/docs/developer/component-architecture.md)
+- [Manual Testing](/docs/developer/manual-testing.md)
 - [Routing](/docs/developer/routing.md)
 
 ## Principles
