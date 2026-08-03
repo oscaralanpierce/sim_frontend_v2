@@ -22,6 +22,9 @@ Support for Android or GrapheneOS may be added in the future.
 
 ## Glossary
 
+- **Support:** Development attention, maintenance, and testing; a supported device or browser is one on
+  which every change is tested and required to function as expected
+
 ## Context
 
 In order to establish a clear manual testing process, it is necessary to understand which exact devices
