@@ -47,7 +47,8 @@ linked under [Resources and References](#resources-and-references).
 ## Considerations
 
 Since the Firebase SDK is officially supported and recommended by Google, updating our approach to use the new
-utility was the obvious choice.
+utility was the obvious choice. This is particularly important given that the functionality in question pertains
+to security and auth.
 
 ## Summary
 
