@@ -47,12 +47,14 @@ unnecessarily.
 ## Summary
 
 We will handle errors in the API wrapper by returning a uniform error object:
+
 ```ts
 type ApiResult<T> =
   | { status: 204, data: null }
   | { status: number, data: T }
   | { status: number: errors: string[] }
 ```
+
 In the case of a transport error or JSON parser error, status is set to `0`. In all other cases, it is an HTTP response
 code.
 
