@@ -16,6 +16,33 @@ const preview: Preview = {
       test: 'error',
     },
   },
+
+  globalTypes: {
+    reducedMotion: {
+      description: 'Emulate prefers-reduced-motion',
+      toolbar: {
+        title: 'Reduced motion',
+        icon: 'accessibility',
+        items: [
+          { value: 'no-preference', title: 'No preference' },
+          { value: 'reduce', title: 'Reduce' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+
+  initialGlobals: {
+    reducedMotion: 'no-preference',
+  },
+
+  decorators: [
+    (Story, { globals }) => (
+      <div data-reduced-motion={globals.reducedMotion === 'reduce'}>
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export default preview
