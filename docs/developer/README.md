@@ -8,6 +8,7 @@ This directory contains developer docs for the Skyrim Inventory Management V2 fr
 - [Component Architecture](/docs/developer/component-architecture.md)
 - [Manual Testing](/docs/developer/manual-testing.md)
 - [Routing](/docs/developer/routing.md)
+- [Storybook](/docs/developer/storybook.md)
 
 ## Principles
 

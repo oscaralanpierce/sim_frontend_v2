@@ -38,3 +38,6 @@ prior to merging their PRs, regardless of whether the PR is approved before test
 authors are expected to test in production on the same desktop browsers as well as supported mobile devices and
 tablets. If an author doesn't have access to a particular device, they need to coordinate with a maintainer who
 does to ensure the testing is done immediately on deploy.
+
+Note that if the changes being deployed have any animations or transitions, they must be tested on a device with
+a preferred motion setting enabled at the OS level once deployed. This is a critical accessibility consideration.
