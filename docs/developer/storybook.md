@@ -63,7 +63,7 @@ the styles in your `prefers-reduced-motion` media query.
 ```
 
 **Both the media query and the `data-reduced-motion` styles are necessary:** without the `data-reduced-motion` styles,
-the behavior will not be visible in Storybook, but without the media query, it won't be visible to users in production.
+the behavior will not be visible in Storybook, but without the media query, it won't be visible to actual users with the setting enabled.
 
 Then, set this global attribute in Storybook.
 

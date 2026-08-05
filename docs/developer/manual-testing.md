@@ -40,4 +40,4 @@ tablets. If an author doesn't have access to a particular device, they need to c
 does to ensure the testing is done immediately on deploy.
 
 Note that if the changes being deployed have any animations or transitions, they must be tested on a device with
-a preferred motion setting enabled at the OS level once deployed. This is a critical accessibility consideration.
+a reduced motion setting enabled at the OS level once deployed. This is a critical accessibility consideration.
