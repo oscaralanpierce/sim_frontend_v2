@@ -26,8 +26,8 @@ updates:
       - dependency-name: '@storybook/addon-a11y'
       - dependency-name: '@storybook/addon-docs'
       - dependency-name: '@storybook/addon-mcp'
+      - dependency-name: '@storybook/react-vite'
       - dependency-name: '@chromatic-com/storybook'
-      - dependency-name: 'eslint-plugin-storybook'
 
       # All FontAwesome packages also need to be updated together.
       - dependency-name: '@fortawesome/fontawesome-svg-core'
