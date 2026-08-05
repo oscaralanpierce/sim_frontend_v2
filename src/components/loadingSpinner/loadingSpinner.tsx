@@ -17,7 +17,11 @@ const LoadingSpinner = () => {
   return (
     <div className={styles.root} style={styleVars}>
       <p className={styles.text}>Loading...</p>
-      <div className={styles.spinner} role="alert">
+      <div
+        className={styles.spinner}
+        role="progressbar"
+        aria-label="loading"
+      >
         <span className={styles.spinnerComponent} key="first"></span>
         <span className={styles.spinnerComponent} key="second"></span>
         <span className={styles.spinnerComponent} key="third"></span>

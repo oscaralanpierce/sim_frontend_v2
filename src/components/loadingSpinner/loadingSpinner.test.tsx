@@ -19,7 +19,7 @@ describe('LoadingSpinner', () => {
     const wrapper = render(<LoadingSpinner />)
 
     expect(wrapper.getByText('Loading...')).toBeTruthy()
-    expect(wrapper.getByRole('alert')).toBeTruthy()
+    expect(wrapper.getByRole('progressbar')).toBeTruthy()
   })
 
   test('matches snapshot', () => {
