@@ -1,0 +1,94 @@
+.root {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.text {
+  display: none;
+}
+
+.spinner {
+  display: grid;
+  grid-template-columns: 20px 20px 20px 20px;
+  align-items: first baseline;
+  height: 20px;
+}
+
+.spinnerComponent {
+  background-color: var(--background-color);
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 50%;
+  animation-name: bounce;
+  animation-duration: 1.25s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+.spinnerComponent:first-of-type {
+  animation-delay: 0s;
+}
+
+.spinnerComponent:nth-of-type(2) {
+  animation-delay: 0.25s;
+}
+
+.spinnerComponent:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+
+.spinnerComponent:last-of-type {
+  animation-delay: 0.75s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(50%);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .text {
+    display: inline-block;
+    border: none;
+    font-family: var(--font-family);
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .spinner {
+    display: none;
+  }
+}
+
+/*
+ * The Storybook "Reduced motion" toolbar toggle drives
+ * this attribute directly to preview the same rules as
+ * are set in the prefers-reduced-motion media.
+ */
+:global([data-reduced-motion='true']) .text {
+  display: inline-block;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+:global([data-reduced-motion='true']) .spinner {
+  display: none;
+}
