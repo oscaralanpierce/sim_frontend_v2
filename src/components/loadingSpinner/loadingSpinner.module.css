@@ -57,11 +57,14 @@
 @media (prefers-reduced-motion) {
   .text {
     display: inline-block;
+    border: none;
     font-family: var(--font-family);
+    font-weight: 700;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-align: center;
     margin: 0 auto;
+    padding: 0;
   }
 
   .spinner {
@@ -76,11 +79,14 @@
  */
 :global([data-reduced-motion='true']) .text {
   display: inline-block;
+  border: none;
   font-family: var(--font-family);
+  font-weight: 700;
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
   margin: 0 auto;
+  padding: 0;
 }
 
 :global([data-reduced-motion='true']) .spinner {

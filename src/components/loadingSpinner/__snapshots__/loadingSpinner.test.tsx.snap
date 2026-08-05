@@ -9,11 +9,11 @@ exports[`LoadingSpinner > matches snapshot 1`] = `
         class="_root_b60c62"
         style="--background-color: #00a323; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
       >
-        <p
+        <dialog
           class="_text_b60c62"
         >
           Loading...
-        </p>
+        </dialog>
         <div
           aria-label="loading"
           class="_spinner_b60c62"
@@ -40,11 +40,11 @@ exports[`LoadingSpinner > matches snapshot 1`] = `
       class="_root_b60c62"
       style="--background-color: #00a323; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
     >
-      <p
+      <dialog
         class="_text_b60c62"
       >
         Loading...
-      </p>
+      </dialog>
       <div
         aria-label="loading"
         class="_spinner_b60c62"
