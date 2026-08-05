@@ -10,6 +10,12 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  optimizeDeps: {
+    // @testing-library/dom's CJS transitive deps aren't statically
+    // analyzable by Vite's cjs-module-lexer for named/default exports
+    // unless pre-bundled by esbuild.
+    include: ['aria-query', 'lz-string', 'pretty-format'],
+  },
   test: {
     coverage: {
       provider: 'v8',
