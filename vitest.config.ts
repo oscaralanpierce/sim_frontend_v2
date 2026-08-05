@@ -4,12 +4,18 @@ import { fileURLToPath } from 'node:url'
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin'
 import { playwright } from '@vitest/browser-playwright'
 const dirname =
-  typeof __dirname !== 'undefined'
-    ? __dirname
+  typeof import.meta.dirname !== 'undefined'
+    ? import.meta.dirname
     : path.dirname(fileURLToPath(import.meta.url))
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  optimizeDeps: {
+    // @testing-library/dom's CJS transitive deps aren't statically
+    // analyzable by Vite's cjs-module-lexer for named/default exports
+    // unless pre-bundled by esbuild.
+    include: ['aria-query', 'lz-string', 'pretty-format'],
+  },
   test: {
     coverage: {
       provider: 'v8',
