@@ -29,7 +29,7 @@ export const Default: NavCardStory = {
   },
 }
 
-export const LongString = {
+export const LongString: NavCardStory = {
   args: {
     href: '#',
     children: 'Neque porro quisquam est quis dolorem ipsum quia dolor sit amet',

@@ -2,7 +2,7 @@ import { type ReactElement, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { useColorScheme } from '../../hooks/contexts'
 import { GLOBAL_CSS_VALUES } from '../../utils/styles/globalCss'
-import { RelativePath } from '../../types/navigation'
+import { type RelativePath } from '../../types/navigation'
 import styles from './navCard.module.css'
 
 interface NavCardProps {
