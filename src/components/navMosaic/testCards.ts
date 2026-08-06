@@ -22,7 +22,7 @@ export default [
     children: 'Link 5',
   },
   {
-    href: 'href6' as RelativePath,
+    href: '/href6' as RelativePath,
     children: 'Link 6',
   },
 ]
