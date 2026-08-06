@@ -32,6 +32,6 @@ export const Default: NavCardStory = {
 export const LongString = {
   args: {
     href: '#',
-    children: 'Sphinx of Black Quartz, Judge My Vow'
+    children: 'Neque porro quisquam est quis dolorem ipsum quia dolor sit amet'
   }
 }

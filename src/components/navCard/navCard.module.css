@@ -11,6 +11,8 @@
   text-align: center;
   align-content: center;
   cursor: pointer;
+  box-sizing: border-box;
+  padding: 0 12px;
 }
 
 .root:hover {
