@@ -13,8 +13,8 @@ const meta: Meta<typeof NavMosaic> = {
       <BrowserRouter>
         <Story />
       </BrowserRouter>
-    )
-  ]
+    ),
+  ],
 }
 
 export default meta

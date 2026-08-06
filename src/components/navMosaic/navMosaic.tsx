@@ -1,7 +1,7 @@
 import { type ReactElement } from 'react'
 import { type RelativePath } from '../../types/navigation'
 import { THEME_COLORS } from '../../utils/styles/colorSchemes'
-import { ColorProvider } from '../../contexts/colorContext';
+import { ColorProvider } from '../../contexts/colorContext'
 import NavCard from '../navCard/navCard'
 import styles from './navMosaic.module.css'
 
