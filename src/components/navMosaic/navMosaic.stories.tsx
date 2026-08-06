@@ -30,5 +30,5 @@ const manyCards = [...cards, ...cards]
 export const ManyCards: NavMosaicStory = {
   args: {
     cards: manyCards,
-  }
+  },
 }
