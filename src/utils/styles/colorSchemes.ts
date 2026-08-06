@@ -98,8 +98,8 @@ export const RED: ColorScheme = {
 
 export const THEME_COLORS: ColorScheme[] = [
   YELLOW,
-  PINK,
   AQUA,
+  PINK,
   GREEN,
   BLUE,
   RED,
