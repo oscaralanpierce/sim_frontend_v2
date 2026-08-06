@@ -16,8 +16,8 @@ const meta: Meta<typeof NavCard> = {
           <Story />
         </ColorContext>
       </BrowserRouter>
-    )
-  ]
+    ),
+  ],
 }
 
 export default meta
@@ -25,13 +25,13 @@ export default meta
 export const Default: NavCardStory = {
   args: {
     href: '#',
-    children: 'Inventory Ledger'
-  }
+    children: 'Inventory Ledger',
+  },
 }
 
 export const LongString = {
   args: {
     href: '#',
-    children: 'Neque porro quisquam est quis dolorem ipsum quia dolor sit amet'
-  }
+    children: 'Neque porro quisquam est quis dolorem ipsum quia dolor sit amet',
+  },
 }

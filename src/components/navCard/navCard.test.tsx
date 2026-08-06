@@ -3,11 +3,10 @@ import { renderWithRouter } from '../../support/testUtils'
 import { ColorContext } from '../../contexts/colorContext'
 import { RED } from '../../utils/styles/colorSchemes'
 import NavCard from './navCard'
-import { ReactElement } from 'react';
+import { ReactElement } from 'react'
 
-const render = (ui: ReactElement) => (
+const render = (ui: ReactElement) =>
   renderWithRouter(<ColorContext value={RED}>{ui}</ColorContext>)
-)
 
 describe('NavCard', () => {
   test('displays the link text', () => {

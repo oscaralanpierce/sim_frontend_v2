@@ -2,7 +2,7 @@ import { type ReactElement, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { useColorScheme } from '../../hooks/contexts'
 import { GLOBAL_CSS_VALUES } from '../../utils/styles/globalCss'
-import { RelativePath } from '../../types/navigation';
+import { RelativePath } from '../../types/navigation'
 import styles from './navCard.module.css'
 
 interface NavCardProps {
@@ -11,11 +11,8 @@ interface NavCardProps {
 }
 
 const NavCard = ({ href, children }: NavCardProps) => {
-  const {
-    schemeColorDarkest,
-    hoverColorDark,
-    textColorPrimary,
-  } = useColorScheme()
+  const { schemeColorDarkest, hoverColorDark, textColorPrimary } =
+    useColorScheme()
 
   const { bodyFontFamily } = GLOBAL_CSS_VALUES
 
