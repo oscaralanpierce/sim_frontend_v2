@@ -1,0 +1,26 @@
+.root {
+  width: calc(320px - 32px);
+  height: 128px;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: 1.5em;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.root:hover {
+  text-decoration: underline;
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+
+@media (min-width: 481px) {
+  .root {
+    width: 320px;
+  }
+}
