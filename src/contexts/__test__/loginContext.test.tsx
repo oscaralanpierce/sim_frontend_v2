@@ -1,4 +1,3 @@
-import { ReactElement } from 'react'
 import { describe, test, expect, afterEach, beforeEach, vi } from 'vitest'
 import { waitFor } from '@testing-library/react'
 import { renderWithRouter as render } from '../../support/testUtils'

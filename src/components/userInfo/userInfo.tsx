@@ -1,7 +1,6 @@
 import {
-  CSSProperties,
   useState,
-  type MouseEventHandler,
+  type CSSProperties,
   type KeyboardEventHandler,
 } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

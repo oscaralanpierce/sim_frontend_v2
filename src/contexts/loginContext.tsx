@@ -1,9 +1,9 @@
-import { createContext, useCallback, useEffect } from 'react'
+import { createContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { type User } from 'firebase/auth'
 import { signOutWithGoogle } from '../firebase'
 import { useAuthUser } from '../hooks/useAuthUser'
-import { ProviderProps } from '../types/contexts'
+import { type ProviderProps } from '../types/contexts'
 import paths from '../routing/paths'
 
 export interface LoginContextType {
