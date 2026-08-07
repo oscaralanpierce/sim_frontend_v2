@@ -1,15 +1,28 @@
 import { describe, test, expect, vi, beforeEach } from 'vitest'
-import { act } from '@testing-library/react'
+import { act, waitFor } from '@testing-library/react'
 import { type User } from 'firebase/auth'
-import { render } from '../../support/testUtils'
+import { renderWithRouter as render } from '../../support/testUtils'
 import { useAuthUser } from '../../hooks/useAuthUser'
 import { signInWithGoogle } from '../../firebase'
 import HomePage from './homePage'
+import paths from '../../routing/paths';
+
+const { mockNavigate } = vi.hoisted(() => ({
+  mockNavigate: vi.fn()
+}))
 
 vi.mock('../../hooks/useAuthUser')
 vi.mock('../../firebase', () => ({
   signInWithGoogle: vi.fn(),
 }))
+
+vi.mock('react-router-dom', async () => {
+  const actual = await vi.importActual('react-router-dom')
+  return {
+    ...actual,
+    useNavigate: () => mockNavigate
+  }
+})
 
 const mockedUseAuthUser = vi.mocked(useAuthUser)
 const mockedSignInWithGoogle = vi.mocked(signInWithGoogle)
@@ -22,7 +35,7 @@ describe('HomePage', () => {
 
   describe('when unauthenticated', () => {
     beforeEach(() => {
-      mockedUseAuthUser.mockReturnValue({ user: null, isLoading: false })
+      mockedUseAuthUser.mockReturnValue({ user: null, authLoading: false })
     })
 
     test('displays properly', () => {
@@ -76,28 +89,17 @@ describe('HomePage', () => {
   })
 
   describe('when already authenticated', () => {
-    test('logs the user’s display name without any interaction', () => {
-      const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
+    test("navigates to the dashboard", async () => {
       mockedUseAuthUser.mockReturnValue({
         user: { displayName: 'Dovahkiin' } as User,
-        isLoading: false,
+        authLoading: false,
       })
 
       render(<HomePage />)
 
-      expect(logSpy).toHaveBeenCalledWith('Dovahkiin')
-    })
-
-    test('falls back to a generic message when there is no display name', () => {
-      const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
-      mockedUseAuthUser.mockReturnValue({
-        user: { displayName: null } as User,
-        isLoading: false,
+      await waitFor(() => {
+        expect(mockNavigate).toHaveBeenCalledExactlyOnceWith(paths.dashboard)
       })
-
-      render(<HomePage />)
-
-      expect(logSpy).toHaveBeenCalledWith('User Logged In')
     })
   })
 })

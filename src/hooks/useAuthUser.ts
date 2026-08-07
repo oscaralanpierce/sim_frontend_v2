@@ -4,18 +4,18 @@ import { auth } from '../firebase'
 
 interface AuthUserState {
   user: User | null
-  isLoading: boolean
+  authLoading: boolean
 }
 
 export const useAuthUser = (): AuthUserState => {
   const [state, setState] = useState<AuthUserState>({
     user: auth.currentUser,
-    isLoading: true,
+    authLoading: true,
   })
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setState({ user, isLoading: false })
+      setState({ user, authLoading: false })
     })
 
     return unsubscribe

@@ -1,18 +1,15 @@
 import { useEffect, useState, type MouseEventHandler } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { signInWithGoogle } from '../../firebase'
 import { useAuthUser } from '../../hooks/useAuthUser'
 import GoogleSignInButton from '../../components/googleSignInButton/googleSignInButton'
 import styles from './homePage.module.css'
+import paths from '../../routing/paths'
 
 const HomePage = () => {
+  const navigate = useNavigate()
   const { user } = useAuthUser()
   const [isSigningIn, setIsSigningIn] = useState(false)
-
-  useEffect(() => {
-    if (user) {
-      console.log(user.displayName || 'User Logged In')
-    }
-  }, [user])
 
   const handleSignIn: MouseEventHandler = () => {
     setIsSigningIn(true)
@@ -22,6 +19,12 @@ const HomePage = () => {
       })
       .finally(() => setIsSigningIn(false))
   }
+
+  useEffect(() => {
+    if (user) {
+      navigate(paths.dashboard)
+    }
+  }, [user])
 
   return (
     <div className={styles.root}>
