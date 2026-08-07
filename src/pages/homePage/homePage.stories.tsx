@@ -12,8 +12,8 @@ const meta: Meta<typeof HomePage> = {
       <BrowserRouter>
         <Story />
       </BrowserRouter>
-    )
-  ]
+    ),
+  ],
 }
 
 export default meta
