@@ -25,7 +25,7 @@ describe('useAuthUser', () => {
   test('starts in a loading state with no user', () => {
     const { result } = renderHook(() => useAuthUser())
 
-    expect(result.current).toEqual({ user: null, isLoading: true })
+    expect(result.current).toEqual({ user: null, authLoading: true })
   })
 
   test('reflects the signed-in user once Firebase reports auth state', async () => {
@@ -39,7 +39,7 @@ describe('useAuthUser', () => {
     const { result } = renderHook(() => useAuthUser())
 
     await waitFor(() => {
-      expect(result.current).toEqual({ user: fakeUser, isLoading: false })
+      expect(result.current).toEqual({ user: fakeUser, authLoading: false })
     })
   })
 
@@ -52,7 +52,7 @@ describe('useAuthUser', () => {
     const { result } = renderHook(() => useAuthUser())
 
     await waitFor(() => {
-      expect(result.current).toEqual({ user: null, isLoading: false })
+      expect(result.current).toEqual({ user: null, authLoading: false })
     })
   })
 
