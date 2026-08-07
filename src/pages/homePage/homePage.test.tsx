@@ -5,10 +5,10 @@ import { renderWithRouter as render } from '../../support/testUtils'
 import { useAuthUser } from '../../hooks/useAuthUser'
 import { signInWithGoogle } from '../../firebase'
 import HomePage from './homePage'
-import paths from '../../routing/paths';
+import paths from '../../routing/paths'
 
 const { mockNavigate } = vi.hoisted(() => ({
-  mockNavigate: vi.fn()
+  mockNavigate: vi.fn(),
 }))
 
 vi.mock('../../hooks/useAuthUser')
@@ -20,7 +20,7 @@ vi.mock('react-router-dom', async () => {
   const actual = await vi.importActual('react-router-dom')
   return {
     ...actual,
-    useNavigate: () => mockNavigate
+    useNavigate: () => mockNavigate,
   }
 })
 
@@ -89,7 +89,7 @@ describe('HomePage', () => {
   })
 
   describe('when already authenticated', () => {
-    test("navigates to the dashboard", async () => {
+    test('navigates to the dashboard', async () => {
       mockedUseAuthUser.mockReturnValue({
         user: { displayName: 'Dovahkiin' } as User,
         authLoading: false,

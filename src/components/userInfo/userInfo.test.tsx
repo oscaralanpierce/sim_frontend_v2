@@ -4,7 +4,12 @@ import { act, fireEvent, waitFor } from '@testing-library/react'
 import { type User } from 'firebase/auth'
 import { renderWithRouter } from '../../support/testUtils'
 import { LoginContext } from '../../contexts/loginContext'
-import { TEST_USER, TEST_USER_DISPLAY_NAME, TEST_USER_EMAIL, TEST_USER_PHOTO_URL } from '../../support/data/login'
+import {
+  TEST_USER,
+  TEST_USER_DISPLAY_NAME,
+  TEST_USER_EMAIL,
+  TEST_USER_PHOTO_URL,
+} from '../../support/data/login'
 import anonymousAvatar from './anonymousAvatar.jpg'
 import UserInfo from './userInfo'
 
@@ -24,9 +29,7 @@ vi.mock('react-router-dom', async () => {
 
 const render = (user: User | null, ui: ReactElement) =>
   renderWithRouter(
-    <LoginContext value={{ authLoading: false, user }}>
-      {ui}
-    </LoginContext>
+    <LoginContext value={{ authLoading: false, user }}>{ui}</LoginContext>
   )
 
 describe('UserInfo', () => {
@@ -34,20 +37,14 @@ describe('UserInfo', () => {
 
   describe('when there is no signed-in user', () => {
     test('displays an anonymous avatar', () => {
-      const wrapper = render(
-        null,
-        <UserInfo />,
-      )
+      const wrapper = render(null, <UserInfo />)
 
       const img = wrapper.getByAltText('Anonymous user avatar')
       expect(img.getAttribute('src')).toEqual(anonymousAvatar)
     })
 
     test('matches snapshot', () => {
-      const wrapper = render(
-        null,
-        <UserInfo />,
-      )
+      const wrapper = render(null, <UserInfo />)
 
       expect(wrapper).toMatchSnapshot()
     })
@@ -56,10 +53,7 @@ describe('UserInfo', () => {
   describe('when there is a signed-in user', () => {
     describe('when the user has a photo URL', () => {
       test('displays the profile data and photo', () => {
-        const wrapper = render(
-          TEST_USER,
-          <UserInfo />,
-        )
+        const wrapper = render(TEST_USER, <UserInfo />)
 
         expect(wrapper.getByText(TEST_USER_DISPLAY_NAME)).toBeTruthy()
         expect(wrapper.getByText(TEST_USER_EMAIL)).toBeTruthy()
@@ -70,10 +64,7 @@ describe('UserInfo', () => {
       })
 
       test('displays the sign out menu when clicked', async () => {
-        const wrapper = render(
-          TEST_USER,
-          <UserInfo />,
-        )
+        const wrapper = render(TEST_USER, <UserInfo />)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
@@ -88,10 +79,7 @@ describe('UserInfo', () => {
       })
 
       test('signs out the user when the link is clicked', async () => {
-        const wrapper = render(
-          TEST_USER,
-          <UserInfo />,
-        )
+        const wrapper = render(TEST_USER, <UserInfo />)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
@@ -108,10 +96,7 @@ describe('UserInfo', () => {
       })
 
       test('matches snapshot', () => {
-        const wrapper = render(
-          TEST_USER,
-          <UserInfo />,
-        )
+        const wrapper = render(TEST_USER, <UserInfo />)
 
         expect(wrapper).toMatchSnapshot()
       })
@@ -121,10 +106,7 @@ describe('UserInfo', () => {
       const user = { ...TEST_USER, photoURL: null }
 
       test('displays profile data and anonymous avatar', () => {
-        const wrapper = render(
-          user,
-          <UserInfo />,
-        )
+        const wrapper = render(user, <UserInfo />)
 
         expect(wrapper.getByText(TEST_USER_DISPLAY_NAME)).toBeTruthy()
         expect(wrapper.getByText(TEST_USER_EMAIL)).toBeTruthy()
@@ -133,11 +115,8 @@ describe('UserInfo', () => {
         expect(img.getAttribute('src')).toEqual(anonymousAvatar)
       })
 
-            test('displays the sign out menu when clicked', async () => {
-        const wrapper = render(
-          user,
-          <UserInfo />,
-        )
+      test('displays the sign out menu when clicked', async () => {
+        const wrapper = render(user, <UserInfo />)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
@@ -152,10 +131,7 @@ describe('UserInfo', () => {
       })
 
       test('signs out the user when the link is clicked', async () => {
-        const wrapper = render(
-          user,
-          <UserInfo />,
-        )
+        const wrapper = render(user, <UserInfo />)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
@@ -172,10 +148,7 @@ describe('UserInfo', () => {
       })
 
       test('matches snapshot', () => {
-        const wrapper = render(
-          user,
-          <UserInfo />,
-        )
+        const wrapper = render(user, <UserInfo />)
 
         expect(wrapper).toMatchSnapshot()
       })

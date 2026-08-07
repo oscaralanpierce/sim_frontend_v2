@@ -42,7 +42,7 @@ const UserInfo = () => {
           className={styles.button}
           role="button"
           aria-label="Toggle Dropdown"
-          aria-controls='userInfoMenu'
+          aria-controls="userInfoMenu"
           aria-expanded={dropdownVisible}
           tabIndex={0}
           onClick={toggleDropdown}
@@ -65,8 +65,8 @@ const UserInfo = () => {
       </div>
       <menu
         className={dropdownVisible ? styles.dropdownVisible : styles.dropdown}
-        id='userInfoMenu'
-        data-testid='userInfoMenu'
+        id="userInfoMenu"
+        data-testid="userInfoMenu"
       >
         <div
           role="button"
