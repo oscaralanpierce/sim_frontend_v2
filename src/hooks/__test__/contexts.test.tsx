@@ -29,7 +29,6 @@ describe('useLogin', () => {
     const contextValue = {
       user: null,
       authLoading: true,
-      requireLogin: () => {}, // noop
     }
 
     const { result } = renderHook(() => useLogin(), {
