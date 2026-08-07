@@ -31,8 +31,13 @@ in Storybook.
 
 One important accessibility consideration is users who have enabled a reduced motion setting on their device.
 Any elements featuring animations or transitions should provide accommodations for users with this setting
-enabled. Unfortunately, without enabling the setting on your own device, it is difficult to mock reduced motion
-behavior.
+enabled. Storybook offers excellent functionality to easily toggle reduced-motion behavior on and off in the
+browser. However, this is easy to forget, so we prefer to have separate stories for reduced-motion states.
+
+Unfortunately, developing separate stories for reduced motion is less than straightforward. It involves adding
+a global attribute and separate styles for that global attribute matching the reduced-motion media query. This
+leaves room for developer error causing drift. For this reason, it is recommended to test components using
+Storybook's built-in feature as well, since this will trigger the actual media query being used.
 
 When developing components with reduced motion, this behavior can be emulated by setting special styles in your
 CSS module for when the global `data-reduced-motion` attribute is set to `true`. These styles should exactly mirror
