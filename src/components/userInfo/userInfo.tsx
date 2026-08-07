@@ -1,8 +1,4 @@
-import {
-  useState,
-  type CSSProperties,
-  type KeyboardEventHandler,
-} from 'react'
+import { useState, type CSSProperties, type KeyboardEventHandler } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { useLogin } from '../../hooks/contexts'
