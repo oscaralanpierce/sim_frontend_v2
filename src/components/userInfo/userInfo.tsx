@@ -70,9 +70,9 @@ const UserInfo = () => {
       >
         <div
           role="button"
-          onClick={signOutWithGoogle}
+          onClick={() => user !== null && signOutWithGoogle()}
           onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
+            if (user !== null && (e.key === 'Enter' || e.key === ' ')) {
               e.preventDefault()
               signOutWithGoogle()
             }
