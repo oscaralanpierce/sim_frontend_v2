@@ -29,7 +29,9 @@ vi.mock('react-router-dom', async () => {
 
 const render = (user: User | null) =>
   renderWithRouter(
-    <LoginContext value={{ authLoading: false, user }}><UserInfo /></LoginContext>
+    <LoginContext value={{ authLoading: false, user }}>
+      <UserInfo />
+    </LoginContext>
   )
 
 describe('UserInfo', () => {
