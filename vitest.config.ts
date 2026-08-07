@@ -21,7 +21,12 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'json-summary', 'html'],
       include: ['src/**'],
-      exclude: ['**/types/**', 'src/main.tsx', 'src/stories/**', 'src/support/**'],
+      exclude: [
+        '**/types/**',
+        'src/main.tsx',
+        'src/stories/**',
+        'src/support/**',
+      ],
       thresholds: {
         lines: 95,
         functions: 95,
