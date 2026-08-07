@@ -23,7 +23,7 @@ vi.mock('react-router-dom', async () => {
   const actual = await vi.importActual('react-router-dom')
   return {
     ...actual,
-    useNavigate: () => mockNavigate
+    useNavigate: () => mockNavigate,
   }
 })
 
@@ -136,9 +136,13 @@ describe('LoginProvider', () => {
 
       expect(wrapper.getByText('Auth Loading: true')).toBeTruthy()
       expect(wrapper.getByText(`UID: ${TEST_USER_UID}`)).toBeTruthy()
-      expect(wrapper.getByText(`Display Name: ${TEST_USER_DISPLAY_NAME}`)).toBeTruthy()
+      expect(
+        wrapper.getByText(`Display Name: ${TEST_USER_DISPLAY_NAME}`)
+      ).toBeTruthy()
       expect(wrapper.getByText(`Email: ${TEST_USER_EMAIL}`)).toBeTruthy()
-      expect(wrapper.getByText(`Photo URL: ${TEST_USER_PHOTO_URL}`)).toBeTruthy()
+      expect(
+        wrapper.getByText(`Photo URL: ${TEST_USER_PHOTO_URL}`)
+      ).toBeTruthy()
 
       await waitFor(() => {
         expect(wrapper.queryByText('Auth Loading: false')).toBeFalsy()
@@ -176,9 +180,13 @@ describe('LoginProvider', () => {
 
       expect(wrapper.getByText('Auth Loading: false')).toBeTruthy()
       expect(wrapper.getByText(`UID: ${TEST_USER_UID}`)).toBeTruthy()
-      expect(wrapper.getByText(`Display Name: ${TEST_USER_DISPLAY_NAME}`)).toBeTruthy()
+      expect(
+        wrapper.getByText(`Display Name: ${TEST_USER_DISPLAY_NAME}`)
+      ).toBeTruthy()
       expect(wrapper.getByText(`Email: ${TEST_USER_EMAIL}`)).toBeTruthy()
-      expect(wrapper.getByText(`Photo URL: ${TEST_USER_PHOTO_URL}`)).toBeTruthy()
+      expect(
+        wrapper.getByText(`Photo URL: ${TEST_USER_PHOTO_URL}`)
+      ).toBeTruthy()
     })
 
     test('does not sign the user out', async () => {
