@@ -36,8 +36,6 @@ const render = (user: User | null) =>
  */
 
 describe('DashboardHeader', () => {
-  afterEach(() => vi.clearAllMocks())
-
   describe('when there is no logged-in user', () => {
     test('displays elements', () => {
       const wrapper = render(null)
