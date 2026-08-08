@@ -9,17 +9,8 @@ import {
   TEST_USER_PHOTO_URL,
 } from '../../support/data/login'
 import { LoginContext } from '../../contexts/loginContext'
+import paths from '../../routing/paths'
 import DashboardHeader from './dashboardHeader'
-
-const { mockNavigate } = vi.hoisted(() => ({ mockNavigate: vi.fn() }))
-
-vi.mock('react-router-dom', async () => {
-  const actual = await vi.importActual('react-router-dom')
-  return {
-    ...actual,
-    useNavigate: () => mockNavigate,
-  }
-})
 
 const render = (user: User | null) =>
   renderWithRouter(
@@ -58,7 +49,9 @@ describe('DashboardHeader', () => {
       expect(header.getAttribute('class')).not.toMatch(/visible/i)
       expect(showTab).toBeTruthy()
       expect(textLink).toBeTruthy()
+      expect(textLink.getAttribute('href')).toEqual(paths.dashboard)
       expect(iconLink).toBeTruthy()
+      expect(iconLink.getAttribute('href')).toEqual(paths.dashboard)
       expect(userInfo).toBeTruthy()
     })
 
@@ -208,7 +201,9 @@ describe('DashboardHeader', () => {
       expect(header.getAttribute('class')).not.toMatch(/visible/i)
       expect(showTab).toBeTruthy()
       expect(textLink).toBeTruthy()
+      expect(textLink.getAttribute('href')).toEqual(paths.dashboard)
       expect(iconLink).toBeTruthy()
+      expect(iconLink.getAttribute('href')).toEqual(paths.dashboard)
       expect(userName).toBeTruthy()
       expect(userEmail).toBeTruthy()
       expect(profileImg.getAttribute('src')).toEqual(TEST_USER_PHOTO_URL)
