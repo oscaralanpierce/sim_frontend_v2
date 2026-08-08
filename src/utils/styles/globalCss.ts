@@ -3,6 +3,9 @@ export const GLOBAL_CSS_VALUES = {
   pageBackgroundMinHeight: '100vh',
   pageBackgroundMinWidth: '100vw',
   pageTextColor: '#000',
+  headerBackgroundColor: '#000',
+  headerTextColor: '#fff',
+  headerTextHoverColor: '#e0e0e0',
   titleFontFamily: "'Cinzel Decorative', Arial, Helvetica, sans-serif",
   bodyFontFamily: "'Quattrocento Sans', Arial, Helvetica, sans-serif",
 }
