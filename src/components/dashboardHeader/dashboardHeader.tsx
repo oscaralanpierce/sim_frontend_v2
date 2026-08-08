@@ -1,7 +1,16 @@
-import { useState, type CSSProperties, type MouseEventHandler, type KeyboardEventHandler } from 'react'
+import {
+  useState,
+  type CSSProperties,
+  type MouseEventHandler,
+  type KeyboardEventHandler,
+} from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faChevronUp, faHouse } from '@fortawesome/free-solid-svg-icons'
+import {
+  faChevronDown,
+  faChevronUp,
+  faHouse,
+} from '@fortawesome/free-solid-svg-icons'
 import { GLOBAL_CSS_VALUES } from '../../utils/styles/globalCss'
 import paths from '../../routing/paths'
 import UserInfo from '../userInfo/userInfo'
@@ -40,13 +49,21 @@ const DashboardHeader = () => {
   return (
     <>
       <header className={styles.root} style={styleVars}>
-        <nav id="pageHeader" className={headerVisible ? styles.headerVisible : styles.header} data-testid="pageHeader">
+        <nav
+          id="pageHeader"
+          className={headerVisible ? styles.headerVisible : styles.header}
+          data-testid="pageHeader"
+        >
           <div className={styles.container}>
             <h1 className={styles.h1}>
               <Link className={styles.headerLink} to={paths.dashboard}>
                 Skyrim Inventory Management
               </Link>
-              <Link className={styles.headerLinkMobile} to={paths.dashboard} aria-label="Return to Dashboard">
+              <Link
+                className={styles.headerLinkMobile}
+                to={paths.dashboard}
+                aria-label="Return to Dashboard"
+              >
                 <FontAwesomeIcon className={styles.house} icon={faHouse} />
               </Link>
             </h1>
@@ -59,7 +76,7 @@ const DashboardHeader = () => {
       <span
         className={styles.pullTab}
         role="button"
-        aria-label={headerVisible ? "Hide Header" : "Show Header"}
+        aria-label={headerVisible ? 'Hide Header' : 'Show Header'}
         tabIndex={0}
         onClick={toggleHeaderOnClick}
         onKeyDown={toggleHeaderOnKeyDown}

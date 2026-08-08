@@ -77,7 +77,9 @@ describe('DashboardHeader', () => {
         expect(header.getAttribute('class')).toMatch(/visible/i)
         expect(pullTab.getAttribute('aria-label')).toEqual('Hide Header')
         expect(pullTab.getElementsByClassName('fa-chevron-up')).toHaveLength(1)
-        expect(pullTab.getElementsByClassName('fa-chevron-down')).toHaveLength(0)
+        expect(pullTab.getElementsByClassName('fa-chevron-down')).toHaveLength(
+          0
+        )
       })
 
       await act(() => fireEvent.click(pullTab))
@@ -105,7 +107,9 @@ describe('DashboardHeader', () => {
         expect(header.getAttribute('class')).toMatch(/visible/i)
         expect(pullTab.getAttribute('aria-label')).toEqual('Hide Header')
         expect(pullTab.getElementsByClassName('fa-chevron-up')).toHaveLength(1)
-        expect(pullTab.getElementsByClassName('fa-chevron-down')).toHaveLength(0)
+        expect(pullTab.getElementsByClassName('fa-chevron-down')).toHaveLength(
+          0
+        )
       })
 
       await act(() => fireEvent.keyDown(pullTab, { key: 'Enter' }))
@@ -133,7 +137,9 @@ describe('DashboardHeader', () => {
         expect(header.getAttribute('class')).toMatch(/visible/i)
         expect(pullTab.getAttribute('aria-label')).toEqual('Hide Header')
         expect(pullTab.getElementsByClassName('fa-chevron-up')).toHaveLength(1)
-        expect(pullTab.getElementsByClassName('fa-chevron-down')).toHaveLength(0)
+        expect(pullTab.getElementsByClassName('fa-chevron-down')).toHaveLength(
+          0
+        )
       })
 
       await act(() => fireEvent.keyDown(pullTab, { key: ' ' }))
@@ -160,7 +166,9 @@ describe('DashboardHeader', () => {
       await waitFor(() => {
         expect(header.getAttribute('class')).not.toMatch(/visible/i)
         expect(pullTab.getAttribute('aria-label')).toEqual('Show Header')
-        expect(pullTab.getElementsByClassName('fa-chevron-down')).toHaveLength(1)
+        expect(pullTab.getElementsByClassName('fa-chevron-down')).toHaveLength(
+          1
+        )
         expect(pullTab.getElementsByClassName('fa-chevron-up')).toHaveLength(0)
       })
     })
