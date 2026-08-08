@@ -24,7 +24,9 @@ const render = (user: User | null) =>
  * tablet sizes, the text "Skyrim Inventory Management" is hidden and replaced by
  * a home icon. We should make sure that the home icon is visible, that the text
  * is hidden, and that the icon is the same size as and aligned with the hamburger
- * icon in the UserInfo child component that appears on the right.
+ * icon in the UserInfo child component that appears on the right. At larger widths,
+ * the icons should be hidden and the user should see the full title and UserInfo
+ * fields instead.
  *
  * We also can't test the accordion-type behavior on the header when the pull-tab
  * is clicked or interacted with the keyboard since this is all done in CSS. We
