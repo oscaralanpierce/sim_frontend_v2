@@ -1,21 +1,15 @@
 .root {
   display: inline-block;
-}
-
-.main {
-  display: contents;
+  height: fit-content;
+  --content-line-height: 1.2rem;
 }
 
 .button {
-  height: 100%;
-  display: flex;
   cursor: pointer;
-  flex-direction: column;
-  justify-content: space-around;
 }
 
 .hamburger {
-  height: 1.5rem;
+  font-size: 2rem;
 }
 
 .info,
@@ -61,29 +55,34 @@
 
 @media (min-width: 601px) {
   .button {
-    flex-direction: row;
-    justify-content: auto;
+    font-family: var(--font-family);
+    height: calc(2 * var(--content-line-height) + 16px);
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-auto-rows: 100%;
   }
 
   .info {
-    max-height: 100%;
-    padding: 8px 12px 8px 0;
-    text-align: end;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: var(--font-family);
+    display: grid;
+    align-items: center;
+    grid-auto-flow: row;
+    margin: 0;
   }
 
   .name,
   .email {
     margin: 0;
+    text-align: end;
+    margin-right: 8px;
+    line-height: var(--content-line-height);
   }
 
   .avatar {
-    display: inline;
+    display: unset;
+    height: 100%;
+    width: auto;
     margin: 8px auto;
-    height: calc(100% - 16px);
     border-radius: 50%;
   }
 
