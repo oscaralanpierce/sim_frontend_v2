@@ -48,3 +48,13 @@ export const NotLoadingWithUser: DashboardHeaderStory = {
     user: { ...TEST_USER, photoURL: testImage },
   },
 }
+
+export const ReducedMotion: DashboardHeaderStory = {
+  globals: {
+    reducedMotion: 'reduce',
+  },
+  parameters: {
+    authLoading: false,
+    user: { ...TEST_USER, photoURL: testImage },
+  }
+}
