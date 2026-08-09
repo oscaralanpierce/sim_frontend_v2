@@ -56,5 +56,5 @@ export const ReducedMotion: DashboardHeaderStory = {
   parameters: {
     authLoading: false,
     user: { ...TEST_USER, photoURL: testImage },
-  }
+  },
 }
