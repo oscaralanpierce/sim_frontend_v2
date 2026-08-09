@@ -32,7 +32,7 @@ const UserInfo = () => {
 
   return (
     <span className={styles.root} style={styleVars}>
-      <div className={styles.main}>
+      <div>
         <div
           className={styles.button}
           role="button"

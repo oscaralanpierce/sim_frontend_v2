@@ -1,4 +1,3 @@
-import { ReactElement } from 'react'
 import { describe, test, expect, vi } from 'vitest'
 import { act, fireEvent, waitFor } from '@testing-library/react'
 import { type User } from 'firebase/auth'
