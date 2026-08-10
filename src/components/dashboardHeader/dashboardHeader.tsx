@@ -41,9 +41,10 @@ const DashboardHeader = () => {
   }
 
   const toggleHeaderOnKeyDown: KeyboardEventHandler = (e) => {
-    e.preventDefault()
-
-    if (e.key === 'Enter' || e.key === ' ') setHeaderVisible(!headerVisible)
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      setHeaderVisible(!headerVisible)
+    }
   }
 
   return (
