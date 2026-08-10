@@ -1,6 +1,8 @@
 .root {
   margin: 0;
   width: 100%;
+  position: sticky;
+  z-index: 1;
 }
 
 .header {
@@ -15,7 +17,8 @@
 
 .headerVisible {
   composes: header;
-  height: 61px;
+  height: 80px;
+  z-index: 1;
 }
 
 .container {
@@ -54,14 +57,25 @@
   color: var(--hover-color);
 }
 
-.pullTab {
+.pullTabUp {
+  position: sticky;
+  top: 0;
+  left: 12px;
+  width: 20px;
   display: inline-block;
   background-color: rgb(0 0 0 / 75%);
   padding: 4px 12px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  margin-left: 12px;
   cursor: pointer;
+  transition-property: top;
+  transition-duration: 1s;
+  z-index: 1000;
+}
+
+.pullTabDown {
+  composes: pullTabUp;
+  top: 80px;
 }
 
 .chevron {
@@ -73,10 +87,6 @@
 }
 
 @media (min-width: 601px) {
-  .headerVisible {
-    height: 80px;
-  }
-
   .headerLink {
     display: inline-block;
     font-family: var(--title-font-family);
@@ -96,12 +106,14 @@
 }
 
 @media (prefers-reduced-motion) {
+  .pullTabUp,
   .header,
   .headerVisible {
     transition: none;
   }
 }
 
+:global([data-reduced-motion='true']) .pullTabUp,
 :global([data-reduced-motion='true']) .header,
 :global([data-reduced-motion='true']) .headerVisible {
   transition: none;

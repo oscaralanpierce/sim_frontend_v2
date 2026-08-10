@@ -2,7 +2,6 @@
   min-height: var(--background-height);
   min-width: var(--background-width);
   background-color: var(--background-color);
-  object-fit: cover;
   color: var(--text-color);
 }
 
@@ -12,7 +11,7 @@
 }
 
 .content {
-  margin: 1.25rem 1.25rem 0;
+  margin: 0 1.25rem 0.25rem 1.25rem;
 }
 
 .title {
@@ -31,30 +30,57 @@
 
 @media (min-width: 601px) {
   .content {
-    margin: 1.25rem 2rem 1rem;
+    margin: 1.25rem 2rem 0.25rem;
   }
 }
 
 @media (min-width: 769px) {
   .content {
-    margin: 1.25rem 3rem 2rem;
+    margin: 1.25rem 3rem 0.25rem;
   }
 }
 
 @media (min-width: 1025px) {
   .content {
-    margin: 1.25rem 4.5rem 3.5rem;
+    margin: 1.25rem 4.5rem 0.25rem;
   }
 }
 
 @media (min-width: 1201px) {
   .content {
-    margin: 1.25rem 6rem 5rem;
+    margin: 1.25rem 6rem 0.25rem;
   }
 }
 
 @media (min-width: 1405px) {
+  .root {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main {
+    padding-bottom: calc(0.25rem + 32px);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
   .content {
-    margin: 3rem 10rem 9rem;
+    margin: 0 10rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    margin-top: 3rem;
+  }
+
+  .container {
+    padding-bottom: 48px; /* 2x height of pull tab to offset alignment issues */
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 }
