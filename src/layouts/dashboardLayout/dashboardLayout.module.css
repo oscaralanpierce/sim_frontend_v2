@@ -1,0 +1,60 @@
+.root {
+  min-height: var(--background-height);
+  min-width: var(--background-width);
+  background-color: var(--background-color);
+  object-fit: cover;
+  color: var(--text-color);
+}
+
+.main {
+  font-family: var(--body-font-family);
+  padding-bottom: 1rem;
+}
+
+.content {
+  margin: 1.25rem 1.25rem 0;
+}
+
+.title {
+  font-family: var(--title-font-family);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.hr {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 601px) {
+  .content {
+    margin: 1.25rem 2rem 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .content {
+    margin: 1.25rem 3rem 2rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .content {
+    margin: 1.25rem 4.5rem 3.5rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .content {
+    margin: 1.25rem 6rem 5rem;
+  }
+}
+
+@media (min-width: 1405px) {
+  .content {
+    margin: 3rem 10rem 9rem;
+  }
+}
