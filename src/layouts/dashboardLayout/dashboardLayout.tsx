@@ -1,6 +1,5 @@
 import { type CSSProperties, type ReactElement } from 'react'
 import { GLOBAL_CSS_VALUES } from '../../utils/styles/globalCss'
-import { LoginProvider } from '../../contexts/loginContext'
 import DashboardHeader from '../../components/dashboardHeader/dashboardHeader'
 import styles from './dashboardLayout.module.css'
 
