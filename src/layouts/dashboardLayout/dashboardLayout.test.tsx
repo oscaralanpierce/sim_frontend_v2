@@ -29,7 +29,9 @@ describe('DashboardLayout', () => {
       const wrapper = render(title)
 
       expect(wrapper.getByText(title)).toBeTruthy()
-      expect(wrapper.getByText('Non eram nescius, Brute,', { exact: false })).toBeTruthy()
+      expect(
+        wrapper.getByText('Non eram nescius, Brute,', { exact: false })
+      ).toBeTruthy()
     })
 
     test('matches snapshot', () => {
@@ -52,7 +54,9 @@ describe('DashboardLayout', () => {
     test('displays the content', () => {
       const wrapper = render(title)
 
-      expect(wrapper.getByText('Non eram nescius, Brute,', { exact: false })).toBeTruthy()
+      expect(
+        wrapper.getByText('Non eram nescius, Brute,', { exact: false })
+      ).toBeTruthy()
     })
 
     test('matches snapshot', () => {
