@@ -54,6 +54,7 @@ const DashboardHeader = () => {
           id="pageHeader"
           className={headerVisible ? styles.headerVisible : styles.header}
           data-testid="pageHeader"
+          inert={!headerVisible}
         >
           <div className={styles.container}>
             <h1 className={styles.h1}>

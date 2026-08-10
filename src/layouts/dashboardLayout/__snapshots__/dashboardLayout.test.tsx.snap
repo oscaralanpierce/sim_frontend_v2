@@ -1,0 +1,819 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DashboardLayout > with a title > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_78663b"
+        style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+      >
+        <header
+          class="_root_faea2d"
+          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        >
+          <nav
+            class="_header_faea2d"
+            data-testid="pageHeader"
+            id="pageHeader"
+            inert=""
+          >
+            <div
+              class="_container_faea2d"
+            >
+              <h1
+                class="_h1_faea2d"
+              >
+                <a
+                  class="_headerLink_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  Skyrim Inventory Management
+                </a>
+                <a
+                  aria-label="Return to Dashboard"
+                  class="_headerLinkMobile_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-house _house_faea2d"
+                    data-icon="house"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </h1>
+              <span
+                class="_userInfo_faea2d"
+              >
+                <span
+                  class="_root_658745"
+                  style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
+                >
+                  <div>
+                    <div
+                      aria-controls="userInfoMenu"
+                      aria-expanded="false"
+                      aria-label="Toggle Dropdown"
+                      class="_button_658745"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-bars _hamburger_658745"
+                        data-icon="bars"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span
+                        class="_info_658745"
+                      >
+                        <p
+                          class="_name_658745"
+                        >
+                          Jane Doe
+                        </p>
+                        <p
+                          class="_email_658745"
+                        >
+                          jane.doe@gmail.com
+                        </p>
+                      </span>
+                      <img
+                        alt="User profile image"
+                        class="_avatar_658745"
+                        referrerpolicy="no-referrer"
+                        src="https://example.com/img/janedoe.png"
+                      />
+                    </div>
+                  </div>
+                  <menu
+                    class="_dropdown_658745"
+                    data-testid="userInfoMenu"
+                    id="userInfoMenu"
+                  >
+                    <div
+                      aria-label="Sign Out"
+                      role="button"
+                      tabindex="-1"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-right-from-bracket _signOutIcon_658745"
+                        data-icon="right-from-bracket"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <p
+                        class="_signOutText_658745"
+                      >
+                        Sign Out
+                      </p>
+                    </div>
+                  </menu>
+                </span>
+              </span>
+            </div>
+          </nav>
+        </header>
+        <span
+          aria-controls="pageHeader"
+          aria-expanded="false"
+          aria-label="Show Header"
+          class="_pullTab_faea2d"
+          role="button"
+          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-chevron-down _chevron_faea2d"
+            data-icon="chevron-down"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <main
+          class="_main_78663b"
+        >
+          <section
+            class="_content_78663b"
+          >
+            <h2
+              class="_title_78663b"
+            >
+              My Dashboard
+            </h2>
+            <hr
+              class="_hr_78663b"
+            />
+            <p>
+              Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc disciplet philosophari. Quidam autem non tam id reprehendunt si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et hi quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_78663b"
+      style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+    >
+      <header
+        class="_root_faea2d"
+        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      >
+        <nav
+          class="_header_faea2d"
+          data-testid="pageHeader"
+          id="pageHeader"
+          inert=""
+        >
+          <div
+            class="_container_faea2d"
+          >
+            <h1
+              class="_h1_faea2d"
+            >
+              <a
+                class="_headerLink_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                Skyrim Inventory Management
+              </a>
+              <a
+                aria-label="Return to Dashboard"
+                class="_headerLinkMobile_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-house _house_faea2d"
+                  data-icon="house"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </h1>
+            <span
+              class="_userInfo_faea2d"
+            >
+              <span
+                class="_root_658745"
+                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
+              >
+                <div>
+                  <div
+                    aria-controls="userInfoMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle Dropdown"
+                    class="_button_658745"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-bars _hamburger_658745"
+                      data-icon="bars"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span
+                      class="_info_658745"
+                    >
+                      <p
+                        class="_name_658745"
+                      >
+                        Jane Doe
+                      </p>
+                      <p
+                        class="_email_658745"
+                      >
+                        jane.doe@gmail.com
+                      </p>
+                    </span>
+                    <img
+                      alt="User profile image"
+                      class="_avatar_658745"
+                      referrerpolicy="no-referrer"
+                      src="https://example.com/img/janedoe.png"
+                    />
+                  </div>
+                </div>
+                <menu
+                  class="_dropdown_658745"
+                  data-testid="userInfoMenu"
+                  id="userInfoMenu"
+                >
+                  <div
+                    aria-label="Sign Out"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-right-from-bracket _signOutIcon_658745"
+                      data-icon="right-from-bracket"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <p
+                      class="_signOutText_658745"
+                    >
+                      Sign Out
+                    </p>
+                  </div>
+                </menu>
+              </span>
+            </span>
+          </div>
+        </nav>
+      </header>
+      <span
+        aria-controls="pageHeader"
+        aria-expanded="false"
+        aria-label="Show Header"
+        class="_pullTab_faea2d"
+        role="button"
+        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        tabindex="0"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-chevron-down _chevron_faea2d"
+          data-icon="chevron-down"
+          data-prefix="fas"
+          role="img"
+          viewBox="0 0 448 512"
+        >
+          <path
+            d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+      <main
+        class="_main_78663b"
+      >
+        <section
+          class="_content_78663b"
+        >
+          <h2
+            class="_title_78663b"
+          >
+            My Dashboard
+          </h2>
+          <hr
+            class="_hr_78663b"
+          />
+          <p>
+            Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc disciplet philosophari. Quidam autem non tam id reprehendunt si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et hi quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere.
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`DashboardLayout > without a title > matches snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_root_78663b"
+        style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+      >
+        <header
+          class="_root_faea2d"
+          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        >
+          <nav
+            class="_header_faea2d"
+            data-testid="pageHeader"
+            id="pageHeader"
+            inert=""
+          >
+            <div
+              class="_container_faea2d"
+            >
+              <h1
+                class="_h1_faea2d"
+              >
+                <a
+                  class="_headerLink_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  Skyrim Inventory Management
+                </a>
+                <a
+                  aria-label="Return to Dashboard"
+                  class="_headerLinkMobile_faea2d"
+                  data-discover="true"
+                  href="/dashboard"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="svg-inline--fa fa-house _house_faea2d"
+                    data-icon="house"
+                    data-prefix="fas"
+                    role="img"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+              </h1>
+              <span
+                class="_userInfo_faea2d"
+              >
+                <span
+                  class="_root_658745"
+                  style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
+                >
+                  <div>
+                    <div
+                      aria-controls="userInfoMenu"
+                      aria-expanded="false"
+                      aria-label="Toggle Dropdown"
+                      class="_button_658745"
+                      role="button"
+                      tabindex="0"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-bars _hamburger_658745"
+                        data-icon="bars"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <span
+                        class="_info_658745"
+                      >
+                        <p
+                          class="_name_658745"
+                        >
+                          Jane Doe
+                        </p>
+                        <p
+                          class="_email_658745"
+                        >
+                          jane.doe@gmail.com
+                        </p>
+                      </span>
+                      <img
+                        alt="User profile image"
+                        class="_avatar_658745"
+                        referrerpolicy="no-referrer"
+                        src="https://example.com/img/janedoe.png"
+                      />
+                    </div>
+                  </div>
+                  <menu
+                    class="_dropdown_658745"
+                    data-testid="userInfoMenu"
+                    id="userInfoMenu"
+                  >
+                    <div
+                      aria-label="Sign Out"
+                      role="button"
+                      tabindex="-1"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="svg-inline--fa fa-right-from-bracket _signOutIcon_658745"
+                        data-icon="right-from-bracket"
+                        data-prefix="fas"
+                        role="img"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                      <p
+                        class="_signOutText_658745"
+                      >
+                        Sign Out
+                      </p>
+                    </div>
+                  </menu>
+                </span>
+              </span>
+            </div>
+          </nav>
+        </header>
+        <span
+          aria-controls="pageHeader"
+          aria-expanded="false"
+          aria-label="Show Header"
+          class="_pullTab_faea2d"
+          role="button"
+          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-chevron-down _chevron_faea2d"
+            data-icon="chevron-down"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+        <main
+          class="_main_78663b"
+        >
+          <section
+            class="_content_78663b"
+          >
+            <p>
+              Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc disciplet philosophari. Quidam autem non tam id reprehendunt si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et hi quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_root_78663b"
+      style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+    >
+      <header
+        class="_root_faea2d"
+        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      >
+        <nav
+          class="_header_faea2d"
+          data-testid="pageHeader"
+          id="pageHeader"
+          inert=""
+        >
+          <div
+            class="_container_faea2d"
+          >
+            <h1
+              class="_h1_faea2d"
+            >
+              <a
+                class="_headerLink_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                Skyrim Inventory Management
+              </a>
+              <a
+                aria-label="Return to Dashboard"
+                class="_headerLinkMobile_faea2d"
+                data-discover="true"
+                href="/dashboard"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-house _house_faea2d"
+                  data-icon="house"
+                  data-prefix="fas"
+                  role="img"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </h1>
+            <span
+              class="_userInfo_faea2d"
+            >
+              <span
+                class="_root_658745"
+                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
+              >
+                <div>
+                  <div
+                    aria-controls="userInfoMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle Dropdown"
+                    class="_button_658745"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-bars _hamburger_658745"
+                      data-icon="bars"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span
+                      class="_info_658745"
+                    >
+                      <p
+                        class="_name_658745"
+                      >
+                        Jane Doe
+                      </p>
+                      <p
+                        class="_email_658745"
+                      >
+                        jane.doe@gmail.com
+                      </p>
+                    </span>
+                    <img
+                      alt="User profile image"
+                      class="_avatar_658745"
+                      referrerpolicy="no-referrer"
+                      src="https://example.com/img/janedoe.png"
+                    />
+                  </div>
+                </div>
+                <menu
+                  class="_dropdown_658745"
+                  data-testid="userInfoMenu"
+                  id="userInfoMenu"
+                >
+                  <div
+                    aria-label="Sign Out"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="svg-inline--fa fa-right-from-bracket _signOutIcon_658745"
+                      data-icon="right-from-bracket"
+                      data-prefix="fas"
+                      role="img"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        d="M505 273c9.4-9.4 9.4-24.6 0-33.9L361 95c-6.9-6.9-17.2-8.9-26.2-5.2S320 102.3 320 112l0 80-112 0c-26.5 0-48 21.5-48 48l0 32c0 26.5 21.5 48 48 48l112 0 0 80c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2L505 273zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <p
+                      class="_signOutText_658745"
+                    >
+                      Sign Out
+                    </p>
+                  </div>
+                </menu>
+              </span>
+            </span>
+          </div>
+        </nav>
+      </header>
+      <span
+        aria-controls="pageHeader"
+        aria-expanded="false"
+        aria-label="Show Header"
+        class="_pullTab_faea2d"
+        role="button"
+        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        tabindex="0"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-chevron-down _chevron_faea2d"
+          data-icon="chevron-down"
+          data-prefix="fas"
+          role="img"
+          viewBox="0 0 448 512"
+        >
+          <path
+            d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+      <main
+        class="_main_78663b"
+      >
+        <section
+          class="_content_78663b"
+        >
+          <p>
+            Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc disciplet philosophari. Quidam autem non tam id reprehendunt si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et hi quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere.
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

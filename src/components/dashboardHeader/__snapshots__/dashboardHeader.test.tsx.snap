@@ -380,6 +380,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
           class="_header_faea2d"
           data-testid="pageHeader"
           id="pageHeader"
+          inert=""
         >
           <div
             class="_container_faea2d"
@@ -535,6 +536,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
         class="_header_faea2d"
         data-testid="pageHeader"
         id="pageHeader"
+        inert=""
       >
         <div
           class="_container_faea2d"
@@ -1106,6 +1108,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
           class="_header_faea2d"
           data-testid="pageHeader"
           id="pageHeader"
+          inert=""
         >
           <div
             class="_container_faea2d"
@@ -1257,6 +1260,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
         class="_header_faea2d"
         data-testid="pageHeader"
         id="pageHeader"
+        inert=""
       >
         <div
           class="_container_faea2d"
