@@ -37,6 +37,17 @@ export const UserProfile: UserInfoStory = {
   },
 }
 
+export const UserProfileLongValues: UserInfoStory = {
+  parameters: {
+    user: {
+      ...TEST_USER,
+      photoURL: testImg,
+      displayName: 'Theophrastus Bombastus von Hohenheim',
+      email: 'theophrastus.bombastus.von.hohenheim@gmail.com',
+    },
+  }
+}
+
 export const UserProfileNoAvatar: UserInfoStory = {
   parameters: {
     user: { ...TEST_USER, photoURL: null },

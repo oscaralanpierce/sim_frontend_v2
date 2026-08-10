@@ -1,8 +1,7 @@
 .root {
   margin: 0;
   width: 100%;
-  position: sticky;
-  z-index: 1;
+  border-bottom: 0;
 }
 
 .header {
@@ -17,7 +16,10 @@
 
 .headerVisible {
   composes: header;
-  height: 80px;
+  height: 61px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   z-index: 1;
 }
 
@@ -28,20 +30,19 @@
   padding: 12px;
 }
 
-.headerLink {
-  display: none;
-}
-
 .h1 {
   margin: 0;
-  line-height: 1.25rem;
-  align-content: center;
+}
+
+.headerLink {
+  display: none;
 }
 
 .headerLinkMobile {
   display: inline-block;
   color: var(--text-color);
   font-size: 2rem;
+  line-height: 1.25rem;
 }
 
 .headerLinkMobile:hover {
@@ -58,9 +59,7 @@
   color: var(--hover-color);
 }
 
-.pullTabUp {
-  position: sticky;
-  top: 0;
+.pullTab {
   margin-left: 12px;
   width: 20px;
   display: inline-block;
@@ -69,14 +68,6 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   cursor: pointer;
-  transition-property: top;
-  transition-duration: 1s;
-  z-index: 2;
-}
-
-.pullTabDown {
-  composes: pullTabUp;
-  top: 80px;
 }
 
 .chevron {
@@ -88,6 +79,15 @@
 }
 
 @media (min-width: 601px) {
+  .headerVisible {
+    height: 78px;
+  }
+
+  .h1 {
+    line-height: 1.25rem;
+    align-content: center;
+  }
+
   .headerLink {
     display: inline-block;
     font-family: var(--title-font-family);
@@ -107,7 +107,6 @@
 }
 
 @media (prefers-reduced-motion) {
-  .pullTabUp,
   .header,
   .headerVisible {
     transition: none;

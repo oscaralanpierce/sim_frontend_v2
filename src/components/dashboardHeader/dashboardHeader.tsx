@@ -76,7 +76,7 @@ const DashboardHeader = () => {
         </nav>
       </header>
       <span
-        className={headerVisible ? styles.pullTabDown : styles.pullTabUp}
+        className={styles.pullTab}
         role="button"
         aria-label={headerVisible ? 'Hide Header' : 'Show Header'}
         tabIndex={0}

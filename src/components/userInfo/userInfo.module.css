@@ -2,6 +2,7 @@
   display: inline-block;
   height: fit-content;
   --content-line-height: 1.2rem;
+  margin-left: 1rem;
 }
 
 .button {
