@@ -9,7 +9,7 @@ interface DeFinibusProps {
 
 const DeFinibus = ({ long, extraLong }: DeFinibusProps) => (
   <>
-    <p>
+    <p style={{ marginTop: 0 }}>
       Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina
       philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus,
       fore ut hic noster labor in varias reprehensiones incurreret. Nam
@@ -103,7 +103,7 @@ const DeFinibus = ({ long, extraLong }: DeFinibusProps) => (
           etiam magis; quorum ille iudicium reformidans Tarentinis ait se et
           Consentinis et Siculis scribere.
         </p>
-        <p>
+        <p style={{ marginBottom: 0 }}>
           Facete is quidem, sicut alia; sed neque tam docti tum erant ad quorum
           iudicium elaboraret, et sunt illius scripta leviora, ut urbanitas
           summa appareat, doctrina mediocris. Ego autem quem timeam lectorem,
