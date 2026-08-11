@@ -1,5 +1,5 @@
 .root {
-  width: calc(320px - 32px);
+  width: calc(320px - 48px);
   height: 128px;
   border-radius: 5px;
   background-color: var(--background-color);

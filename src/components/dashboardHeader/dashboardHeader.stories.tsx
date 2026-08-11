@@ -49,6 +49,18 @@ export const NotLoadingWithUser: DashboardHeaderStory = {
   },
 }
 
+export const WideUserInfoComponent: DashboardHeaderStory = {
+  parameters: {
+    authLoading: false,
+    user: {
+      ...TEST_USER,
+      photoURL: testImage,
+      displayName: 'Theophrastus Bombastus von Hohenheim',
+      email: 'theophrastus.bombastus.von.hohenheim@gmail.com',
+    },
+  },
+}
+
 export const ReducedMotion: DashboardHeaderStory = {
   globals: {
     reducedMotion: 'reduce',

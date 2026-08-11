@@ -11,12 +11,14 @@
 @media (min-width: 769px) {
   .root {
     grid-template-columns: 1fr 1fr;
-    column-gap: 16px;
+    column-gap: 32px;
+    row-gap: 32px;
   }
 }
 
 @media (min-width: 1201px) {
   .root {
     grid-template-columns: 1fr 1fr 1fr;
+    align-content: space-around;
   }
 }

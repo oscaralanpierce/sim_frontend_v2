@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DashboardLayout > with a title > matches snapshot 1`] = `
+exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -82,25 +82,11 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
                           fill="currentColor"
                         />
                       </svg>
-                      <span
-                        class="_info_658745"
-                      >
-                        <p
-                          class="_name_658745"
-                        >
-                          Jane Doe
-                        </p>
-                        <p
-                          class="_email_658745"
-                        >
-                          jane.doe@gmail.com
-                        </p>
-                      </span>
                       <img
-                        alt="User profile image"
+                        alt="Anonymous user avatar"
                         class="_avatar_658745"
                         referrerpolicy="no-referrer"
-                        src="https://example.com/img/janedoe.png"
+                        src="/src/components/userInfo/anonymousAvatar.jpg"
                       />
                     </div>
                   </div>
@@ -168,19 +154,42 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
           <section
             class="_content_78663b"
           >
-            <h2
-              class="_title_78663b"
+            <div
+              class="_root_2a6a55"
             >
-              My Dashboard
-            </h2>
-            <hr
-              class="_hr_78663b"
-            />
-            <p
-              style="margin-top: 0px;"
-            >
-              Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc disciplet philosophari. Quidam autem non tam id reprehendunt si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et hi quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere.
-            </p>
+              <div
+                class="_container_2a6a55"
+              >
+                <div
+                  class="_root_b60c62"
+                  style="--background-color: #20e2e9; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                >
+                  <dialog
+                    class="_text_b60c62"
+                  >
+                    Loading...
+                  </dialog>
+                  <div
+                    aria-label="loading"
+                    class="_spinner_b60c62"
+                    role="progressbar"
+                  >
+                    <span
+                      class="_spinnerComponent_b60c62"
+                    />
+                    <span
+                      class="_spinnerComponent_b60c62"
+                    />
+                    <span
+                      class="_spinnerComponent_b60c62"
+                    />
+                    <span
+                      class="_spinnerComponent_b60c62"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </main>
       </div>
@@ -264,25 +273,11 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
                         fill="currentColor"
                       />
                     </svg>
-                    <span
-                      class="_info_658745"
-                    >
-                      <p
-                        class="_name_658745"
-                      >
-                        Jane Doe
-                      </p>
-                      <p
-                        class="_email_658745"
-                      >
-                        jane.doe@gmail.com
-                      </p>
-                    </span>
                     <img
-                      alt="User profile image"
+                      alt="Anonymous user avatar"
                       class="_avatar_658745"
                       referrerpolicy="no-referrer"
-                      src="https://example.com/img/janedoe.png"
+                      src="/src/components/userInfo/anonymousAvatar.jpg"
                     />
                   </div>
                 </div>
@@ -350,19 +345,42 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
         <section
           class="_content_78663b"
         >
-          <h2
-            class="_title_78663b"
+          <div
+            class="_root_2a6a55"
           >
-            My Dashboard
-          </h2>
-          <hr
-            class="_hr_78663b"
-          />
-          <p
-            style="margin-top: 0px;"
-          >
-            Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc disciplet philosophari. Quidam autem non tam id reprehendunt si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et hi quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere.
-          </p>
+            <div
+              class="_container_2a6a55"
+            >
+              <div
+                class="_root_b60c62"
+                style="--background-color: #20e2e9; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+              >
+                <dialog
+                  class="_text_b60c62"
+                >
+                  Loading...
+                </dialog>
+                <div
+                  aria-label="loading"
+                  class="_spinner_b60c62"
+                  role="progressbar"
+                >
+                  <span
+                    class="_spinnerComponent_b60c62"
+                  />
+                  <span
+                    class="_spinnerComponent_b60c62"
+                  />
+                  <span
+                    class="_spinnerComponent_b60c62"
+                  />
+                  <span
+                    class="_spinnerComponent_b60c62"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
@@ -421,7 +439,7 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
 }
 `;
 
-exports[`DashboardLayout > without a title > matches snapshot 1`] = `
+exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -589,11 +607,90 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
           <section
             class="_content_78663b"
           >
-            <p
-              style="margin-top: 0px;"
+            <div
+              class="_root_2a6a55"
             >
-              Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc disciplet philosophari. Quidam autem non tam id reprehendunt si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et hi quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere.
-            </p>
+              <div
+                class="_container_2a6a55"
+              >
+                <div
+                  class="_root_ab33a2"
+                >
+                  <div
+                    class="_card_ab33a2"
+                  >
+                    <a
+                      class="_root_fe3515"
+                      data-discover="true"
+                      href="/"
+                      style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    >
+                      Nav Link 1
+                    </a>
+                  </div>
+                  <div
+                    class="_card_ab33a2"
+                  >
+                    <a
+                      class="_root_fe3515"
+                      data-discover="true"
+                      href="/"
+                      style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    >
+                      Nav Link 2
+                    </a>
+                  </div>
+                  <div
+                    class="_card_ab33a2"
+                  >
+                    <a
+                      class="_root_fe3515"
+                      data-discover="true"
+                      href="/"
+                      style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    >
+                      Nav Link 3
+                    </a>
+                  </div>
+                  <div
+                    class="_card_ab33a2"
+                  >
+                    <a
+                      class="_root_fe3515"
+                      data-discover="true"
+                      href="/"
+                      style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    >
+                      Nav Link 4
+                    </a>
+                  </div>
+                  <div
+                    class="_card_ab33a2"
+                  >
+                    <a
+                      class="_root_fe3515"
+                      data-discover="true"
+                      href="/"
+                      style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    >
+                      Nav Link 5
+                    </a>
+                  </div>
+                  <div
+                    class="_card_ab33a2"
+                  >
+                    <a
+                      class="_root_fe3515"
+                      data-discover="true"
+                      href="/"
+                      style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    >
+                      Nav Link 6
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </main>
       </div>
@@ -763,11 +860,90 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
         <section
           class="_content_78663b"
         >
-          <p
-            style="margin-top: 0px;"
+          <div
+            class="_root_2a6a55"
           >
-            Non eram nescius, Brute, cum quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractivissent ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. Nam quibusdam, et iis quidem non admodum indoctis, totum hoc disciplet philosophari. Quidam autem non tam id reprehendunt si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. Erunt etiam, et hi quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere.
-          </p>
+            <div
+              class="_container_2a6a55"
+            >
+              <div
+                class="_root_ab33a2"
+              >
+                <div
+                  class="_card_ab33a2"
+                >
+                  <a
+                    class="_root_fe3515"
+                    data-discover="true"
+                    href="/"
+                    style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                  >
+                    Nav Link 1
+                  </a>
+                </div>
+                <div
+                  class="_card_ab33a2"
+                >
+                  <a
+                    class="_root_fe3515"
+                    data-discover="true"
+                    href="/"
+                    style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                  >
+                    Nav Link 2
+                  </a>
+                </div>
+                <div
+                  class="_card_ab33a2"
+                >
+                  <a
+                    class="_root_fe3515"
+                    data-discover="true"
+                    href="/"
+                    style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                  >
+                    Nav Link 3
+                  </a>
+                </div>
+                <div
+                  class="_card_ab33a2"
+                >
+                  <a
+                    class="_root_fe3515"
+                    data-discover="true"
+                    href="/"
+                    style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                  >
+                    Nav Link 4
+                  </a>
+                </div>
+                <div
+                  class="_card_ab33a2"
+                >
+                  <a
+                    class="_root_fe3515"
+                    data-discover="true"
+                    href="/"
+                    style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                  >
+                    Nav Link 5
+                  </a>
+                </div>
+                <div
+                  class="_card_ab33a2"
+                >
+                  <a
+                    class="_root_fe3515"
+                    data-discover="true"
+                    href="/"
+                    style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                  >
+                    Nav Link 6
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>

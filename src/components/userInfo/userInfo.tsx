@@ -44,10 +44,14 @@ const UserInfo = () => {
           onKeyDown={toggleDropdownOnKeyDown}
         >
           <FontAwesomeIcon icon={faBars} className={styles.hamburger} />
-          <span className={styles.info}>
-            <p className={styles.name}>{user?.displayName || ''}</p>
-            <p className={styles.email}>{user?.email || ''}</p>
-          </span>
+          {user && (
+            <span className={styles.info}>
+              <p className={styles.name}>
+                {user.displayName || 'Anonymous User'}
+              </p>
+              <p className={styles.email}>{user.email || 'No Email'}</p>
+            </span>
+          )}
           <img
             className={styles.avatar}
             src={user?.photoURL || anonymousAvatar}

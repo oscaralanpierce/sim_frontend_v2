@@ -5,7 +5,7 @@ import { ColorProvider } from '../../contexts/colorContext'
 import NavCard from '../navCard/navCard'
 import styles from './navMosaic.module.css'
 
-interface CardAttributes {
+export interface CardAttributes {
   href: RelativePath
   children: string | ReactElement
 }

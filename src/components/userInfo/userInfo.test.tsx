@@ -601,5 +601,26 @@ describe('UserInfo', () => {
         expect(wrapper).toMatchSnapshot()
       })
     })
+
+    describe('when the user is missing profile information', () => {
+      const user = {
+        ...TEST_USER,
+        displayName: null,
+        email: null,
+      }
+
+      test('displays default values', () => {
+        const wrapper = render(user)
+
+        expect(wrapper.getByText('Anonymous User')).toBeTruthy()
+        expect(wrapper.getByText('No Email')).toBeTruthy()
+      })
+
+      test('matches snapshot', () => {
+        const wrapper = render(user)
+
+        expect(wrapper).toMatchSnapshot()
+      })
+    })
   })
 })
