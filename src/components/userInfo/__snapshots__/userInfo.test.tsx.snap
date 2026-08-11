@@ -915,16 +915,6 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
                 fill="currentColor"
               />
             </svg>
-            <span
-              class="_info_658745"
-            >
-              <p
-                class="_name_658745"
-              />
-              <p
-                class="_email_658745"
-              />
-            </span>
             <img
               alt="Anonymous user avatar"
               class="_avatar_658745"
@@ -993,16 +983,6 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
               fill="currentColor"
             />
           </svg>
-          <span
-            class="_info_658745"
-          >
-            <p
-              class="_name_658745"
-            />
-            <p
-              class="_email_658745"
-            />
-          </span>
           <img
             alt="Anonymous user avatar"
             class="_avatar_658745"
@@ -1128,16 +1108,6 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
                 fill="currentColor"
               />
             </svg>
-            <span
-              class="_info_658745"
-            >
-              <p
-                class="_name_658745"
-              />
-              <p
-                class="_email_658745"
-              />
-            </span>
             <img
               alt="Anonymous user avatar"
               class="_avatar_658745"
@@ -1206,16 +1176,6 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
               fill="currentColor"
             />
           </svg>
-          <span
-            class="_info_658745"
-          >
-            <p
-              class="_name_658745"
-            />
-            <p
-              class="_email_658745"
-            />
-          </span>
           <img
             alt="Anonymous user avatar"
             class="_avatar_658745"

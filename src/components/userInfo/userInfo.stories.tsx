@@ -45,7 +45,7 @@ export const UserProfileLongValues: UserInfoStory = {
       displayName: 'Theophrastus Bombastus von Hohenheim',
       email: 'theophrastus.bombastus.von.hohenheim@gmail.com',
     },
-  }
+  },
 }
 
 export const UserProfileNoAvatar: UserInfoStory = {
