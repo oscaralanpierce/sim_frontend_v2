@@ -813,16 +813,6 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                         fill="currentColor"
                       />
                     </svg>
-                    <span
-                      class="_info_658745"
-                    >
-                      <p
-                        class="_name_658745"
-                      />
-                      <p
-                        class="_email_658745"
-                      />
-                    </span>
                     <img
                       alt="Anonymous user avatar"
                       class="_avatar_658745"
@@ -964,16 +954,6 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                       fill="currentColor"
                     />
                   </svg>
-                  <span
-                    class="_info_658745"
-                  >
-                    <p
-                      class="_name_658745"
-                    />
-                    <p
-                      class="_email_658745"
-                    />
-                  </span>
                   <img
                     alt="Anonymous user avatar"
                     class="_avatar_658745"
@@ -1173,16 +1153,6 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                         fill="currentColor"
                       />
                     </svg>
-                    <span
-                      class="_info_658745"
-                    >
-                      <p
-                        class="_name_658745"
-                      />
-                      <p
-                        class="_email_658745"
-                      />
-                    </span>
                     <img
                       alt="Anonymous user avatar"
                       class="_avatar_658745"
@@ -1325,16 +1295,6 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                       fill="currentColor"
                     />
                   </svg>
-                  <span
-                    class="_info_658745"
-                  >
-                    <p
-                      class="_name_658745"
-                    />
-                    <p
-                      class="_email_658745"
-                    />
-                  </span>
                   <img
                     alt="Anonymous user avatar"
                     class="_avatar_658745"
