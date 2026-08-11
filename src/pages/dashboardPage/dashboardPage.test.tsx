@@ -1,8 +1,7 @@
 import { describe, test, expect, vi } from 'vitest'
-import { act, waitFor, fireEvent } from '@testing-library/react'
+import { waitFor } from '@testing-library/react'
 import { type User } from 'firebase/auth'
 import { LoginContext, LoginProvider } from '../../contexts/loginContext'
-import { useAuthUser } from '../../hooks/useAuthUser'
 import { renderWithRouter } from '../../support/testUtils'
 import {
   TEST_USER,
@@ -71,6 +70,9 @@ describe('DashboardPage', () => {
       const image = wrapper.getByAltText('User profile image')
       expect(image).toBeTruthy()
       expect(image.getAttribute('src')).toEqual(TEST_USER_PHOTO_URL)
+
+      expect(wrapper.getByText(TEST_USER_DISPLAY_NAME)).toBeTruthy()
+      expect(wrapper.getByText(TEST_USER_EMAIL)).toBeTruthy()
 
       navCards.forEach((link) => {
         const card = wrapper.getByText(link.children as string)

@@ -1,12 +1,12 @@
 import { type ReactElement } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { type RelativePath } from '../types/navigation'
+import { LoginProvider } from '../contexts/loginContext'
 import PageHead from '../components/pageHead/pageHead'
 import HomePage from '../pages/homePage/homePage'
 import DashboardPage from '../pages/dashboardPage/dashboardPage'
 import NotFoundPage from '../pages/notFoundPage/notFoundPage'
 import paths from './paths'
-import { LoginProvider } from '../contexts/loginContext'
 
 const siteTitle = 'Skyrim Inventory Management'
 
