@@ -38,7 +38,7 @@ const DashboardLayout = ({ title, children }: DashboardLayoutProps) => {
               <hr className={styles.hr} />
             </>
           )}
-          <div className={styles.container}>{children}</div>
+          {children}
         </section>
       </main>
     </div>
