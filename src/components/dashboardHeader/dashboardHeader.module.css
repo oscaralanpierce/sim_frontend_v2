@@ -32,6 +32,8 @@
 
 .h1 {
   margin: 0;
+  font-family: var(--title-font-family);
+  line-height: 1.25rem;
 }
 
 .headerLink {
@@ -42,7 +44,7 @@
   display: inline-block;
   color: var(--text-color);
   font-size: 2rem;
-  line-height: 1.25rem;
+  height: 100%;
 }
 
 .headerLinkMobile:hover {
@@ -90,7 +92,6 @@
 
   .headerLink {
     display: inline-block;
-    font-family: var(--title-font-family);
     font-size: 1.5rem;
     line-height: var(--title-line-height);
     color: var(--text-color);
