@@ -162,7 +162,7 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
               >
                 <div
                   class="_root_b60c62"
-                  style="--background-color: #00a323; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                  style="--background-color: #20e2e9; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
                 >
                   <dialog
                     class="_text_b60c62"
@@ -353,7 +353,7 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
             >
               <div
                 class="_root_b60c62"
-                style="--background-color: #00a323; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                style="--background-color: #20e2e9; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
               >
                 <dialog
                   class="_text_b60c62"

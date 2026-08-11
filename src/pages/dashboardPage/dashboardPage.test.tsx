@@ -28,6 +28,10 @@ const render = (user: User | null, authLoading: boolean) =>
   )
 
 describe('DashboardPage', () => {
+  beforeEach(() => {
+    vi.spyOn(Math, 'random').mockReturnValue(0.2)
+  })
+
   afterEach(() => {
     vi.clearAllMocks()
   })
