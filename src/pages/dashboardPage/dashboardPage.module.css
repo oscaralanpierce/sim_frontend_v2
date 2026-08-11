@@ -1,0 +1,13 @@
+.root {
+  margin: 0 auto;
+  flex-grow: 1;
+  align-content: center;
+}
+
+.container {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  margin: 0 auto;
+}

@@ -3,8 +3,10 @@ import { Routes, Route } from 'react-router-dom'
 import { type RelativePath } from '../types/navigation'
 import PageHead from '../components/pageHead/pageHead'
 import HomePage from '../pages/homePage/homePage'
+import DashboardPage from '../pages/dashboardPage/dashboardPage'
 import NotFoundPage from '../pages/notFoundPage/notFoundPage'
 import paths from './paths'
+import { LoginProvider } from '../contexts/loginContext'
 
 const siteTitle = 'Skyrim Inventory Management'
 
@@ -32,6 +34,17 @@ const pages: Page[] = [
     description: 'Manage inventory and logistics in Skyrim',
     tsx: <HomePage />,
     path: paths.home,
+  },
+  {
+    pageId: 'dashboard',
+    title: `${siteTitle} | Main Dashboard`,
+    description: 'Navigate your dashboard to manage Skyrim inventory',
+    tsx: (
+      <LoginProvider>
+        <DashboardPage />
+      </LoginProvider>
+    ),
+    path: paths.dashboard,
   },
 ]
 
