@@ -55,6 +55,17 @@ export const UserProfileNoAvatar: UserInfoStory = {
   },
 }
 
+export const UserProfileNoData: UserInfoStory = {
+  parameters: {
+    user: {
+      ...TEST_USER,
+      photoURL: testImg,
+      displayName: null,
+      email: null,
+    },
+  },
+}
+
 export const NoLoggedInUser: UserInfoStory = {
   parameters: {
     user: null,
