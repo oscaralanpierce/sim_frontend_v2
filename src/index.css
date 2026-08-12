@@ -13,6 +13,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --page-background-color: #f0f0f0;
+  --page-background-min-height: 100vh;
+  --page-background-min-width: 100vw;
+  --page-text-color: #000;
+  --header-background-color: #000;
+  --header-text-color: #fff;
+  --header-text-hover-color: #e0e0e0;
+  --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif;
+  --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;
 }
 
 html {

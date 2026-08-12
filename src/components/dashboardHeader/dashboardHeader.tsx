@@ -11,7 +11,6 @@ import {
   faChevronUp,
   faHouse,
 } from '@fortawesome/free-solid-svg-icons'
-import { GLOBAL_CSS_VALUES } from '../../utils/styles/globalCss'
 import paths from '../../routing/paths'
 import UserInfo from '../userInfo/userInfo'
 import styles from './dashboardHeader.module.css'
@@ -19,18 +18,7 @@ import styles from './dashboardHeader.module.css'
 const DashboardHeader = () => {
   const [headerVisible, setHeaderVisible] = useState(false)
 
-  const {
-    titleFontFamily,
-    headerBackgroundColor,
-    headerTextColor,
-    headerTextHoverColor,
-  } = GLOBAL_CSS_VALUES
-
   const styleVars = {
-    '--title-font-family': titleFontFamily,
-    '--background-color': headerBackgroundColor,
-    '--text-color': headerTextColor,
-    '--hover-color': headerTextHoverColor,
     '--title-line-height': '1.8rem',
     '--header-font-size': '1.5rem',
   } as CSSProperties

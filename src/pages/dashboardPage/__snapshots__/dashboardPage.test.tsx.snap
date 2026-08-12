@@ -7,11 +7,10 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
     <div>
       <div
         class="_root_78663b"
-        style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
       >
         <header
           class="_root_faea2d"
-          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         >
           <nav
             class="_header_faea2d"
@@ -58,7 +57,6 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
               >
                 <span
                   class="_root_658745"
-                  style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
                 >
                   <div>
                     <div
@@ -131,7 +129,7 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
           aria-label="Show Header"
           class="_pullTab_faea2d"
           role="button"
-          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
           tabindex="0"
         >
           <svg
@@ -162,7 +160,7 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
               >
                 <div
                   class="_root_b60c62"
-                  style="--background-color: #20e2e9; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                  style="--background-color: #20e2e9;"
                 >
                   <dialog
                     class="_text_b60c62"
@@ -198,11 +196,10 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
   "container": <div>
     <div
       class="_root_78663b"
-      style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
     >
       <header
         class="_root_faea2d"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       >
         <nav
           class="_header_faea2d"
@@ -249,7 +246,6 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
             >
               <span
                 class="_root_658745"
-                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
               >
                 <div>
                   <div
@@ -322,7 +318,7 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
         aria-label="Show Header"
         class="_pullTab_faea2d"
         role="button"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         tabindex="0"
       >
         <svg
@@ -353,7 +349,7 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
             >
               <div
                 class="_root_b60c62"
-                style="--background-color: #20e2e9; --text-color: #000; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                style="--background-color: #20e2e9;"
               >
                 <dialog
                   class="_text_b60c62"
@@ -446,11 +442,10 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
     <div>
       <div
         class="_root_78663b"
-        style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
       >
         <header
           class="_root_faea2d"
-          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         >
           <nav
             class="_header_faea2d"
@@ -497,7 +492,6 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
               >
                 <span
                   class="_root_658745"
-                  style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
                 >
                   <div>
                     <div
@@ -584,7 +578,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
           aria-label="Show Header"
           class="_pullTab_faea2d"
           role="button"
-          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
           tabindex="0"
         >
           <svg
@@ -623,7 +617,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                       class="_root_fe3515"
                       data-discover="true"
                       href="/"
-                      style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                      style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
                     >
                       Nav Link 1
                     </a>
@@ -635,7 +629,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                       class="_root_fe3515"
                       data-discover="true"
                       href="/"
-                      style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                      style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
                     >
                       Nav Link 2
                     </a>
@@ -647,7 +641,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                       class="_root_fe3515"
                       data-discover="true"
                       href="/"
-                      style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                      style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
                     >
                       Nav Link 3
                     </a>
@@ -659,7 +653,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                       class="_root_fe3515"
                       data-discover="true"
                       href="/"
-                      style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                      style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
                     >
                       Nav Link 4
                     </a>
@@ -671,7 +665,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                       class="_root_fe3515"
                       data-discover="true"
                       href="/"
-                      style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                      style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
                     >
                       Nav Link 5
                     </a>
@@ -683,7 +677,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                       class="_root_fe3515"
                       data-discover="true"
                       href="/"
-                      style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                      style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff;"
                     >
                       Nav Link 6
                     </a>
@@ -699,11 +693,10 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
   "container": <div>
     <div
       class="_root_78663b"
-      style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
     >
       <header
         class="_root_faea2d"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       >
         <nav
           class="_header_faea2d"
@@ -750,7 +743,6 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
             >
               <span
                 class="_root_658745"
-                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
               >
                 <div>
                   <div
@@ -837,7 +829,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
         aria-label="Show Header"
         class="_pullTab_faea2d"
         role="button"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         tabindex="0"
       >
         <svg
@@ -876,7 +868,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                     class="_root_fe3515"
                     data-discover="true"
                     href="/"
-                    style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
                   >
                     Nav Link 1
                   </a>
@@ -888,7 +880,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                     class="_root_fe3515"
                     data-discover="true"
                     href="/"
-                    style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
                   >
                     Nav Link 2
                   </a>
@@ -900,7 +892,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                     class="_root_fe3515"
                     data-discover="true"
                     href="/"
-                    style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
                   >
                     Nav Link 3
                   </a>
@@ -912,7 +904,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                     class="_root_fe3515"
                     data-discover="true"
                     href="/"
-                    style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
                   >
                     Nav Link 4
                   </a>
@@ -924,7 +916,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                     class="_root_fe3515"
                     data-discover="true"
                     href="/"
-                    style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
                   >
                     Nav Link 5
                   </a>
@@ -936,7 +928,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                     class="_root_fe3515"
                     data-discover="true"
                     href="/"
-                    style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+                    style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff;"
                   >
                     Nav Link 6
                   </a>

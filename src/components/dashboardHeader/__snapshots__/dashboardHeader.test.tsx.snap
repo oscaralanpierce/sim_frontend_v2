@@ -7,7 +7,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
     <div>
       <header
         class="_root_faea2d"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       >
         <nav
           class="_headerVisible_faea2d"
@@ -53,7 +53,6 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
             >
               <span
                 class="_root_658745"
-                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
               >
                 <div>
                   <div
@@ -140,7 +139,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
         aria-label="Hide Header"
         class="_pullTab_faea2d"
         role="button"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         tabindex="0"
       >
         <svg
@@ -162,7 +161,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
   "container": <div>
     <header
       class="_root_faea2d"
-      style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
     >
       <nav
         class="_headerVisible_faea2d"
@@ -208,7 +207,6 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
           >
             <span
               class="_root_658745"
-              style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
             >
               <div>
                 <div
@@ -295,7 +293,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
       aria-label="Hide Header"
       class="_pullTab_faea2d"
       role="button"
-      style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       tabindex="0"
     >
       <svg
@@ -374,7 +372,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
     <div>
       <header
         class="_root_faea2d"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       >
         <nav
           class="_header_faea2d"
@@ -421,7 +419,6 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
             >
               <span
                 class="_root_658745"
-                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
               >
                 <div>
                   <div
@@ -508,7 +505,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
         aria-label="Show Header"
         class="_pullTab_faea2d"
         role="button"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         tabindex="0"
       >
         <svg
@@ -530,7 +527,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
   "container": <div>
     <header
       class="_root_faea2d"
-      style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
     >
       <nav
         class="_header_faea2d"
@@ -577,7 +574,6 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
           >
             <span
               class="_root_658745"
-              style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
             >
               <div>
                 <div
@@ -664,7 +660,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
       aria-label="Show Header"
       class="_pullTab_faea2d"
       role="button"
-      style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       tabindex="0"
     >
       <svg
@@ -743,7 +739,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
     <div>
       <header
         class="_root_faea2d"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       >
         <nav
           class="_headerVisible_faea2d"
@@ -789,7 +785,6 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
             >
               <span
                 class="_root_658745"
-                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
               >
                 <div>
                   <div
@@ -862,7 +857,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
         aria-label="Hide Header"
         class="_pullTab_faea2d"
         role="button"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         tabindex="0"
       >
         <svg
@@ -884,7 +879,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
   "container": <div>
     <header
       class="_root_faea2d"
-      style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
     >
       <nav
         class="_headerVisible_faea2d"
@@ -930,7 +925,6 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
           >
             <span
               class="_root_658745"
-              style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
             >
               <div>
                 <div
@@ -1003,7 +997,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
       aria-label="Hide Header"
       class="_pullTab_faea2d"
       role="button"
-      style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       tabindex="0"
     >
       <svg
@@ -1082,7 +1076,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
     <div>
       <header
         class="_root_faea2d"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       >
         <nav
           class="_header_faea2d"
@@ -1129,7 +1123,6 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
             >
               <span
                 class="_root_658745"
-                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
               >
                 <div>
                   <div
@@ -1202,7 +1195,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
         aria-label="Show Header"
         class="_pullTab_faea2d"
         role="button"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         tabindex="0"
       >
         <svg
@@ -1224,7 +1217,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
   "container": <div>
     <header
       class="_root_faea2d"
-      style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
     >
       <nav
         class="_header_faea2d"
@@ -1271,7 +1264,6 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
           >
             <span
               class="_root_658745"
-              style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
             >
               <div>
                 <div
@@ -1344,7 +1336,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
       aria-label="Show Header"
       class="_pullTab_faea2d"
       role="button"
-      style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+      style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       tabindex="0"
     >
       <svg

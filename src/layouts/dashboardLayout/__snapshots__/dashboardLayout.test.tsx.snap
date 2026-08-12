@@ -7,11 +7,10 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
     <div>
       <div
         class="_root_78663b"
-        style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
       >
         <header
           class="_root_faea2d"
-          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         >
           <nav
             class="_header_faea2d"
@@ -58,7 +57,6 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
               >
                 <span
                   class="_root_658745"
-                  style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
                 >
                   <div>
                     <div
@@ -145,7 +143,7 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
           aria-label="Show Header"
           class="_pullTab_faea2d"
           role="button"
-          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
           tabindex="0"
         >
           <svg
@@ -189,11 +187,10 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
   "container": <div>
     <div
       class="_root_78663b"
-      style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
     >
       <header
         class="_root_faea2d"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       >
         <nav
           class="_header_faea2d"
@@ -240,7 +237,6 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
             >
               <span
                 class="_root_658745"
-                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
               >
                 <div>
                   <div
@@ -327,7 +323,7 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
         aria-label="Show Header"
         class="_pullTab_faea2d"
         role="button"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         tabindex="0"
       >
         <svg
@@ -428,11 +424,10 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
     <div>
       <div
         class="_root_78663b"
-        style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
       >
         <header
           class="_root_faea2d"
-          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         >
           <nav
             class="_header_faea2d"
@@ -479,7 +474,6 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
               >
                 <span
                   class="_root_658745"
-                  style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
                 >
                   <div>
                     <div
@@ -566,7 +560,7 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
           aria-label="Show Header"
           class="_pullTab_faea2d"
           role="button"
-          style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+          style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
           tabindex="0"
         >
           <svg
@@ -602,11 +596,10 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
   "container": <div>
     <div
       class="_root_78663b"
-      style="--background-color: #f0f0f0; --background-height: 100vh; --background-width: 100vw; --text-color: #000; --title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --body-font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
     >
       <header
         class="_root_faea2d"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
       >
         <nav
           class="_header_faea2d"
@@ -653,7 +646,6 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
             >
               <span
                 class="_root_658745"
-                style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
               >
                 <div>
                   <div
@@ -740,7 +732,7 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
         aria-label="Show Header"
         class="_pullTab_faea2d"
         role="button"
-        style="--title-font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; --background-color: #000; --text-color: #fff; --hover-color: #e0e0e0; --title-line-height: 1.8rem; --header-font-size: 1.5rem;"
+        style="--title-line-height: 1.8rem; --header-font-size: 1.5rem;"
         tabindex="0"
       >
         <svg

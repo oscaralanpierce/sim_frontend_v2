@@ -9,7 +9,7 @@ exports[`NavCard > matches snapshot 1`] = `
         class="_root_fe3515"
         data-discover="true"
         href="/"
-        style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+        style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff;"
       >
         Inventory Ledger
       </a>
@@ -20,7 +20,7 @@ exports[`NavCard > matches snapshot 1`] = `
       class="_root_fe3515"
       data-discover="true"
       href="/"
-      style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+      style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff;"
     >
       Inventory Ledger
     </a>

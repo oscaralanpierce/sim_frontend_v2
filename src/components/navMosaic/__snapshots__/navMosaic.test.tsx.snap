@@ -15,7 +15,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
             class="_root_fe3515"
             data-discover="true"
             href="/href1"
-            style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+            style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
           >
             Link 1
           </a>
@@ -27,7 +27,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
             class="_root_fe3515"
             data-discover="true"
             href="/href2"
-            style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+            style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
           >
             Link 2
           </a>
@@ -39,7 +39,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
             class="_root_fe3515"
             data-discover="true"
             href="/href3"
-            style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+            style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
           >
             Link 3
           </a>
@@ -51,7 +51,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
             class="_root_fe3515"
             data-discover="true"
             href="/href4"
-            style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+            style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
           >
             Link 4
           </a>
@@ -63,7 +63,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
             class="_root_fe3515"
             data-discover="true"
             href="/href5"
-            style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+            style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
           >
             Link 5
           </a>
@@ -75,7 +75,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
             class="_root_fe3515"
             data-discover="true"
             href="/href6"
-            style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+            style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff;"
           >
             Link 6
           </a>
@@ -94,7 +94,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
           class="_root_fe3515"
           data-discover="true"
           href="/href1"
-          style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+          style="--background-color: #ffbf00; --hover-color: #e5ab00; --text-color: #4c3900;"
         >
           Link 1
         </a>
@@ -106,7 +106,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
           class="_root_fe3515"
           data-discover="true"
           href="/href2"
-          style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+          style="--background-color: #20e2e9; --hover-color: #11cbd1; --text-color: #094345;"
         >
           Link 2
         </a>
@@ -118,7 +118,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
           class="_root_fe3515"
           data-discover="true"
           href="/href3"
-          style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+          style="--background-color: #e83f6f; --hover-color: #d03863; --text-color: #fff;"
         >
           Link 3
         </a>
@@ -130,7 +130,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
           class="_root_fe3515"
           data-discover="true"
           href="/href4"
-          style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+          style="--background-color: #00a323; --hover-color: #00921f; --text-color: #fff;"
         >
           Link 4
         </a>
@@ -142,7 +142,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
           class="_root_fe3515"
           data-discover="true"
           href="/href5"
-          style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+          style="--background-color: #2274a5; --hover-color: #1e6894; --text-color: #fff;"
         >
           Link 5
         </a>
@@ -154,7 +154,7 @@ exports[`NavMosaic > matches snapshot 1`] = `
           class="_root_fe3515"
           data-discover="true"
           href="/href6"
-          style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff; --font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif;"
+          style="--background-color: #d90000; --hover-color: #c00000; --text-color: #fff;"
         >
           Link 6
         </a>
