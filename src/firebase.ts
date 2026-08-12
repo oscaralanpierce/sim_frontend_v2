@@ -2,9 +2,9 @@ import { initializeApp } from 'firebase/app'
 import {
   GoogleAuthProvider,
   getAuth,
-  signInWithPopup,
+  getRedirectResult,
+  signInWithRedirect,
   signOut,
-  type User,
   type UserCredential,
 } from 'firebase/auth'
 
@@ -28,9 +28,11 @@ export const auth = getAuth(app)
 const authProvider = new GoogleAuthProvider()
 
 // Handler function for login button click event
-export const signInWithGoogle = async (): Promise<User> => {
-  const resp: UserCredential = await signInWithPopup(auth, authProvider)
-  return resp.user
-}
+export const signInWithGoogle = (): Promise<void> =>
+  signInWithRedirect(auth, authProvider)
+
+// Call on app load to pick up the result of a signInWithGoogle redirect
+export const getGoogleRedirectResult = (): Promise<UserCredential | null> =>
+  getRedirectResult(auth)
 
 export const signOutWithGoogle = () => signOut(auth)

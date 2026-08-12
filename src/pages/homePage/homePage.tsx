@@ -1,6 +1,6 @@
 import { useEffect, useState, type MouseEventHandler } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { signInWithGoogle } from '../../firebase'
+import { getGoogleRedirectResult, signInWithGoogle } from '../../firebase'
 import { useAuthUser } from '../../hooks/useAuthUser'
 import GoogleSignInButton from '../../components/googleSignInButton/googleSignInButton'
 import styles from './homePage.module.css'
@@ -8,17 +8,30 @@ import paths from '../../routing/paths'
 
 const HomePage = () => {
   const navigate = useNavigate()
-  const { user } = useAuthUser()
+  const { user, authLoading } = useAuthUser()
   const [isSigningIn, setIsSigningIn] = useState(false)
 
-  const handleSignIn: MouseEventHandler = () => {
+  const handleSignIn: MouseEventHandler = async () => {
     setIsSigningIn(true)
-    signInWithGoogle()
-      .catch((error: unknown) => {
-        console.error('Google sign-in failed', error)
-      })
-      .finally(() => setIsSigningIn(false))
+    try {
+      await signInWithGoogle()
+    } catch (error: unknown) {
+      console.error('Google sign-in failed', error)
+      setIsSigningIn(false)
+    }
   }
+
+  useEffect(() => {
+    const checkRedirectResult = async () => {
+      try {
+        await getGoogleRedirectResult()
+      } catch (error: unknown) {
+        console.error('Google sign-in failed', error)
+      }
+    }
+
+    void checkRedirectResult()
+  }, [])
 
   useEffect(() => {
     if (user) {
@@ -31,7 +44,10 @@ const HomePage = () => {
       <div className={styles.container}>
         <h1 className={styles.header}>Skyrim Inventory Management</h1>
         <div className={styles.login}>
-          <GoogleSignInButton onClick={handleSignIn} loading={isSigningIn} />
+          <GoogleSignInButton
+            onClick={handleSignIn}
+            loading={isSigningIn || authLoading}
+          />
         </div>
       </div>
     </div>
