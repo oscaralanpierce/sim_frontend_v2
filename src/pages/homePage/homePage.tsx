@@ -44,7 +44,10 @@ const HomePage = () => {
       <div className={styles.container}>
         <h1 className={styles.header}>Skyrim Inventory Management</h1>
         <div className={styles.login}>
-          <GoogleSignInButton onClick={handleSignIn} loading={isSigningIn || authLoading} />
+          <GoogleSignInButton
+            onClick={handleSignIn}
+            loading={isSigningIn || authLoading}
+          />
         </div>
       </div>
     </div>
