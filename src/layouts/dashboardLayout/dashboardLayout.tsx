@@ -1,5 +1,4 @@
-import { type CSSProperties, type ReactElement } from 'react'
-import { GLOBAL_CSS_VALUES } from '../../utils/styles/globalCss'
+import { type ReactElement } from 'react'
 import DashboardHeader from '../../components/dashboardHeader/dashboardHeader'
 import styles from './dashboardLayout.module.css'
 
@@ -9,26 +8,8 @@ interface DashboardLayoutProps {
 }
 
 const DashboardLayout = ({ title, children }: DashboardLayoutProps) => {
-  const {
-    pageBackgroundColor,
-    pageBackgroundMinHeight,
-    pageBackgroundMinWidth,
-    pageTextColor,
-    titleFontFamily,
-    bodyFontFamily,
-  } = GLOBAL_CSS_VALUES
-
-  const styleVars = {
-    '--background-color': pageBackgroundColor,
-    '--background-height': pageBackgroundMinHeight,
-    '--background-width': pageBackgroundMinWidth,
-    '--text-color': pageTextColor,
-    '--title-font-family': titleFontFamily,
-    '--body-font-family': bodyFontFamily,
-  } as CSSProperties
-
   return (
-    <div className={styles.root} style={styleVars}>
+    <div className={styles.root}>
       <DashboardHeader />
       <main className={styles.main}>
         <section className={styles.content}>

@@ -7,7 +7,7 @@
 .header {
   height: 0;
   min-height: 0;
-  background-color: var(--background-color);
+  background-color: var(--header-background-color);
   transition-property: height;
   transition-duration: 1s;
   overflow-y: hidden;
@@ -41,22 +41,22 @@
 
 .headerLinkMobile {
   display: inline-block;
-  color: var(--text-color);
+  color: var(--header-text-color);
   font-size: 2rem;
 }
 
 .headerLinkMobile:hover {
-  color: var(--hover-color);
+  color: var(--header-text-hover-color);
 }
 
 .userInfo {
   display: inline-block;
   align-content: center;
-  color: var(--text-color);
+  color: var(--header-text-color);
 }
 
 .userInfo:hover {
-  color: var(--hover-color);
+  color: var(--header-text-hover-color);
 }
 
 .pullTab {
@@ -71,11 +71,11 @@
 }
 
 .chevron {
-  color: var(--text-color);
+  color: var(--header-text-color);
 }
 
 .pullTab:hover > .chevron {
-  color: var(--hover-color);
+  color: var(--header-text-hover-color);
 }
 
 @media (min-width: 601px) {
@@ -92,12 +92,12 @@
     display: inline-block;
     font-size: 1.5rem;
     line-height: var(--title-line-height);
-    color: var(--text-color);
+    color: var(--header-text-color);
     text-decoration: none;
   }
 
   .headerLink:hover {
-    color: var(--hover-color);
+    color: var(--header-text-hover-color);
   }
 
   .headerLinkMobile {

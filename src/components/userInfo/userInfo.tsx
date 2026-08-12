@@ -1,22 +1,14 @@
-import { useState, type CSSProperties, type KeyboardEventHandler } from 'react'
+import { useState, type KeyboardEventHandler } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { useLogin } from '../../hooks/contexts'
 import { signOutWithGoogle } from '../../firebase'
-import { GLOBAL_CSS_VALUES } from '../../utils/styles/globalCss'
 import anonymousAvatar from './anonymousAvatar.jpg'
 import styles from './userInfo.module.css'
 
 const UserInfo = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false)
   const { user } = useLogin()
-
-  const { bodyFontFamily, pageBackgroundColor } = GLOBAL_CSS_VALUES
-
-  const styleVars = {
-    '--font-family': bodyFontFamily,
-    '--dropdown-background-color': pageBackgroundColor,
-  } as CSSProperties
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible)
@@ -31,7 +23,7 @@ const UserInfo = () => {
   }
 
   return (
-    <span className={styles.root} style={styleVars}>
+    <span className={styles.root}>
       <div>
         <div
           className={styles.button}

@@ -7,7 +7,6 @@ exports[`UserInfo > when there is a signed-in user > when the user has a photo U
     <div>
       <span
         class="_root_658745"
-        style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
       >
         <div>
           <div
@@ -89,7 +88,6 @@ exports[`UserInfo > when there is a signed-in user > when the user has a photo U
   "container": <div>
     <span
       class="_root_658745"
-      style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
     >
       <div>
         <div
@@ -228,7 +226,6 @@ exports[`UserInfo > when there is a signed-in user > when the user has a photo U
     <div>
       <span
         class="_root_658745"
-        style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
       >
         <div>
           <div
@@ -310,7 +307,6 @@ exports[`UserInfo > when there is a signed-in user > when the user has a photo U
   "container": <div>
     <span
       class="_root_658745"
-      style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
     >
       <div>
         <div
@@ -449,7 +445,6 @@ exports[`UserInfo > when there is a signed-in user > when the user has no photo 
     <div>
       <span
         class="_root_658745"
-        style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
       >
         <div>
           <div
@@ -531,7 +526,6 @@ exports[`UserInfo > when there is a signed-in user > when the user has no photo 
   "container": <div>
     <span
       class="_root_658745"
-      style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
     >
       <div>
         <div
@@ -670,7 +664,6 @@ exports[`UserInfo > when there is a signed-in user > when the user has no photo 
     <div>
       <span
         class="_root_658745"
-        style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
       >
         <div>
           <div
@@ -752,7 +745,6 @@ exports[`UserInfo > when there is a signed-in user > when the user has no photo 
   "container": <div>
     <span
       class="_root_658745"
-      style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
     >
       <div>
         <div
@@ -891,7 +883,6 @@ exports[`UserInfo > when there is a signed-in user > when the user is missing pr
     <div>
       <span
         class="_root_658745"
-        style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
       >
         <div>
           <div
@@ -973,7 +964,6 @@ exports[`UserInfo > when there is a signed-in user > when the user is missing pr
   "container": <div>
     <span
       class="_root_658745"
-      style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
     >
       <div>
         <div
@@ -1112,7 +1102,6 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
     <div>
       <span
         class="_root_658745"
-        style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
       >
         <div>
           <div
@@ -1180,7 +1169,6 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
   "container": <div>
     <span
       class="_root_658745"
-      style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
     >
       <div>
         <div
@@ -1305,7 +1293,6 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
     <div>
       <span
         class="_root_658745"
-        style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
       >
         <div>
           <div
@@ -1373,7 +1360,6 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
   "container": <div>
     <span
       class="_root_658745"
-      style="--font-family: 'Quattrocento Sans', Arial, Helvetica, sans-serif; --dropdown-background-color: #f0f0f0;"
     >
       <div>
         <div

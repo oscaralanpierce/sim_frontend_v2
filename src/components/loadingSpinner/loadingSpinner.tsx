@@ -1,17 +1,13 @@
 import { type CSSProperties } from 'react'
 import { THEME_COLORS } from '../../utils/styles/colorSchemes'
-import { GLOBAL_CSS_VALUES } from '../../utils/styles/globalCss'
 import styles from './loadingSpinner.module.css'
 
 const LoadingSpinner = () => {
   const { schemeColorDarkest } =
     THEME_COLORS[Math.floor(Math.random() * THEME_COLORS.length)]
-  const { pageTextColor, bodyFontFamily } = GLOBAL_CSS_VALUES
 
   const styleVars = {
     '--background-color': schemeColorDarkest,
-    '--text-color': pageTextColor,
-    '--font-family': bodyFontFamily,
   } as CSSProperties
 
   return (

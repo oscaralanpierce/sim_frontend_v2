@@ -58,9 +58,9 @@
   .text {
     display: inline-block;
     border: none;
-    font-family: var(--font-family);
+    font-family: var(--body-font-family);
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--page-text-color);
     font-size: 1.1rem;
     text-align: center;
     margin: 0 auto;

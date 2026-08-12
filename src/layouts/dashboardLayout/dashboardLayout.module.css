@@ -1,8 +1,8 @@
 .root {
-  min-height: var(--background-height);
-  width: var(--background-width);
-  background-color: var(--background-color);
-  color: var(--text-color);
+  min-height: var(--page-background-min-height);
+  width: var(--page-background-min-width);
+  background-color: var(--page-background-color);
+  color: var(--page-text-color);
   display: flex;
   flex-direction: column;
 }
