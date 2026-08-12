@@ -3,7 +3,7 @@ import { act, waitFor } from '@testing-library/react'
 import { type User } from 'firebase/auth'
 import { renderWithRouter as render } from '../../support/testUtils'
 import { useAuthUser } from '../../hooks/useAuthUser'
-import { signInWithGoogle } from '../../firebase'
+import { getGoogleRedirectResult, signInWithGoogle } from '../../firebase'
 import HomePage from './homePage'
 import paths from '../../routing/paths'
 
@@ -14,6 +14,7 @@ const { mockNavigate } = vi.hoisted(() => ({
 vi.mock('../../hooks/useAuthUser')
 vi.mock('../../firebase', () => ({
   signInWithGoogle: vi.fn(),
+  getGoogleRedirectResult: vi.fn(),
 }))
 
 vi.mock('react-router-dom', async () => {
@@ -26,11 +27,14 @@ vi.mock('react-router-dom', async () => {
 
 const mockedUseAuthUser = vi.mocked(useAuthUser)
 const mockedSignInWithGoogle = vi.mocked(signInWithGoogle)
+const mockedGetGoogleRedirectResult = vi.mocked(getGoogleRedirectResult)
 
 describe('HomePage', () => {
   beforeEach(() => {
     mockedUseAuthUser.mockReset()
     mockedSignInWithGoogle.mockReset()
+    mockedGetGoogleRedirectResult.mockReset()
+    mockedGetGoogleRedirectResult.mockResolvedValue(null)
   })
 
   describe('when unauthenticated', () => {
@@ -61,7 +65,7 @@ describe('HomePage', () => {
     })
 
     test('calls signInWithGoogle when the button is clicked', async () => {
-      mockedSignInWithGoogle.mockResolvedValue({} as User)
+      mockedSignInWithGoogle.mockResolvedValue()
       const wrapper = render(<HomePage />)
 
       await act(async () => {
@@ -73,7 +77,7 @@ describe('HomePage', () => {
 
     test('logs an error if signInWithGoogle rejects', async () => {
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
-      const signInError = new Error('popup closed by user')
+      const signInError = new Error('redirect failed')
       mockedSignInWithGoogle.mockRejectedValue(signInError)
       const wrapper = render(<HomePage />)
 
@@ -85,6 +89,21 @@ describe('HomePage', () => {
         'Google sign-in failed',
         signInError
       )
+    })
+
+    test('logs an error if getGoogleRedirectResult rejects', async () => {
+      const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
+      const redirectError = new Error('account-exists-with-different-credential')
+      mockedGetGoogleRedirectResult.mockRejectedValue(redirectError)
+
+      render(<HomePage />)
+
+      await waitFor(() => {
+        expect(errorSpy).toHaveBeenCalledWith(
+          'Google sign-in failed',
+          redirectError
+        )
+      })
     })
   })
 

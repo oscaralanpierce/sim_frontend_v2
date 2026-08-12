@@ -1,11 +1,17 @@
 import { describe, test, expect, vi } from 'vitest'
 import {
-  signInWithPopup,
+  getRedirectResult,
+  signInWithRedirect,
   signOut,
   type User,
   type UserCredential,
 } from 'firebase/auth'
-import { signInWithGoogle, signOutWithGoogle, auth } from './firebase'
+import {
+  getGoogleRedirectResult,
+  signInWithGoogle,
+  signOutWithGoogle,
+  auth,
+} from './firebase'
 
 vi.mock('firebase/app', () => ({
   initializeApp: vi.fn(() => ({})),
@@ -13,25 +19,35 @@ vi.mock('firebase/app', () => ({
 
 vi.mock('firebase/auth', () => ({
   getAuth: vi.fn(() => ({})),
-  signInWithPopup: vi.fn(),
+  signInWithRedirect: vi.fn(),
+  getRedirectResult: vi.fn(),
   signOut: vi.fn(),
   GoogleAuthProvider: vi.fn(),
 }))
 
-const mockedSignInWithPopup = vi.mocked(signInWithPopup)
+const mockedSignInWithRedirect = vi.mocked(signInWithRedirect)
+const mockedGetRedirectResult = vi.mocked(getRedirectResult)
 const mockedSignOut = vi.mocked(signOut)
 
 describe('firebase', () => {
-  test('signInWithGoogle resolves with the signed-in user', async () => {
+  test('signInWithGoogle triggers a redirect to the Google sign-in flow', () => {
+    mockedSignInWithRedirect.mockReturnValue(new Promise(() => {}))
+
+    void signInWithGoogle()
+
+    expect(mockedSignInWithRedirect).toHaveBeenCalledOnce()
+  })
+
+  test('getGoogleRedirectResult resolves with the signed-in user credential', async () => {
     const fakeUser = { displayName: 'Dovahkiin' } as User
-    mockedSignInWithPopup.mockResolvedValue({
+    mockedGetRedirectResult.mockResolvedValue({
       user: fakeUser,
     } as UserCredential)
 
-    const user = await signInWithGoogle()
+    const result = await getGoogleRedirectResult()
 
-    expect(mockedSignInWithPopup).toHaveBeenCalledOnce()
-    expect(user).toBe(fakeUser)
+    expect(mockedGetRedirectResult).toHaveBeenCalledWith(auth)
+    expect(result?.user).toBe(fakeUser)
   })
 
   test('signOutWithGoogle signs the current user out', async () => {
