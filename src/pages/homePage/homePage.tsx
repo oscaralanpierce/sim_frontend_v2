@@ -8,7 +8,7 @@ import paths from '../../routing/paths'
 
 const HomePage = () => {
   const navigate = useNavigate()
-  const { user } = useAuthUser()
+  const { user, authLoading } = useAuthUser()
   const [isSigningIn, setIsSigningIn] = useState(false)
 
   const handleSignIn: MouseEventHandler = async () => {
@@ -44,7 +44,7 @@ const HomePage = () => {
       <div className={styles.container}>
         <h1 className={styles.header}>Skyrim Inventory Management</h1>
         <div className={styles.login}>
-          <GoogleSignInButton onClick={handleSignIn} loading={isSigningIn} />
+          <GoogleSignInButton onClick={handleSignIn} loading={isSigningIn || authLoading} />
         </div>
       </div>
     </div>
