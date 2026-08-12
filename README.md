@@ -11,6 +11,7 @@ This repo houses the README for the Skyrim Inventory Management V2 front end. Th
   - [Running Locally](#running-locally)
     - [Running the Back End](#running-the-back-end)
     - [Running the Front End](#running-the-front-end)
+    - [Setting Up Google Sign-In Locally](#setting-up-google-sign-in-locally)
   - [Development Workflows](#development-workflows)
   - [Testing](#testing)
     - [Testing with Vitest](#testing-with-vitest)
@@ -58,6 +59,31 @@ yarn dev
 ```
 
 In keeping with Vite defaults, the front end is configured to run on `http://localhost:5173` when you run this command. The API's [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policy dictates that the front end must run on port 5173 in development.
+
+#### Setting Up Google Sign-In Locally
+
+Google sign-in relies on Firebase Auth's `authDomain` being same-site with wherever the app is served, or browsers' third-party cookie/storage protections will silently break the auth flow. Since `VITE_FIREBASE_AUTH_DOMAIN` is set to `sim.oscaralanpierce.com` (matching production), testing sign-in locally means serving the front end from a subdomain of `oscaralanpierce.com` rather than plain `localhost`. This requires a one-time setup:
+
+1. **Add a local hostname entry.** Add the following line to `/etc/hosts` (requires `sudo`):
+
+   ```
+   127.0.0.1 dev.oscaralanpierce.com
+   ```
+
+   Before editing `/etc/hosts` on any machine, check that nothing else (e.g. `dnsmasq`, a corporate VPN, or another local DNS tool) is already managing it, since conflicting configuration can cause hard-to-diagnose networking issues.
+
+2. **Install and trust `mkcert`.** The dev server needs a valid HTTPS certificate for `dev.oscaralanpierce.com` (some browser cookie/storage behaviour requires a secure context). Install [mkcert](https://github.com/FiloSottile/mkcert) and add its local CA to your system and browser trust stores:
+
+   ```bash
+   brew install mkcert nss
+   mkcert -install
+   ```
+
+   `vite-plugin-mkcert` (already configured in `vite.config.ts`) will automatically generate a certificate for `dev.oscaralanpierce.com` using this local CA the first time you run the dev server.
+
+**Note:** this also requires `dev.oscaralanpierce.com` to be listed in Firebase's authorized domains (Firebase Console → Authentication → Settings → Authorized domains). This is a one-time, project-wide setting rather than something each developer needs to configure, so it should already be in place.
+
+Once this is set up, run `yarn dev` as usual and visit `https://dev.oscaralanpierce.com:5173` instead of `http://localhost:5173` to test Google sign-in. Note that the dev server is deliberately bound only to the `127.0.0.1` loopback interface (see `server.host` in `vite.config.ts`), so it will not be reachable from other devices on your network, even on an untrusted network like a coffee shop's Wi-Fi.
 
 ### Development Workflows
 
