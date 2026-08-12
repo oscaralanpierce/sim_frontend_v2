@@ -93,7 +93,9 @@ describe('HomePage', () => {
 
     test('logs an error if getGoogleRedirectResult rejects', async () => {
       const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
-      const redirectError = new Error('account-exists-with-different-credential')
+      const redirectError = new Error(
+        'account-exists-with-different-credential'
+      )
       mockedGetGoogleRedirectResult.mockRejectedValue(redirectError)
 
       render(<HomePage />)
