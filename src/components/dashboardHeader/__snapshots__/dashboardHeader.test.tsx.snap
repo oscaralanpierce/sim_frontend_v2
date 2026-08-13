@@ -99,7 +99,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
                   </div>
                 </div>
                 <menu
-                  class="_dropdown_658745"
+                  class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
                 >
@@ -253,7 +253,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
                 </div>
               </div>
               <menu
-                class="_dropdown_658745"
+                class="_menu_658745"
                 data-testid="userInfoMenu"
                 id="userInfoMenu"
               >
@@ -465,7 +465,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
                   </div>
                 </div>
                 <menu
-                  class="_dropdown_658745"
+                  class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
                 >
@@ -620,7 +620,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
                 </div>
               </div>
               <menu
-                class="_dropdown_658745"
+                class="_menu_658745"
                 data-testid="userInfoMenu"
                 id="userInfoMenu"
               >
@@ -817,7 +817,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                   </div>
                 </div>
                 <menu
-                  class="_dropdown_658745"
+                  class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
                 >
@@ -957,7 +957,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                 </div>
               </div>
               <menu
-                class="_dropdown_658745"
+                class="_menu_658745"
                 data-testid="userInfoMenu"
                 id="userInfoMenu"
               >
@@ -1155,7 +1155,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                   </div>
                 </div>
                 <menu
-                  class="_dropdown_658745"
+                  class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
                 >
@@ -1296,7 +1296,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                 </div>
               </div>
               <menu
-                class="_dropdown_658745"
+                class="_menu_658745"
                 data-testid="userInfoMenu"
                 id="userInfoMenu"
               >

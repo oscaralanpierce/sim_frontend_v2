@@ -2,6 +2,7 @@ import { describe, test, expect, vi } from 'vitest'
 import { waitFor } from '@testing-library/react'
 import { type User } from 'firebase/auth'
 import { LoginContext, LoginProvider } from '../../contexts/loginContext'
+import { DashboardProvider } from '../../contexts/dashboardContext'
 import { renderWithRouter } from '../../support/testUtils'
 import {
   TEST_USER,
@@ -22,7 +23,9 @@ const { mockNavigate, mockUseAuthUser } = vi.hoisted(() => ({
 const render = (user: User | null, authLoading: boolean) =>
   renderWithRouter(
     <LoginContext value={{ user, authLoading }}>
-      <DashboardPage />
+      <DashboardProvider>
+        <DashboardPage />
+      </DashboardProvider>
     </LoginContext>
   )
 
@@ -116,7 +119,9 @@ describe('DashboardPage', () => {
     test('navigates to the homepage without rendering links', async () => {
       const wrapper = renderWithRouter(
         <LoginProvider>
-          <DashboardPage />
+          <DashboardProvider>
+            <DashboardPage />
+          </DashboardProvider>
         </LoginProvider>
       )
 

@@ -3,6 +3,7 @@ import { act, fireEvent, waitFor } from '@testing-library/react'
 import { type User } from 'firebase/auth'
 import { renderWithRouter } from '../../support/testUtils'
 import { LoginContext } from '../../contexts/loginContext'
+import { DashboardContext } from '../../contexts/dashboardContext'
 import {
   TEST_USER,
   TEST_USER_DISPLAY_NAME,
@@ -12,7 +13,7 @@ import {
 import anonymousAvatar from './anonymousAvatar.jpg'
 import UserInfo from './userInfo'
 
-const { mockSignOut } = vi.hoisted(() => ({ mockSignOut: vi.fn() }))
+const { mockSignOut, setMenuVisible } = vi.hoisted(() => ({ mockSignOut: vi.fn(), setMenuVisible: vi.fn() }))
 
 vi.mock('../../firebase', () => ({
   signOutWithGoogle: mockSignOut,
@@ -26,10 +27,19 @@ vi.mock('react-router-dom', async () => {
   }
 })
 
-const render = (user: User | null) =>
+const render = (user: User | null, menuVisible: boolean = false) =>
   renderWithRouter(
     <LoginContext value={{ authLoading: false, user }}>
-      <UserInfo />
+      <DashboardContext
+        value={{
+          headerVisible: true,
+          setHeaderVisible: vi.fn(),
+          menuVisible,
+          setMenuVisible,
+        }}
+      >
+        <UserInfo />
+      </DashboardContext>
     </LoginContext>
   )
 
@@ -49,14 +59,19 @@ describe('UserInfo', () => {
 
       const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
-      const menu = wrapper.getByTestId('userInfoMenu')
-      expect(menu.getAttribute('class')).not.toMatch(/visible/i)
+      await act(() => fireEvent.click(toggle))
+
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
+    })
+
+    test('hides the sign-out menu when clicked', async () => {
+      const wrapper = render(null, true)
+
+      const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
       await act(() => fireEvent.click(toggle))
 
-      await waitFor(() => {
-        expect(menu.getAttribute('class')).toMatch(/visible/i)
-      })
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
     })
 
     test('displays the sign-out menu when Enter is pressed', async () => {
@@ -69,9 +84,7 @@ describe('UserInfo', () => {
 
       await act(() => fireEvent.keyDown(toggle, { key: 'Enter' }))
 
-      await waitFor(() => {
-        expect(menu.getAttribute('class')).toMatch(/visible/i)
-      })
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
     })
 
     test('displays the sign-out menu when space bar is pressed', async () => {
@@ -84,41 +97,21 @@ describe('UserInfo', () => {
 
       await act(() => fireEvent.keyDown(toggle, { key: ' ' }))
 
-      await waitFor(() => {
-        expect(menu.getAttribute('class')).toMatch(/visible/i)
-      })
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
     })
 
     test('hides the sign-out menu when Escape is pressed with control in focus', async () => {
-      const wrapper = render(null)
+      const wrapper = render(null, true)
 
       const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-      const menu = wrapper.getByTestId('userInfoMenu')
-      expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-
-      await act(() => fireEvent.keyDown(toggle, { key: ' ' }))
-
-      await waitFor(() => {
-        expect(menu.getAttribute('class')).toMatch(/visible/i)
-      })
 
       await act(() => fireEvent.keyDown(toggle, { key: 'Escape' }))
 
-      await waitFor(() => {
-        expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-      })
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
     })
 
     test("doesn't call sign-out function when link is clicked", async () => {
-      const wrapper = render(null)
-
-      const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-      const menu = wrapper.getByTestId('userInfoMenu')
-
-      await act(() => fireEvent.click(toggle))
-      await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+      const wrapper = render(null, true)
 
       const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -128,14 +121,7 @@ describe('UserInfo', () => {
     })
 
     test("doesn't call sign-out function when Enter is pressed", async () => {
-      const wrapper = render(null)
-
-      const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-      const menu = wrapper.getByTestId('userInfoMenu')
-
-      await act(() => fireEvent.click(toggle))
-      await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+      const wrapper = render(null, true)
 
       const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -145,14 +131,7 @@ describe('UserInfo', () => {
     })
 
     test("doesn't call sign-out function when space bar is pressed", async () => {
-      const wrapper = render(null)
-
-      const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-      const menu = wrapper.getByTestId('userInfoMenu')
-
-      await act(() => fireEvent.click(toggle))
-      await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+      const wrapper = render(null, true)
 
       const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -162,24 +141,14 @@ describe('UserInfo', () => {
     })
 
     test('hides the menu when Escape pressed with menu in focus', async () => {
-      const wrapper = render(null)
-
-      const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-      const menu = wrapper.getByTestId('userInfoMenu')
-
-      await act(() => fireEvent.click(toggle))
-      await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+      const wrapper = render(null, true)
 
       const signOutButton = wrapper.getByLabelText('Sign Out')
 
       await act(() => fireEvent.keyDown(signOutButton, { key: 'Escape' }))
 
       expect(mockSignOut).not.toHaveBeenCalled()
-
-      await waitFor(() =>
-        expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-      )
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
     })
 
     test('matches snapshot with menu hidden', () => {
@@ -189,18 +158,7 @@ describe('UserInfo', () => {
     })
 
     test('matches snapshot with menu visible', async () => {
-      const wrapper = render(null)
-
-      const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-      await act(() => fireEvent.click(toggle))
-
-      await waitFor(() =>
-        wrapper
-          .getByTestId('userInfoMenu')
-          .getAttribute('class')
-          ?.match(/visible/i)
-      )
+      const wrapper = render(null, true)
 
       expect(wrapper).toMatchSnapshot()
     })
@@ -229,9 +187,20 @@ describe('UserInfo', () => {
 
         await act(() => fireEvent.click(toggle))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
+      })
+
+      test('hides the sign-out menu when clicked', async () => {
+        const wrapper = render(TEST_USER, true)
+
+        const toggle = wrapper.getByLabelText('Toggle Dropdown')
+
+        const menu = wrapper.getByTestId('userInfoMenu')
+        expect(menu.getAttribute('class')).toMatch(/visible/i)
+
+        await act(() => fireEvent.click(toggle))
+
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
       })
 
       test('displays the sign-out menu when Enter is pressed', async () => {
@@ -244,9 +213,20 @@ describe('UserInfo', () => {
 
         await act(() => fireEvent.keyDown(toggle, { key: 'Enter' }))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
+      })
+
+      test('hides the sign-out menu when Enter is pressed', async () => {
+        const wrapper = render(TEST_USER, true)
+
+        const toggle = wrapper.getByLabelText('Toggle Dropdown')
+
+        const menu = wrapper.getByTestId('userInfoMenu')
+        expect(menu.getAttribute('class')).toMatch(/visible/i)
+
+        await act(() => fireEvent.keyDown(toggle, { key: 'Enter' }))
+
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
       })
 
       test('displays the sign-out menu when space bar is pressed', async () => {
@@ -259,64 +239,54 @@ describe('UserInfo', () => {
 
         await act(() => fireEvent.keyDown(toggle, { key: ' ' }))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
       })
 
-      test('hides the sign-out menu when Escape is pressed with control in focus', async () => {
-        const wrapper = render(TEST_USER)
+      test('hides the sign-out menu when space bar is pressed', async () => {
+        const wrapper = render(TEST_USER, true)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
         const menu = wrapper.getByTestId('userInfoMenu')
-        expect(menu.getAttribute('class')).not.toMatch(/visible/i)
+        expect(menu.getAttribute('class')).toMatch(/visible/i)
 
         await act(() => fireEvent.keyDown(toggle, { key: ' ' }))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
+      })
+
+      test('hides the sign-out menu when Escape is pressed with control in focus', async () => {
+        const wrapper = render(TEST_USER, true)
+
+        const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
         await act(() => fireEvent.keyDown(toggle, { key: 'Escape' }))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
       })
 
-      test("doesn't display or hide the sign-out menu when another key is pressed", async () => {
+      test("doesn't display the sign-out menu when another key is pressed", async () => {
         const wrapper = render(TEST_USER)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
-        const menu = wrapper.getByTestId('userInfoMenu')
 
         await act(() => fireEvent.keyDown(toggle, { key: 'Q' }))
 
-        await waitFor(() =>
-          expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-        )
-
-        await act(() => fireEvent.click(toggle))
-
-        await waitFor(() => menu.getAttribute('class')?.match(/visible/i))
-
-        await act(() => fireEvent.keyDown(toggle, { key: 'M' }))
-
-        await waitFor(() =>
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        )
+        expect(setMenuVisible).not.toHaveBeenCalled()
       })
 
-      test('signs out the user when the link is clicked', async () => {
-        const wrapper = render(TEST_USER)
+      test("doesn't hide the sign-out menu when another key is pressed", async () => {
+        const wrapper = render(TEST_USER, true)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
-        const menu = wrapper.getByTestId('userInfoMenu')
+        await act(() => fireEvent.keyDown(toggle, { key: 'F' }))
 
-        await act(() => fireEvent.click(toggle))
-        await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+        expect(setMenuVisible).not.toHaveBeenCalled()
+      })
+
+      test('signs out the user when the link is clicked', async () => {
+        const wrapper = render(TEST_USER, true)
 
         const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -326,14 +296,7 @@ describe('UserInfo', () => {
       })
 
       test('signs out the user when Enter is pressed', async () => {
-        const wrapper = render(TEST_USER)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        const menu = wrapper.getByTestId('userInfoMenu')
-
-        await act(() => fireEvent.click(toggle))
-        await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+        const wrapper = render(TEST_USER, true)
 
         const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -343,14 +306,7 @@ describe('UserInfo', () => {
       })
 
       test('signs out the user when space bar is pressed', async () => {
-        const wrapper = render(TEST_USER)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        const menu = wrapper.getByTestId('userInfoMenu')
-
-        await act(() => fireEvent.click(toggle))
-        await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+        const wrapper = render(TEST_USER, true)
 
         const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -360,24 +316,14 @@ describe('UserInfo', () => {
       })
 
       test('hides the menu when Escape pressed with menu in focus', async () => {
-        const wrapper = render(TEST_USER)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        const menu = wrapper.getByTestId('userInfoMenu')
-
-        await act(() => fireEvent.click(toggle))
-        await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+        const wrapper = render(TEST_USER, true)
 
         const signOutButton = wrapper.getByLabelText('Sign Out')
 
         await act(() => fireEvent.keyDown(signOutButton, { key: 'Escape' }))
 
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
         expect(mockSignOut).not.toHaveBeenCalled()
-
-        await waitFor(() =>
-          expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-        )
       })
 
       test('matches snapshot when menu hidden', () => {
@@ -386,19 +332,8 @@ describe('UserInfo', () => {
         expect(wrapper).toMatchSnapshot()
       })
 
-      test('matches snapshot when menu visible', async () => {
-        const wrapper = render(TEST_USER)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        await act(() => fireEvent.click(toggle))
-
-        await waitFor(() =>
-          wrapper
-            .getByTestId('userInfoMenu')
-            .getAttribute('class')
-            ?.match(/visible/i)
-        )
+      test('matches snapshot when menu visible', () => {
+        const wrapper = render(TEST_USER, true)
 
         expect(wrapper).toMatchSnapshot()
       })
@@ -427,9 +362,20 @@ describe('UserInfo', () => {
 
         await act(() => fireEvent.click(toggle))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
+      })
+
+      test('hides the sign-out menu when clicked', async () => {
+        const wrapper = render(user, true)
+
+        const toggle = wrapper.getByLabelText('Toggle Dropdown')
+
+        const menu = wrapper.getByTestId('userInfoMenu')
+        expect(menu.getAttribute('class')).toMatch(/visible/i)
+
+        await act(() => fireEvent.click(toggle))
+
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
       })
 
       test('displays the sign-out menu when Enter is pressed', async () => {
@@ -442,9 +388,20 @@ describe('UserInfo', () => {
 
         await act(() => fireEvent.keyDown(toggle, { key: 'Enter' }))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
+      })
+
+      test('hides the sign-out menu when Enter is pressed', async () => {
+        const wrapper = render(user, true)
+
+        const toggle = wrapper.getByLabelText('Toggle Dropdown')
+
+        const menu = wrapper.getByTestId('userInfoMenu')
+        expect(menu.getAttribute('class')).toMatch(/visible/i)
+
+        await act(() => fireEvent.keyDown(toggle, { key: 'Enter' }))
+
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
       })
 
       test('displays the sign-out menu when space bar is pressed', async () => {
@@ -457,64 +414,54 @@ describe('UserInfo', () => {
 
         await act(() => fireEvent.keyDown(toggle, { key: ' ' }))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
       })
 
-      test("doesn't display or hide the sign-out menu when another key is pressed", async () => {
-        const wrapper = render(user)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-        const menu = wrapper.getByTestId('userInfoMenu')
-
-        await act(() => fireEvent.keyDown(toggle, { key: 'Q' }))
-
-        await waitFor(() =>
-          expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-        )
-
-        await act(() => fireEvent.click(toggle))
-
-        await waitFor(() => menu.getAttribute('class')?.match(/visible/i))
-
-        await act(() => fireEvent.keyDown(toggle, { key: 'M' }))
-
-        await waitFor(() =>
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        )
-      })
-
-      test('hides the sign-out menu when Escape is pressed with control in focus', async () => {
-        const wrapper = render(user)
+      test('hides the sign-out menu when space bar is pressed', async () => {
+        const wrapper = render(user, true)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
         const menu = wrapper.getByTestId('userInfoMenu')
-        expect(menu.getAttribute('class')).not.toMatch(/visible/i)
+        expect(menu.getAttribute('class')).toMatch(/visible/i)
 
         await act(() => fireEvent.keyDown(toggle, { key: ' ' }))
 
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).toMatch(/visible/i)
-        })
-
-        await act(() => fireEvent.keyDown(toggle, { key: 'Escape' }))
-
-        await waitFor(() => {
-          expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-        })
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
       })
 
-      test('signs out the user when the link is clicked', async () => {
+      test("doesn't display the sign-out menu when another key is pressed", async () => {
         const wrapper = render(user)
 
         const toggle = wrapper.getByLabelText('Toggle Dropdown')
 
-        const menu = wrapper.getByTestId('userInfoMenu')
+        await act(() => fireEvent.keyDown(toggle, { key: 'Q' }))
 
-        await act(() => fireEvent.click(toggle))
-        await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+        expect(setMenuVisible).not.toHaveBeenCalled()
+      })
+
+      test("doesn't hide the sign-out menu when another key is pressed", async () => {
+        const wrapper = render(user, true)
+
+        const toggle = wrapper.getByLabelText('Toggle Dropdown')
+
+        await act(() => fireEvent.keyDown(toggle, { key: 'Q' }))
+
+        expect(setMenuVisible).not.toHaveBeenCalled()
+      })
+
+      test('hides the sign-out menu when Escape is pressed with control in focus', async () => {
+        const wrapper = render(user, true)
+
+        const toggle = wrapper.getByLabelText('Toggle Dropdown')
+
+        await act(() => fireEvent.keyDown(toggle, { key: 'Escape' }))
+
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
+      })
+
+      test('signs out the user when the link is clicked', async () => {
+        const wrapper = render(user, true)
 
         const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -524,14 +471,7 @@ describe('UserInfo', () => {
       })
 
       test('signs out the user when Enter is pressed', async () => {
-        const wrapper = render(user)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        const menu = wrapper.getByTestId('userInfoMenu')
-
-        await act(() => fireEvent.click(toggle))
-        await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+        const wrapper = render(user, true)
 
         const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -541,14 +481,7 @@ describe('UserInfo', () => {
       })
 
       test('signs out the user when space bar is pressed', async () => {
-        const wrapper = render(user)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        const menu = wrapper.getByTestId('userInfoMenu')
-
-        await act(() => fireEvent.click(toggle))
-        await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+        const wrapper = render(user, true)
 
         const signOutButton = wrapper.getByLabelText('Sign Out')
 
@@ -558,24 +491,14 @@ describe('UserInfo', () => {
       })
 
       test('hides the menu when Escape pressed with menu in focus', async () => {
-        const wrapper = render(user)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        const menu = wrapper.getByTestId('userInfoMenu')
-
-        await act(() => fireEvent.click(toggle))
-        await waitFor(() => menu?.getAttribute('class')?.match(/visible/i))
+        const wrapper = render(user, true)
 
         const signOutButton = wrapper.getByLabelText('Sign Out')
 
         await act(() => fireEvent.keyDown(signOutButton, { key: 'Escape' }))
 
+        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
         expect(mockSignOut).not.toHaveBeenCalled()
-
-        await waitFor(() =>
-          expect(menu.getAttribute('class')).not.toMatch(/visible/i)
-        )
       })
 
       test('matches snapshot when menu is hidden', () => {
@@ -584,19 +507,8 @@ describe('UserInfo', () => {
         expect(wrapper).toMatchSnapshot()
       })
 
-      test('matches snapshot when menu is visible', async () => {
-        const wrapper = render(user)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        await act(() => fireEvent.click(toggle))
-
-        await waitFor(() =>
-          wrapper
-            .getByTestId('userInfoMenu')
-            .getAttribute('class')
-            ?.match(/visible/i)
-        )
+      test('matches snapshot when menu is visible', () => {
+        const wrapper = render(user, true)
 
         expect(wrapper).toMatchSnapshot()
       })
@@ -616,8 +528,14 @@ describe('UserInfo', () => {
         expect(wrapper.getByText('No Email')).toBeTruthy()
       })
 
-      test('matches snapshot', () => {
+      test('matches snapshot with menu hidden', () => {
         const wrapper = render(user)
+
+        expect(wrapper).toMatchSnapshot()
+      })
+
+      test('matches snapshot with menu visible', () => {
+        const wrapper = render(user, true)
 
         expect(wrapper).toMatchSnapshot()
       })

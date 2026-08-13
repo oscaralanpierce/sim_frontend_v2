@@ -9,13 +9,16 @@ import {
   TEST_USER_PHOTO_URL,
 } from '../../support/data/login'
 import { LoginContext } from '../../contexts/loginContext'
+import { DashboardProvider } from '../../contexts/dashboardContext'
 import paths from '../../routing/paths'
 import DashboardHeader from './dashboardHeader'
 
 const render = (user: User | null) =>
   renderWithRouter(
     <LoginContext value={{ user, authLoading: false }}>
-      <DashboardHeader />
+      <DashboardProvider>
+        <DashboardHeader />
+      </DashboardProvider>
     </LoginContext>
   )
 

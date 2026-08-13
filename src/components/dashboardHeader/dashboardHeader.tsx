@@ -1,5 +1,4 @@
 import {
-  useState,
   type CSSProperties,
   type MouseEventHandler,
   type KeyboardEventHandler,
@@ -11,12 +10,13 @@ import {
   faChevronUp,
   faHouse,
 } from '@fortawesome/free-solid-svg-icons'
+import { useDashboardContext } from '../../hooks/contexts'
 import paths from '../../routing/paths'
 import UserInfo from '../userInfo/userInfo'
 import styles from './dashboardHeader.module.css'
 
 const DashboardHeader = () => {
-  const [headerVisible, setHeaderVisible] = useState(false)
+  const { headerVisible, setHeaderVisible } = useDashboardContext()
 
   const styleVars = {
     '--title-line-height': '1.8rem',

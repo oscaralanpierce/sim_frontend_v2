@@ -103,7 +103,7 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
                     </div>
                   </div>
                   <menu
-                    class="_dropdown_658745"
+                    class="_menu_658745"
                     data-testid="userInfoMenu"
                     id="userInfoMenu"
                   >
@@ -283,7 +283,7 @@ exports[`DashboardLayout > with a title > matches snapshot 1`] = `
                   </div>
                 </div>
                 <menu
-                  class="_dropdown_658745"
+                  class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
                 >
@@ -520,7 +520,7 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
                     </div>
                   </div>
                   <menu
-                    class="_dropdown_658745"
+                    class="_menu_658745"
                     data-testid="userInfoMenu"
                     id="userInfoMenu"
                   >
@@ -692,7 +692,7 @@ exports[`DashboardLayout > without a title > matches snapshot 1`] = `
                   </div>
                 </div>
                 <menu
-                  class="_dropdown_658745"
+                  class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
                 >

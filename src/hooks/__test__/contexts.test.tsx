@@ -1,10 +1,10 @@
-import React from 'react'
 import { describe, test, expect } from 'vitest'
-import { renderHook, waitFor } from '@testing-library/react'
-import { useColorScheme, useLogin } from '../contexts'
-import { ColorContext } from '../../contexts/colorContext'
+import { renderHook } from '@testing-library/react'
 import { RED } from '../../utils/styles/colorSchemes'
+import { useColorScheme, useLogin, useDashboardContext } from '../contexts'
+import { ColorContext } from '../../contexts/colorContext'
 import { LoginContext } from '../../contexts/loginContext'
+import { DashboardContext } from '../../contexts/dashboardContext'
 
 describe('useColorScheme', () => {
   test('works when rendered in a ColorContext', () => {
@@ -44,5 +44,42 @@ describe('useLogin', () => {
     expect(() => {
       renderHook(() => useLogin())
     }).toThrow('useLogin must be used within a LoginProvider')
+  })
+})
+
+describe('useDashboardContext', () => {
+  test('works when rendered in a DashboardContext', () => {
+    const menuVisible = true
+    const headerVisible = true
+    const setMenuVisible = (_value: boolean) => {}
+    const setHeaderVisible = (_value: boolean) => {}
+
+    const { result } = renderHook(() => useDashboardContext(), {
+      wrapper: ({ children }) => (
+        <DashboardContext
+          value={{
+            menuVisible,
+            headerVisible,
+            setMenuVisible,
+            setHeaderVisible,
+          }}
+        >
+          {children}
+        </DashboardContext>
+      ),
+    })
+
+    expect(result.current).toEqual({
+      headerVisible,
+      menuVisible,
+      setHeaderVisible,
+      setMenuVisible,
+    })
+  })
+
+  test('raises an error when rendered outside a DashboardContext', () => {
+    expect(() => {
+      renderHook(() => useDashboardContext())
+    }).toThrow('useDashboardContext must be used within a DashboardProvider')
   })
 })
