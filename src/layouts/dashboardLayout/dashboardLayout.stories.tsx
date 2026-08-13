@@ -4,7 +4,6 @@ import { TEST_USER } from '../../support/data/login'
 import profileImage from '../../support/testProfileImg.png'
 import DeFinibus from '../../support/testComponents/deFinibus'
 import { LoginContext } from '../../contexts/loginContext'
-import { DashboardProvider } from '../../contexts/dashboardContext'
 import DashboardLayout from './dashboardLayout'
 
 const user = { ...TEST_USER, photoURL: profileImage }
@@ -18,9 +17,7 @@ const meta: Meta<typeof DashboardLayout> = {
     (Story) => (
       <BrowserRouter>
         <LoginContext value={{ user, authLoading: false }}>
-          <DashboardProvider>
-            <Story />
-          </DashboardProvider>
+          <Story />
         </LoginContext>
       </BrowserRouter>
     ),

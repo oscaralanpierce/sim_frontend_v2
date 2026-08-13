@@ -3,17 +3,14 @@ import { renderWithRouter } from '../../support/testUtils'
 import { TEST_USER, TEST_USER_DISPLAY_NAME } from '../../support/data/login'
 import DeFinibus from '../../support/testComponents/deFinibus'
 import { LoginContext } from '../../contexts/loginContext'
-import { DashboardProvider } from '../../contexts/dashboardContext'
 import DashboardLayout from './dashboardLayout'
 
 const render = (title?: string) =>
   renderWithRouter(
     <LoginContext value={{ user: TEST_USER, authLoading: false }}>
-      <DashboardProvider>
-        <DashboardLayout title={title}>
-            <DeFinibus />
-        </DashboardLayout>
-      </DashboardProvider>
+      <DashboardLayout title={title}>
+        <DeFinibus />
+      </DashboardLayout>
     </LoginContext>
   )
 
