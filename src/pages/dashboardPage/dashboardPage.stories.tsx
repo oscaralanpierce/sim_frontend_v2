@@ -1,7 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { BrowserRouter } from 'react-router-dom'
 import { LoginContext } from '../../contexts/loginContext'
-import { DashboardProvider } from '../../contexts/dashboardContext'
 import { TEST_USER } from '../../support/data/login'
 import photoURL from '../../support/testProfileImg.png'
 import DashboardPage from './dashboardPage'
@@ -22,9 +21,7 @@ const meta: Meta<typeof DashboardPage> = {
             authLoading: parameters['authLoading'],
           }}
         >
-          <DashboardProvider>
-            <Story />
-          </DashboardProvider>
+          <Story />
         </LoginContext>
       </BrowserRouter>
     ),
