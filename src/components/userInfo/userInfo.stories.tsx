@@ -20,8 +20,7 @@ const meta: Meta<typeof UserInfo> = {
             authLoading: parameters['authLoading'],
           }}
         >
-          <
-            DashboardContext
+          <DashboardContext
             value={{
               headerVisible: true,
               setHeaderVisible: () => {},
@@ -98,5 +97,5 @@ export const MenuVisible: UserInfoStory = {
     },
     authLoading: false,
     menuVisible: true,
-  }
+  },
 }

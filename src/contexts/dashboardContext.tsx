@@ -21,8 +21,7 @@ export const DashboardProvider = ({ children }: ProviderProps) => {
   // components, ensures the header has to be visible for the
   // menu to be displayed.
   const setMenuVisible = (value: boolean) => {
-    if (!headerVisible && value === true)
-      return
+    if (!headerVisible && value === true) return
 
     _setMenuVisible(value)
   }

@@ -13,7 +13,10 @@ import {
 import anonymousAvatar from './anonymousAvatar.jpg'
 import UserInfo from './userInfo'
 
-const { mockSignOut, setMenuVisible } = vi.hoisted(() => ({ mockSignOut: vi.fn(), setMenuVisible: vi.fn() }))
+const { mockSignOut, setMenuVisible } = vi.hoisted(() => ({
+  mockSignOut: vi.fn(),
+  setMenuVisible: vi.fn(),
+}))
 
 vi.mock('../../firebase', () => ({
   signOutWithGoogle: mockSignOut,

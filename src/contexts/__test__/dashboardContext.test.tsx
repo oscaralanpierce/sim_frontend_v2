@@ -3,7 +3,7 @@ import { act, fireEvent, waitFor } from '@testing-library/react'
 import { render } from '../../support/testUtils'
 import { useDashboardContext } from '../../hooks/contexts'
 import { DashboardProvider } from '../dashboardContext'
-import Test from 'node:test';
+import Test from 'node:test'
 
 const TestComponent = () => {
   const { menuVisible, setMenuVisible, headerVisible, setHeaderVisible } =
@@ -127,6 +127,32 @@ describe('DashboardProvider', () => {
       const button = wrapper.getByText('Toggle Menu')
 
       await act(() => fireEvent.click(button))
+
+      await waitFor(() => {
+        expect(wrapper.getByText('Header Visible: false')).toBeTruthy()
+        expect(wrapper.getByText('Menu Visible: false')).toBeTruthy()
+      })
+    })
+
+    test('hides the menu when the header is hidden', async () => {
+      const wrapper = render(
+        <DashboardProvider>
+          <TestComponent />
+        </DashboardProvider>
+      )
+
+      const headerButton = wrapper.getByText('Toggle Header')
+      const menuButton = wrapper.getByText('Toggle Menu')
+
+      await act(() => fireEvent.click(headerButton))
+      await act(() => fireEvent.click(menuButton))
+
+      await waitFor(() => {
+        expect(wrapper.getByText('Header Visible: true')).toBeTruthy()
+        expect(wrapper.getByText('Menu Visible: true')).toBeTruthy()
+      })
+
+      await act(() => fireEvent.click(headerButton))
 
       await waitFor(() => {
         expect(wrapper.getByText('Header Visible: false')).toBeTruthy()
