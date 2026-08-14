@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { ColorContext } from '../contexts/colorContext'
 import { LoginContext } from '../contexts/loginContext'
+import { DashboardContext } from '../contexts/dashboardContext'
 
 const useCustomContext = <T>(cxt: React.Context<T>, msg: string) => {
   const context = useContext(cxt)
@@ -18,3 +19,9 @@ export const useColorScheme = () =>
 
 export const useLogin = () =>
   useCustomContext(LoginContext, 'useLogin must be used within a LoginProvider')
+
+export const useDashboardContext = () =>
+  useCustomContext(
+    DashboardContext,
+    'useDashboardContext must be used within a DashboardProvider'
+  )

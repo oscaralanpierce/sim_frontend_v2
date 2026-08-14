@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react-vite'
 import { BrowserRouter } from 'react-router-dom'
 import { TEST_USER } from '../../support/data/login'
 import { LoginContext } from '../../contexts/loginContext'
+import { DashboardProvider } from '../../contexts/dashboardContext'
 import testImage from '../../support/testProfileImg.png'
 import DashboardHeader from './dashboardHeader'
 
@@ -19,7 +20,9 @@ const meta: Meta<typeof DashboardHeader> = {
             user: parameters['user'],
           }}
         >
-          <Story />
+          <DashboardProvider>
+            <Story />
+          </DashboardProvider>
         </LoginContext>
       </BrowserRouter>
     ),

@@ -1,25 +1,25 @@
-import { useState, type KeyboardEventHandler } from 'react'
+import { type KeyboardEventHandler } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
-import { useLogin } from '../../hooks/contexts'
+import { useLogin, useDashboardContext } from '../../hooks/contexts'
 import { signOutWithGoogle } from '../../firebase'
 import anonymousAvatar from './anonymousAvatar.jpg'
 import styles from './userInfo.module.css'
 
 const UserInfo = () => {
-  const [dropdownVisible, setDropdownVisible] = useState(false)
+  const { menuVisible, setMenuVisible } = useDashboardContext()
   const { user } = useLogin()
 
-  const toggleDropdown = () => {
-    setDropdownVisible(!dropdownVisible)
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible)
   }
 
-  const toggleDropdownOnKeyDown: KeyboardEventHandler = (e) => {
+  const toggleMenuOnKeyDown: KeyboardEventHandler = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
-      toggleDropdown()
+      toggleMenu()
     }
-    if (e.key === 'Escape') setDropdownVisible(false)
+    if (e.key === 'Escape') setMenuVisible(false)
   }
 
   return (
@@ -30,10 +30,10 @@ const UserInfo = () => {
           role="button"
           aria-label="Toggle Dropdown"
           aria-controls="userInfoMenu"
-          aria-expanded={dropdownVisible}
+          aria-expanded={menuVisible}
           tabIndex={0}
-          onClick={toggleDropdown}
-          onKeyDown={toggleDropdownOnKeyDown}
+          onClick={toggleMenu}
+          onKeyDown={toggleMenuOnKeyDown}
         >
           <FontAwesomeIcon icon={faBars} className={styles.hamburger} />
           {user && (
@@ -55,9 +55,10 @@ const UserInfo = () => {
         </div>
       </div>
       <menu
-        className={dropdownVisible ? styles.dropdownVisible : styles.dropdown}
+        className={menuVisible ? styles.menuVisible : styles.menu}
         id="userInfoMenu"
         data-testid="userInfoMenu"
+        inert={!menuVisible}
       >
         <div
           role="button"
@@ -67,10 +68,10 @@ const UserInfo = () => {
               e.preventDefault()
               signOutWithGoogle()
             }
-            if (e.key === 'Escape') setDropdownVisible(false)
+            if (e.key === 'Escape') setMenuVisible(false)
           }}
           aria-label="Sign Out"
-          tabIndex={dropdownVisible ? 0 : -1}
+          tabIndex={menuVisible ? 0 : -1}
         >
           <FontAwesomeIcon
             icon={faRightFromBracket}

@@ -18,11 +18,11 @@
   display: none;
 }
 
-.dropdown {
+.menu {
   display: none;
 }
 
-.dropdownVisible {
+.menuVisible {
   font-family: var(--body-font-family);
   color: #000;
   display: block;
@@ -37,14 +37,14 @@
   opacity: 90%;
 }
 
-.dropdownVisible:hover {
+.menuVisible:hover {
   background-color: #e0e0e0;
   opacity: 90%;
   border-color: #dadada;
 }
 
-.dropdownVisible:focus,
-.dropdownVisible:active {
+.menuVisible:focus,
+.menuVisible:active {
   background-color: #e0e0e0;
   opacity: 90%;
 }
