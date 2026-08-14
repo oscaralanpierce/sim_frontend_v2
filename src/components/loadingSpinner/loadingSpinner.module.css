@@ -81,7 +81,7 @@
 :global([data-reduced-motion='true']) .text {
   display: inline-block;
   border: none;
-  font-family: var(--font-family);
+  font-family: var(--body-font-family);
   font-weight: 700;
   color: var(--text-color);
   font-size: 1.1rem;
