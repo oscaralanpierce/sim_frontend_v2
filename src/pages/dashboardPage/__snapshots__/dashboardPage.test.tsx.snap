@@ -92,6 +92,7 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
                     class="_menu_658745"
                     data-testid="userInfoMenu"
                     id="userInfoMenu"
+                    inert=""
                   >
                     <div
                       aria-label="Sign Out"
@@ -281,6 +282,7 @@ exports[`DashboardPage > when auth is loading > matches snapshot 1`] = `
                   class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
+                  inert=""
                 >
                   <div
                     aria-label="Sign Out"
@@ -541,6 +543,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                     class="_menu_658745"
                     data-testid="userInfoMenu"
                     id="userInfoMenu"
+                    inert=""
                   >
                     <div
                       aria-label="Sign Out"
@@ -792,6 +795,7 @@ exports[`DashboardPage > when there is a logged-in user > matches snapshot 1`] =
                   class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
+                  inert=""
                 >
                   <div
                     aria-label="Sign Out"

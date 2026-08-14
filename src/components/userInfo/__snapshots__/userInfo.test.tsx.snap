@@ -56,6 +56,7 @@ exports[`UserInfo > when there is a signed-in user > when the user has a photo U
           class="_menu_658745"
           data-testid="userInfoMenu"
           id="userInfoMenu"
+          inert=""
         >
           <div
             aria-label="Sign Out"
@@ -137,6 +138,7 @@ exports[`UserInfo > when there is a signed-in user > when the user has a photo U
         class="_menu_658745"
         data-testid="userInfoMenu"
         id="userInfoMenu"
+        inert=""
       >
         <div
           aria-label="Sign Out"
@@ -494,6 +496,7 @@ exports[`UserInfo > when there is a signed-in user > when the user has no photo 
           class="_menu_658745"
           data-testid="userInfoMenu"
           id="userInfoMenu"
+          inert=""
         >
           <div
             aria-label="Sign Out"
@@ -575,6 +578,7 @@ exports[`UserInfo > when there is a signed-in user > when the user has no photo 
         class="_menu_658745"
         data-testid="userInfoMenu"
         id="userInfoMenu"
+        inert=""
       >
         <div
           aria-label="Sign Out"
@@ -932,6 +936,7 @@ exports[`UserInfo > when there is a signed-in user > when the user is missing pr
           class="_menu_658745"
           data-testid="userInfoMenu"
           id="userInfoMenu"
+          inert=""
         >
           <div
             aria-label="Sign Out"
@@ -1013,6 +1018,7 @@ exports[`UserInfo > when there is a signed-in user > when the user is missing pr
         class="_menu_658745"
         data-testid="userInfoMenu"
         id="userInfoMenu"
+        inert=""
       >
         <div
           aria-label="Sign Out"
@@ -1356,6 +1362,7 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
           class="_menu_658745"
           data-testid="userInfoMenu"
           id="userInfoMenu"
+          inert=""
         >
           <div
             aria-label="Sign Out"
@@ -1423,6 +1430,7 @@ exports[`UserInfo > when there is no signed-in user > matches snapshot with menu
         class="_menu_658745"
         data-testid="userInfoMenu"
         id="userInfoMenu"
+        inert=""
       >
         <div
           aria-label="Sign Out"

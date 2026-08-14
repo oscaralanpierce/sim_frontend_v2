@@ -58,6 +58,7 @@ const UserInfo = () => {
         className={menuVisible ? styles.menuVisible : styles.menu}
         id="userInfoMenu"
         data-testid="userInfoMenu"
+        inert={!menuVisible}
       >
         <div
           role="button"

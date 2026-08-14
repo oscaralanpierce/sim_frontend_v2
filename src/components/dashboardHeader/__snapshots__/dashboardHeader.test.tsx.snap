@@ -102,6 +102,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
                   class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
+                  inert=""
                 >
                   <div
                     aria-label="Sign Out"
@@ -256,6 +257,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
                 class="_menu_658745"
                 data-testid="userInfoMenu"
                 id="userInfoMenu"
+                inert=""
               >
                 <div
                   aria-label="Sign Out"
@@ -468,6 +470,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
                   class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
+                  inert=""
                 >
                   <div
                     aria-label="Sign Out"
@@ -623,6 +626,7 @@ exports[`DashboardHeader > when there is a logged-in user > matches snapshot whe
                 class="_menu_658745"
                 data-testid="userInfoMenu"
                 id="userInfoMenu"
+                inert=""
               >
                 <div
                   aria-label="Sign Out"
@@ -820,6 +824,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                   class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
+                  inert=""
                 >
                   <div
                     aria-label="Sign Out"
@@ -960,6 +965,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                 class="_menu_658745"
                 data-testid="userInfoMenu"
                 id="userInfoMenu"
+                inert=""
               >
                 <div
                   aria-label="Sign Out"
@@ -1158,6 +1164,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                   class="_menu_658745"
                   data-testid="userInfoMenu"
                   id="userInfoMenu"
+                  inert=""
                 >
                   <div
                     aria-label="Sign Out"
@@ -1299,6 +1306,7 @@ exports[`DashboardHeader > when there is no logged-in user > matches snapshot wh
                 class="_menu_658745"
                 data-testid="userInfoMenu"
                 id="userInfoMenu"
+                inert=""
               >
                 <div
                   aria-label="Sign Out"
