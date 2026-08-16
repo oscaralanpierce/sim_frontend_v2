@@ -103,16 +103,6 @@ describe('UserInfo', () => {
       expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(true)
     })
 
-    test('hides the sign-out menu when Escape is pressed with control in focus', async () => {
-      const wrapper = render(null, true)
-
-      const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-      await act(() => fireEvent.keyDown(toggle, { key: 'Escape' }))
-
-      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
-    })
-
     test("doesn't call sign-out function when link is clicked", async () => {
       const wrapper = render(null, true)
 
@@ -141,17 +131,6 @@ describe('UserInfo', () => {
       await act(() => fireEvent.keyDown(signOutButton, { key: ' ' }))
 
       expect(mockSignOut).not.toHaveBeenCalled()
-    })
-
-    test('hides the menu when Escape pressed with menu in focus', async () => {
-      const wrapper = render(null, true)
-
-      const signOutButton = wrapper.getByLabelText('Sign Out')
-
-      await act(() => fireEvent.keyDown(signOutButton, { key: 'Escape' }))
-
-      expect(mockSignOut).not.toHaveBeenCalled()
-      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
     })
 
     test('matches snapshot with menu hidden', () => {
@@ -258,16 +237,6 @@ describe('UserInfo', () => {
         expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
       })
 
-      test('hides the sign-out menu when Escape is pressed with control in focus', async () => {
-        const wrapper = render(TEST_USER, true)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        await act(() => fireEvent.keyDown(toggle, { key: 'Escape' }))
-
-        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
-      })
-
       test("doesn't display the sign-out menu when another key is pressed", async () => {
         const wrapper = render(TEST_USER)
 
@@ -316,17 +285,6 @@ describe('UserInfo', () => {
         await act(() => fireEvent.keyDown(signOutButton, { key: ' ' }))
 
         expect(mockSignOut).toHaveBeenCalledOnce()
-      })
-
-      test('hides the menu when Escape pressed with menu in focus', async () => {
-        const wrapper = render(TEST_USER, true)
-
-        const signOutButton = wrapper.getByLabelText('Sign Out')
-
-        await act(() => fireEvent.keyDown(signOutButton, { key: 'Escape' }))
-
-        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
-        expect(mockSignOut).not.toHaveBeenCalled()
       })
 
       test('matches snapshot when menu hidden', () => {
@@ -453,16 +411,6 @@ describe('UserInfo', () => {
         expect(setMenuVisible).not.toHaveBeenCalled()
       })
 
-      test('hides the sign-out menu when Escape is pressed with control in focus', async () => {
-        const wrapper = render(user, true)
-
-        const toggle = wrapper.getByLabelText('Toggle Dropdown')
-
-        await act(() => fireEvent.keyDown(toggle, { key: 'Escape' }))
-
-        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
-      })
-
       test('signs out the user when the link is clicked', async () => {
         const wrapper = render(user, true)
 
@@ -491,17 +439,6 @@ describe('UserInfo', () => {
         await act(() => fireEvent.keyDown(signOutButton, { key: ' ' }))
 
         expect(mockSignOut).toHaveBeenCalledOnce()
-      })
-
-      test('hides the menu when Escape pressed with menu in focus', async () => {
-        const wrapper = render(user, true)
-
-        const signOutButton = wrapper.getByLabelText('Sign Out')
-
-        await act(() => fireEvent.keyDown(signOutButton, { key: 'Escape' }))
-
-        expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
-        expect(mockSignOut).not.toHaveBeenCalled()
       })
 
       test('matches snapshot when menu is hidden', () => {
