@@ -121,5 +121,35 @@ describe('DashboardLayout', () => {
 
       expect(setMenuVisible).not.toHaveBeenCalled()
     })
+
+    test('closes the menu when Escape is pressed with the header in focus', async () => {
+      const wrapper = render(undefined, true)
+
+      const header = wrapper.getByText('Skyrim Inventory Management')
+
+      await act(() => fireEvent.keyDown(header, { key: 'Escape' }))
+
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
+    })
+
+    test('closes the menu when Escape is pressed with profile info in focus', async () => {
+      const wrapper = render('Foobar', true)
+
+      const userInfo = wrapper.getByLabelText('Toggle Dropdown')
+
+      await act(() => fireEvent.keyDown(userInfo, { key: 'Escape' }))
+
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
+    })
+
+    test('closes the menu when Escape is pressed with menu in focus', async () => {
+      const wrapper = render(undefined, true)
+
+      const menu = wrapper.getByText('Sign Out')
+
+      await act(() => fireEvent.keyDown(menu, { key: 'Escape' }))
+
+      expect(setMenuVisible).toHaveBeenCalledExactlyOnceWith(false)
+    })
   })
 })
