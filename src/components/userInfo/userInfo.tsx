@@ -19,7 +19,6 @@ const UserInfo = () => {
       e.preventDefault()
       toggleMenu()
     }
-    if (e.key === 'Escape') setMenuVisible(false)
   }
 
   return (
