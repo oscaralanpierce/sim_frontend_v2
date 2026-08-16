@@ -68,7 +68,6 @@ const UserInfo = () => {
               e.preventDefault()
               signOutWithGoogle()
             }
-            if (e.key === 'Escape') setMenuVisible(false)
           }}
           aria-label="Sign Out"
           tabIndex={menuVisible ? 0 : -1}
