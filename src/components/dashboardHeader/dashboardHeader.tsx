@@ -1,4 +1,6 @@
 import {
+  useEffect,
+  useRef,
   type CSSProperties,
   type MouseEventHandler,
   type KeyboardEventHandler,
@@ -18,6 +20,8 @@ import styles from './dashboardHeader.module.css'
 const DashboardHeader = () => {
   const { headerVisible, setHeaderVisible } = useDashboardContext()
 
+  const dashboardLinkRef = useRef<HTMLAnchorElement>(null)
+
   const styleVars = {
     '--title-line-height': '1.8rem',
     '--header-font-size': '1.5rem',
@@ -25,15 +29,22 @@ const DashboardHeader = () => {
 
   const toggleHeaderOnClick: MouseEventHandler = (e) => {
     e.preventDefault()
+
     setHeaderVisible(!headerVisible)
   }
 
   const toggleHeaderOnKeyDown: KeyboardEventHandler = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
+
       setHeaderVisible(!headerVisible)
     }
   }
+
+  useEffect(() => {
+    if (headerVisible && dashboardLinkRef.current)
+      dashboardLinkRef.current.focus({ focusVisible: true })
+  }, [headerVisible])
 
   return (
     <>
@@ -46,7 +57,11 @@ const DashboardHeader = () => {
         >
           <div className={styles.container}>
             <h1 className={styles.h1}>
-              <Link className={styles.headerLink} to={paths.dashboard}>
+              <Link
+                className={styles.headerLink}
+                to={paths.dashboard}
+                ref={dashboardLinkRef}
+              >
                 Skyrim Inventory Management
               </Link>
               <Link
